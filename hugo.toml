@@ -1,0 +1,36 @@
+baseURL = "https://jandytenedora.github.io/"
+languageCode = "en-gb"
+title = "Jandy Tenedora"
+theme = "PaperMod"
+[pagination]
+  pagerSize = 10
+
+[params]
+  author = "Jandy Tenedora"
+  description = "Senior Data Engineer in progress. Building things to understand them."
+  defaultTheme = "dark"
+  ShowReadingTime = true
+  ShowPostNavLinks = true
+  ShowCodeCopyButtons = true
+
+[params.homeInfoParams]
+  Title = "Learning in public"
+  Content = "Senior Data Engineer upskilling through building: HTTP servers, relational DBs, message queues. Also learning German."
+
+[[params.socialIcons]]
+  name = "github"
+  url = "https://github.com/JandyTenedora"
+
+[[params.socialIcons]]
+  name = "linkedin"
+  url = "https://linkedin.com/in/jandytenedora"
+
+[menu]
+  [[menu.main]]
+    name = "Posts"
+    url = "/posts/"
+    weight = 1
+  [[menu.main]]
+    name = "About"
+    url = "/about/"
+    weight = 2
