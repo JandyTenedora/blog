@@ -1,36 +1,40 @@
 baseURL = "https://jandytenedora.github.io/"
 languageCode = "en-gb"
 title = "Jandy Tenedora"
-theme = "PaperMod"
-[pagination]
-  pagerSize = 10
+theme = "hugo-tufte"
+paginate = 10
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+  [markup.highlight]
+    noClasses = false
+    guessSyntax = true
 
 [params]
-  author = "Jandy Tenedora"
-  description = "Senior Data Engineer in progress. Building things to understand them."
-  defaultTheme = "dark"
-  ShowReadingTime = true
-  ShowPostNavLinks = true
-  ShowCodeCopyButtons = true
+  subtitle = "Senior Data Engineer. Back to first principles."
+  showSummary = true
+  showPoweredBy = false
+  math = false
+  github = "JandyTenedora"
+  linkedin = "jandytenedora"
 
-[params.homeInfoParams]
-  Title = "Learning in public"
-  Content = "Senior Data Engineer upskilling through building: HTTP servers, relational DBs, message queues. Also learning German."
-
-[[params.socialIcons]]
-  name = "github"
-  url = "https://github.com/JandyTenedora"
-
-[[params.socialIcons]]
-  name = "linkedin"
-  url = "https://linkedin.com/in/jandytenedora"
+[taxonomies]
+  category = "categories"
+  series = "series"
+  tag = "tags"
 
 [menu]
-  [[menu.main]]
+  [[menu.nav]]
     name = "Posts"
     url = "/posts/"
     weight = 1
-  [[menu.main]]
+  [[menu.nav]]
     name = "About"
     url = "/about/"
     weight = 2
+  [[menu.nav]]
+    name = "Graph"
+    url = "/graph/"
+    weight = 3

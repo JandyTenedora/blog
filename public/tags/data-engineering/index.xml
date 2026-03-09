@@ -1,1 +1,19 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Data-Engineering on Jandy Tenedora</title><link>https://jandytenedora.github.io/tags/data-engineering/</link><description>Recent content in Data-Engineering on Jandy Tenedora</description><generator>Hugo -- 0.157.0</generator><language>en-gb</language><lastBuildDate>Sat, 07 Mar 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://jandytenedora.github.io/tags/data-engineering/index.xml" rel="self" type="application/rss+xml"/><item><title>Building a learning OS with Obsidian and Claude Code</title><link>https://jandytenedora.github.io/posts/building-my-learning-os/</link><pubDate>Sat, 07 Mar 2026 00:00:00 +0000</pubDate><guid>https://jandytenedora.github.io/posts/building-my-learning-os/</guid><description>How I built a structured learning system to upskill to senior data engineer level — and why I&amp;#39;m writing about it publicly.</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Data-Engineering on Jandy Tenedora</title>
+    <link>https://jandytenedora.github.io/tags/data-engineering/</link>
+    <description>Recent content in Data-Engineering on Jandy Tenedora</description>
+    <generator>Hugo</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Sat, 07 Mar 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://jandytenedora.github.io/tags/data-engineering/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Building a learning OS with Obsidian and Claude Code</title>
+      <link>https://jandytenedora.github.io/posts/building-my-learning-os/</link>
+      <pubDate>Sat, 07 Mar 2026 00:00:00 +0000</pubDate>
+      <guid>https://jandytenedora.github.io/posts/building-my-learning-os/</guid>
+      <description>&lt;h2 id=&#34;why&#34;&gt;&#xA;Why&#xA;&lt;a href=&#34;#why&#34; class=&#34;heading-anchor&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;p&gt;It&amp;rsquo;s easy, as a working engineer, to spend years operating at the level of abstraction the job demands — and only that level. Frameworks, managed services, APIs. Things that work without requiring you to know why they work.&lt;/p&gt;&#xA;&lt;p&gt;Jandy wanted to go back. Not to fill gaps, but to rediscover the kind of engagement with computing that used to excite him most — the academic days of grappling with things from first principles, building understanding from the ground up. The nostalgia for that mode of thinking turned into a structured project. This post is about how he organised it.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

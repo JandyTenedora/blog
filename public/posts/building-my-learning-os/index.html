@@ -1,7 +1,169 @@
-<!doctype html><html lang=en dir=auto data-theme=dark><head><meta charset=utf-8><meta http-equiv=X-UA-Compatible content="IE=edge"><meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no"><meta name=robots content="index, follow"><title>Building a learning OS with Obsidian and Claude Code | Jandy Tenedora</title><meta name=keywords content="meta,obsidian,claude-code,learning,data-engineering"><meta name=description content="How I built a structured learning system to upskill to senior data engineer level — and why I'm writing about it publicly."><meta name=author content="Jandy Tenedora"><link rel=canonical href=https://jandytenedora.github.io/posts/building-my-learning-os/><link crossorigin=anonymous href=/assets/css/stylesheet.da3211e5ef867bf2b75fd5a6515cfed7195c011e8ab735694e203810a827097b.css integrity="sha256-2jIR5e+Ge/K3X9WmUVz+1xlcAR6KtzVpTiA4EKgnCXs=" rel="preload stylesheet" as=style><link rel=icon href=https://jandytenedora.github.io/favicon.ico><link rel=icon type=image/png sizes=16x16 href=https://jandytenedora.github.io/favicon-16x16.png><link rel=icon type=image/png sizes=32x32 href=https://jandytenedora.github.io/favicon-32x32.png><link rel=apple-touch-icon href=https://jandytenedora.github.io/apple-touch-icon.png><link rel=mask-icon href=https://jandytenedora.github.io/safari-pinned-tab.svg><meta name=theme-color content="#2e2e33"><meta name=msapplication-TileColor content="#2e2e33"><link rel=alternate hreflang=en href=https://jandytenedora.github.io/posts/building-my-learning-os/><noscript><style>#theme-toggle,.top-link{display:none}</style></noscript><script>localStorage.getItem("pref-theme")==="light"&&(document.querySelector("html").dataset.theme="light")</script><meta property="og:url" content="https://jandytenedora.github.io/posts/building-my-learning-os/"><meta property="og:site_name" content="Jandy Tenedora"><meta property="og:title" content="Building a learning OS with Obsidian and Claude Code"><meta property="og:description" content="How I built a structured learning system to upskill to senior data engineer level — and why I'm writing about it publicly."><meta property="og:locale" content="en-gb"><meta property="og:type" content="article"><meta property="article:section" content="posts"><meta property="article:published_time" content="2026-03-07T00:00:00+00:00"><meta property="article:modified_time" content="2026-03-07T00:00:00+00:00"><meta property="article:tag" content="Meta"><meta property="article:tag" content="Obsidian"><meta property="article:tag" content="Claude-Code"><meta property="article:tag" content="Learning"><meta property="article:tag" content="Data-Engineering"><meta name=twitter:card content="summary"><meta name=twitter:title content="Building a learning OS with Obsidian and Claude Code"><meta name=twitter:description content="How I built a structured learning system to upskill to senior data engineer level — and why I'm writing about it publicly."><script type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Posts","item":"https://jandytenedora.github.io/posts/"},{"@type":"ListItem","position":2,"name":"Building a learning OS with Obsidian and Claude Code","item":"https://jandytenedora.github.io/posts/building-my-learning-os/"}]}</script><script type=application/ld+json>{"@context":"https://schema.org","@type":"BlogPosting","headline":"Building a learning OS with Obsidian and Claude Code","name":"Building a learning OS with Obsidian and Claude Code","description":"How I built a structured learning system to upskill to senior data engineer level — and why I'm writing about it publicly.","keywords":["meta","obsidian","claude-code","learning","data-engineering"],"articleBody":"Why I’m doing this I’m a data engineer and I decided to get serious about the gaps in my knowledge. Not surface-level “watch some videos and update the CV” serious. Actually serious: build the things, read the source material, understand the internals.\nThat kind of commitment needs structure, or it dissolves into context-switching and half-finished tutorials. So I built a system. This post is about that system — what it is, how it works, and what I’m planning to build with it.\nThe learning OS The core is an Obsidian vault running as a personal knowledge OS. Everything flows through it:\nDaily notes with a study plan generated each morning and a log written at the end of the day Habit tracker watching three streaks: German, Data Engineering, Training A 6-month roadmap in a single file — the one source of truth for what I’m working on and what’s next Reading notes for the first-principles books I’m working through (CS:APP, Kurose, SICP) The daily workflow is mostly automated through Claude Code slash commands:\n/dailystudy — reads the roadmap, checks recent notes, generates today’s study plan, appends it to the daily note /dailylog — writes a structured log of what actually got done /readingnotes — generates companion notes for chapters I’ve read, formatted and linked back into the vault The vault lives in a git repo. CLAUDE.md at the root tells Claude Code how the vault is structured, what not to touch, and how to behave. It’s the equivalent of a CONTRIBUTING.md for an AI collaborator operating inside your personal notes.\nThe roadmap The plan has two phases.\nPhase A: SQL cram. There’s an interview coming up, so SQL fundamentals get priority first. Ten specific challenge categories, tracked in a table with checkboxes.\nPhase B: deep-systems. Seven projects building progressively more complex infrastructure from scratch:\nHTTP/1.1 server in Python Redis clone Shell in Go SQLite clone DNS resolver BitTorrent client Wide-column store Each project has milestones and a required reading list from the first-principles books. You don’t start a milestone until you’ve read the relevant chapters. The idea is to force the theory and practice to happen together rather than letting one drift ahead of the other.\nAlongside this: OSS contributions to Airflow and Dagster (unlocked after P5), German language study at A2 level, and GCP certification eventually.\nThe stack The technical stack is deliberately minimal:\nObsidian — the vault, graph view, plugins (obsidian-tracker for habit streaks, kanban for sprint boards) Claude Code — running locally, scoped to the vault directory, the automation layer for all the skills neovim + tmux — writing environment This blog — Hugo + PaperMod, deployed to GitHub Pages via Actions The blog is intentionally outside the vault. The vault is private working memory. The blog is the public output — polished enough to be worth reading, but not overthought.\nWhat’s next Currently: P1. Building an HTTP/1.1 server in Python while working through Kurose’s Computer Networking: A Top-Down Approach Chapter 2. The goal is to understand what actually happens between a browser and a server, not just “it sends HTTP requests”. Build the thing. Read the book. Write the notes. Post here.\nIf you’re doing something similar — structured self-directed upskilling, learning in public, or just trying to build better CS foundations as a working engineer — I’d like to hear about it.\n","wordCount":"557","inLanguage":"en","datePublished":"2026-03-07T00:00:00Z","dateModified":"2026-03-07T00:00:00Z","author":{"@type":"Person","name":"Jandy Tenedora"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://jandytenedora.github.io/posts/building-my-learning-os/"},"publisher":{"@type":"Organization","name":"Jandy Tenedora","logo":{"@type":"ImageObject","url":"https://jandytenedora.github.io/favicon.ico"}}}</script></head><body id=top><header class=header><nav class=nav><div class=logo><a href=https://jandytenedora.github.io/ accesskey=h title="Jandy Tenedora (Alt + H)">Jandy Tenedora</a><div class=logo-switches><button id=theme-toggle accesskey=t title="(Alt + T)" aria-label="Toggle theme">
-<svg id="moon" width="24" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
-<svg id="sun" width="24" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></button></div></div><ul id=menu><li><a href=https://jandytenedora.github.io/posts/ title=Posts><span>Posts</span></a></li><li><a href=https://jandytenedora.github.io/about/ title=About><span>About</span></a></li></ul></nav></header><main class=main><article class=post-single><header class=post-header><h1 class="post-title entry-hint-parent">Building a learning OS with Obsidian and Claude Code</h1><div class=post-description>How I built a structured learning system to upskill to senior data engineer level — and why I'm writing about it publicly.</div><div class=post-meta><span title='2026-03-07 00:00:00 +0000 UTC'>March 7, 2026</span>&nbsp;·&nbsp;<span>3 min</span>&nbsp;·&nbsp;<span>Jandy Tenedora</span></div></header><div class=toc><details><summary accesskey=c title="(Alt + C)"><span class=details>Table of Contents</span></summary><div class=inner><ul><li><a href=#why-im-doing-this aria-label="Why I&rsquo;m doing this">Why I&rsquo;m doing this</a></li><li><a href=#the-learning-os aria-label="The learning OS">The learning OS</a></li><li><a href=#the-roadmap aria-label="The roadmap">The roadmap</a></li><li><a href=#the-stack aria-label="The stack">The stack</a></li><li><a href=#whats-next aria-label="What&rsquo;s next">What&rsquo;s next</a></li></ul></div></details></div><div class=post-content><h2 id=why-im-doing-this>Why I&rsquo;m doing this<a hidden class=anchor aria-hidden=true href=#why-im-doing-this>#</a></h2><p>I&rsquo;m a data engineer and I decided to get serious about the gaps in my knowledge. Not surface-level &ldquo;watch some videos and update the CV&rdquo; serious. Actually serious: build the things, read the source material, understand the internals.</p><p>That kind of commitment needs structure, or it dissolves into context-switching and half-finished tutorials. So I built a system. This post is about that system — what it is, how it works, and what I&rsquo;m planning to build with it.</p><h2 id=the-learning-os>The learning OS<a hidden class=anchor aria-hidden=true href=#the-learning-os>#</a></h2><p>The core is an Obsidian vault running as a personal knowledge OS. Everything flows through it:</p><ul><li><strong>Daily notes</strong> with a study plan generated each morning and a log written at the end of the day</li><li><strong>Habit tracker</strong> watching three streaks: German, Data Engineering, Training</li><li><strong>A 6-month roadmap</strong> in a single file — the one source of truth for what I&rsquo;m working on and what&rsquo;s next</li><li><strong>Reading notes</strong> for the first-principles books I&rsquo;m working through (CS:APP, Kurose, SICP)</li></ul><p>The daily workflow is mostly automated through Claude Code slash commands:</p><ul><li><code>/dailystudy</code> — reads the roadmap, checks recent notes, generates today&rsquo;s study plan, appends it to the daily note</li><li><code>/dailylog</code> — writes a structured log of what actually got done</li><li><code>/readingnotes</code> — generates companion notes for chapters I&rsquo;ve read, formatted and linked back into the vault</li></ul><p>The vault lives in a git repo. CLAUDE.md at the root tells Claude Code how the vault is structured, what not to touch, and how to behave. It&rsquo;s the equivalent of a CONTRIBUTING.md for an AI collaborator operating inside your personal notes.</p><h2 id=the-roadmap>The roadmap<a hidden class=anchor aria-hidden=true href=#the-roadmap>#</a></h2><p>The plan has two phases.</p><p><strong>Phase A: SQL cram.</strong> There&rsquo;s an interview coming up, so SQL fundamentals get priority first. Ten specific challenge categories, tracked in a table with checkboxes.</p><p><strong>Phase B: deep-systems.</strong> Seven projects building progressively more complex infrastructure from scratch:</p><ol><li>HTTP/1.1 server in Python</li><li>Redis clone</li><li>Shell in Go</li><li>SQLite clone</li><li>DNS resolver</li><li>BitTorrent client</li><li>Wide-column store</li></ol><p>Each project has milestones and a required reading list from the first-principles books. You don&rsquo;t start a milestone until you&rsquo;ve read the relevant chapters. The idea is to force the theory and practice to happen together rather than letting one drift ahead of the other.</p><p>Alongside this: OSS contributions to Airflow and Dagster (unlocked after P5), German language study at A2 level, and GCP certification eventually.</p><h2 id=the-stack>The stack<a hidden class=anchor aria-hidden=true href=#the-stack>#</a></h2><p>The technical stack is deliberately minimal:</p><ul><li><strong>Obsidian</strong> — the vault, graph view, plugins (obsidian-tracker for habit streaks, kanban for sprint boards)</li><li><strong>Claude Code</strong> — running locally, scoped to the vault directory, the automation layer for all the skills</li><li><strong>neovim + tmux</strong> — writing environment</li><li><strong>This blog</strong> — Hugo + PaperMod, deployed to GitHub Pages via Actions</li></ul><p>The blog is intentionally outside the vault. The vault is private working memory. The blog is the public output — polished enough to be worth reading, but not overthought.</p><h2 id=whats-next>What&rsquo;s next<a hidden class=anchor aria-hidden=true href=#whats-next>#</a></h2><p>Currently: P1. Building an HTTP/1.1 server in Python while working through Kurose&rsquo;s <em>Computer Networking: A Top-Down Approach</em> Chapter 2. The goal is to understand what actually happens between a browser and a server, not just &ldquo;it sends HTTP requests&rdquo;. Build the thing. Read the book. Write the notes. Post here.</p><p>If you&rsquo;re doing something similar — structured self-directed upskilling, learning in public, or just trying to build better CS foundations as a working engineer — I&rsquo;d like to hear about it.</p></div><footer class=post-footer><ul class=post-tags><li><a href=https://jandytenedora.github.io/tags/meta/>Meta</a></li><li><a href=https://jandytenedora.github.io/tags/obsidian/>Obsidian</a></li><li><a href=https://jandytenedora.github.io/tags/claude-code/>Claude-Code</a></li><li><a href=https://jandytenedora.github.io/tags/learning/>Learning</a></li><li><a href=https://jandytenedora.github.io/tags/data-engineering/>Data-Engineering</a></li></ul></footer></article></main><footer class=footer><span>&copy; 2026 <a href=https://jandytenedora.github.io/>Jandy Tenedora</a></span> ·
-<span>Powered by
-<a href=https://gohugo.io/ rel="noopener noreferrer" target=_blank>Hugo</a> &
-<a href=https://github.com/adityatelange/hugo-PaperMod/ rel=noopener target=_blank>PaperMod</a></span></footer><a href=#top aria-label="go to top" title="Go to Top (Alt + G)" class=top-link id=top-link accesskey=g><svg viewBox="0 0 12 6" fill="currentColor"><path d="M12 6H0l6-6z"/></svg>
-</a><script>let menu=document.getElementById("menu");if(menu){const e=localStorage.getItem("menu-scroll-position");e&&(menu.scrollLeft=parseInt(e,10)),menu.onscroll=function(){localStorage.setItem("menu-scroll-position",menu.scrollLeft)}}document.querySelectorAll('a[href^="#"]').forEach(e=>{e.addEventListener("click",function(e){e.preventDefault();var t=this.getAttribute("href").substr(1);window.matchMedia("(prefers-reduced-motion: reduce)").matches?document.querySelector(`[id='${decodeURIComponent(t)}']`).scrollIntoView():document.querySelector(`[id='${decodeURIComponent(t)}']`).scrollIntoView({behavior:"smooth"}),t==="top"?history.replaceState(null,null," "):history.pushState(null,null,`#${t}`)})})</script><script>var mybutton=document.getElementById("top-link");window.onscroll=function(){document.body.scrollTop>800||document.documentElement.scrollTop>800?(mybutton.style.visibility="visible",mybutton.style.opacity="1"):(mybutton.style.visibility="hidden",mybutton.style.opacity="0")}</script><script>document.getElementById("theme-toggle").addEventListener("click",()=>{const e=document.querySelector("html");e.dataset.theme==="dark"?(e.dataset.theme="light",localStorage.setItem("pref-theme","light")):(e.dataset.theme="dark",localStorage.setItem("pref-theme","dark"))})</script><script>document.querySelectorAll("pre > code").forEach(e=>{const n=e.parentNode.parentNode,t=document.createElement("button");t.classList.add("copy-code"),t.innerHTML="copy";function s(){t.innerHTML="copied!",setTimeout(()=>{t.innerHTML="copy"},2e3)}t.addEventListener("click",t=>{if("clipboard"in navigator){navigator.clipboard.writeText(e.textContent),s();return}const n=document.createRange();n.selectNodeContents(e);const o=window.getSelection();o.removeAllRanges(),o.addRange(n);try{document.execCommand("copy"),s()}catch{}o.removeRange(n)}),n.classList.contains("highlight")?n.appendChild(t):n.parentNode.firstChild==n||(e.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName=="TABLE"?e.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(t):e.parentNode.appendChild(t))})</script></body></html>
+<!DOCTYPE html>
+<html lang="en-gb"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link rel="preload" as="style"
+      href="https://fonts.googleapis.com/css?family=Noto+Serif+SC|Noto+Emoji&display=swap" />
+<link rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Noto+Serif+SC|Noto+Emoji&display=swap"
+      media="print" onload="this.media='all'" />
+<noscript>
+<link rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Noto+Serif+SC&display=swap" />
+</noscript>
+
+
+
+<link rel="stylesheet" href="/css/hugo-tufte.min.css">
+
+
+
+<link rel="stylesheet" href="/css/hugo-tufte-options.min.css">
+
+<link rel="stylesheet" href="/css/hugo-tufte-override.css">
+<body>
+
+
+<article id="main">
+  <section>
+<h1 class="content-title">Building a learning OS with Obsidian and Claude Code</h1></section>
+
+  
+
+  <section><h2 id="why">
+Why
+<a href="#why" class="heading-anchor">#</a>
+</h2>
+<p>It&rsquo;s easy, as a working engineer, to spend years operating at the level of abstraction the job demands — and only that level. Frameworks, managed services, APIs. Things that work without requiring you to know why they work.</p>
+<p>Jandy wanted to go back. Not to fill gaps, but to rediscover the kind of engagement with computing that used to excite him most — the academic days of grappling with things from first principles, building understanding from the ground up. The nostalgia for that mode of thinking turned into a structured project. This post is about how he organised it.</p>
+<h2 id="the-learning-os">
+The learning OS
+<a href="#the-learning-os" class="heading-anchor">#</a>
+</h2>
+<p>The core is an Obsidian vault running as a personal knowledge OS. Everything flows through it:</p>
+<ul>
+<li><strong>Daily notes</strong> with a study plan generated each morning and a log written at the end of the day</li>
+<li><strong>Habit tracker</strong> watching three streaks: German, Data Engineering, Training</li>
+<li><strong>A 6-month roadmap</strong> in a single file — the one source of truth for what he&rsquo;s working on and what&rsquo;s next</li>
+<li><strong>Reading notes</strong> for the first-principles books he&rsquo;s working through (CS:APP, Kurose, SICP)</li>
+</ul>
+<p>The daily workflow is mostly automated through Claude Code slash commands:</p>
+<ul>
+<li><code>/dailystudy</code> — reads the roadmap, checks recent notes, generates today&rsquo;s study plan, appends it to the daily note</li>
+<li><code>/dailylog</code> — writes a structured log of what actually got done</li>
+<li><code>/readingnotes</code> — generates companion notes for chapters he&rsquo;s read, formatted and linked back into the vault</li>
+</ul>
+<p>The vault lives in a git repo. CLAUDE.md at the root tells Claude Code how the vault is structured, what not to touch, and how to behave. It&rsquo;s the equivalent of a CONTRIBUTING.md for an AI collaborator operating inside personal notes.</p>
+<h2 id="the-roadmap">
+The roadmap
+<a href="#the-roadmap" class="heading-anchor">#</a>
+</h2>
+<p>The plan has two phases.</p>
+<p><strong>Phase A: SQL cram.</strong> Ten specific challenge categories, tracked in a table with checkboxes.</p>
+<p><strong>Phase B: deep-systems.</strong> Seven projects building progressively more complex infrastructure from scratch:</p>
+<ol>
+<li>HTTP/1.1 server in Python</li>
+<li>Redis clone</li>
+<li>Shell in Go</li>
+<li>SQLite clone</li>
+<li>DNS resolver</li>
+<li>BitTorrent client</li>
+<li>Wide-column store</li>
+</ol>
+<p>Each project has milestones and a required reading list from the first-principles books. The idea is to force the theory and practice to happen together rather than letting one drift ahead of the other.</p>
+<p>Alongside this: OSS contributions to Airflow and Dagster, German language study at A2 level, and GCP certification.</p>
+<h2 id="the-stack">
+The stack
+<a href="#the-stack" class="heading-anchor">#</a>
+</h2>
+<p>The technical stack is deliberately minimal:</p>
+<ul>
+<li><strong>Obsidian</strong> — the vault, graph view, plugins (obsidian-tracker for habit streaks, kanban for sprint boards)</li>
+<li><strong>Claude Code</strong> — running locally, scoped to the vault directory, the automation layer for all the skills</li>
+<li><strong>neovim + tmux</strong> — writing environment</li>
+<li><strong>This blog</strong> — Hugo + PaperMod, deployed to GitHub Pages via Actions</li>
+</ul>
+<p>The blog is intentionally outside the vault. The vault is private working memory. The blog is the public output.</p>
+<h2 id="whats-next">
+What&rsquo;s next
+<a href="#whats-next" class="heading-anchor">#</a>
+</h2>
+<!-- TODO: Update with current project -->
+</section>
+  <section><footer class="page-footer">
+<hr />
+
+<div class="previous-post" style="display:inline-block;">
+  
+  <a class="link-reverse" href="https://jandytenedora.github.io/about/?ref=footer">« About</a>
+  
+</div>
+
+<div class="next-post", style="display:inline-block;float:right;">
+  
+</div>
+
+<ul class="page-footer-menu">
+  
+  
+
+  
+  <li><a href="https://linkedin.com/in/jandytenedora">LinkedIn</a></li>
+  
+
+  
+  <li><a href="https://github.com/JandyTenedora">GitHub</a></li>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+  
+</ul>
+
+
+
+
+
+</footer>
+</section>
+  <section><nav class="menu">
+    <ul>
+    
+        <li><a href="/posts/">Posts</a></li>
+    
+        <li><a href="/about/">About</a></li>
+    
+        <li><a href="/graph/">Graph</a></li>
+    
+    </ul>
+</nav>
+</section>
+</article>
+
+
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,12 @@
+{{ define "main" }}
+<article id="main" class="graph-page">
+  <h1>{{ .Title }}</h1>
+  <p class="graph-instructions">Drag to reposition nodes. Scroll to zoom. Hover for labels.</p>
+  <div id="graph-container"></div>
+  {{ .Content }}
+</article>
+
+<script src="https://cdn.jsdelivr.net/npm/d3@7/dist/d3.min.js"></script>
+<link rel="stylesheet" href="/css/graph.css">
+<script src="/js/graph.js"></script>
+{{ end }}
