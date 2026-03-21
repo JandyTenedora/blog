@@ -2,6 +2,7 @@
 title: "About"
 layout: "page"
 url: "/about/"
+bookHidden: true
 ---
 
 Jandy is a senior data engineer based in the UK.
@@ -22,4 +23,4 @@ The underlying system is an Obsidian vault running as a personal learning OS, wi
 ## Elsewhere
 
 - [GitHub](https://github.com/JandyTenedora)
-- [LinkedIn](https://www.linkedin.com/in/jandytenedora/)
+- [LinkedIn](https://www.linkedin.com/in/jandy-tenedora/)
