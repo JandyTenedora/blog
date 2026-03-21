@@ -27,14 +27,22 @@ paginate = 10
 
 [menu]
   [[menu.nav]]
-    name = "Posts"
-    url = "/posts/"
+    name = "Learning OS"
+    url = "/learning-os/"
     weight = 1
+  [[menu.nav]]
+    name = "Language"
+    url = "/language/"
+    weight = 2
+  [[menu.nav]]
+    name = "General"
+    url = "/general/"
+    weight = 3
   [[menu.nav]]
     name = "About"
     url = "/about/"
-    weight = 2
+    weight = 4
   [[menu.nav]]
     name = "Graph"
     url = "/graph/"
-    weight = 3
+    weight = 5

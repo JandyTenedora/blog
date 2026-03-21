@@ -5,6 +5,7 @@ draft: false
 tags: ["meta", "obsidian", "claude-code", "learning", "data-engineering"]
 description: "How I built a structured learning system to upskill to senior data engineer level — and why I'm writing about it publicly."
 showToc: true
+aliases: ["/posts/building-my-learning-os/"]
 ---
 
 ## Why
@@ -63,6 +64,17 @@ The technical stack is deliberately minimal:
 
 The blog is intentionally outside the vault. The vault is private working memory. The blog is the public output.
 
+## The vault graph
+
+Every note in the vault is a node. Every wikilink between notes is an edge. The graph below is a live export of that structure — 429 nodes, 766 connections. Red nodes are the most-linked. Drag to reposition, scroll to zoom, hover to identify.
+
+<div id="graph-mini-container"></div>
+<p class="graph-mini-caption">The Obsidian vault graph. Rendered with D3.js from a live export. <a href="/graph/">Full view →</a></p>
+
+<script src="https://cdn.jsdelivr.net/npm/d3@7/dist/d3.min.js"></script>
+<link rel="stylesheet" href="/css/graph.css">
+<script src="/js/graph-mini.js"></script>
+
 ## What's next
 
-Week one of the ramp-up sprint. CS:APP chapters 1–3 and 8, Effective Java chapters 4–5. P1 — the HTTP server — starts next week in Java, then crosses over to Go at the halfway point. That'll be the first proper build post.
+Week one of the ramp-up sprint. CS:APP chapters 1–3 and 8, Effective Java chapters 4–5. P1 — the HTTP server — starts this week in Java, then crosses over to Go at the halfway point. That'll be the first proper build post.
