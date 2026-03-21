@@ -4,3 +4,6 @@
 [submodule "themes/hugo-tufte"]
 	path = themes/hugo-tufte
 	url = https://github.com/loikein/hugo-tufte
+[submodule "vault"]
+	path = vault
+	url = git@github.com:JandyTenedora/jandys-vault.git

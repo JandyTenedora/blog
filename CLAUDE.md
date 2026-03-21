@@ -82,6 +82,10 @@ git submodule update --remote themes/PaperMod
 
 Do not edit files inside `themes/PaperMod/` directly. Use `assets/`, `layouts/`, or `static/` at the repo root to override theme files.
 
+## Git commit messages
+
+Never include any mention of Claude or AI in commit messages — no `Co-Authored-By` trailers, no attribution, nothing.
+
 ## What not to touch
 
 - `public/` — generated build output, rebuilt on every deploy
