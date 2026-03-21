@@ -28,7 +28,7 @@
       .on('zoom', (event) => g.attr('transform', event.transform))
   );
 
-  fetch('/data/graph.json')
+  fetch(window.GRAPH_DATA_URL || '/data/graph.json')
     .then(r => r.json())
     .then(data => render(data))
     .catch(() => {
