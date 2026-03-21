@@ -10,7 +10,7 @@ This blog documents a return to first principles — building systems from scrat
 
 ## What he writes about
 
-- **deep-systems projects** — HTTP servers, Redis clones, SQLite implementations, DNS resolvers. Each one built to understand a layer of infrastructure he uses but doesn't fully understand yet.
+- **deep-systems projects** — HTTP servers, relational databases, message queues, distributed brokers, wide-column stores. Each one built twice: Java prototype first, then Go. Built to understand the layers of infrastructure he uses but hasn't had to implement.
 - **First-principles reading** — notes from CS:APP, Kurose, SICP. The books that most working engineers skip.
 - **Data engineering** — pipelines, orchestration, warehousing, stream processing.
 - **German** — He's learning German. Occasionally he'll write about that too.

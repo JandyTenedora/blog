@@ -32,23 +32,25 @@ The vault lives in a git repo. CLAUDE.md at the root tells Claude Code how the v
 
 ## The roadmap
 
-The plan has two phases.
+The plan changed in March after he accepted an offer at Spotify. The SQL cram sprint was dropped — not because SQL doesn't matter, but because it was the wrong thing to optimise for with eight weeks before day one.
 
-**Phase A: SQL cram.** Ten specific challenge categories, tracked in a table with checkboxes.
+The new plan has two tracks running in parallel.
 
-**Phase B: deep-systems.** Seven projects building progressively more complex infrastructure from scratch:
+**Track 1: Spotify ramp-up.** Fifteen specific gaps surfaced during the interview process — things like OS-level process and thread models, HTTP internals, Go fluency, Kubernetes operational model, I/O tracing, distinguishing DDoS from retry storms. Each gap has a named resource and a deadline. The sprint runs March 19 to May 17.
 
-1. HTTP/1.1 server in Python
-2. Redis clone
-3. Shell in Go
-4. SQLite clone
-5. DNS resolver
-6. BitTorrent client
-7. Wide-column store
+**Track 2: deep-systems.** Seven projects, building progressively more complex infrastructure from scratch. Each one is implemented twice: first a Java prototype to learn the concepts, then a Go production version to build fluency in the language he'll be using at work.
 
-Each project has milestones and a required reading list from the first-principles books. The idea is to force the theory and practice to happen together rather than letting one drift ahead of the other.
+1. HTTP/1.1 server from raw TCP
+2. Relational database (B-tree storage, WAL, SQL parser)
+3. Message queue
+4. Connection pooler (PgBouncer-like)
+5. Workflow orchestration engine (Airflow-like)
+6. Distributed message broker (Kafka-like)
+7. Wide-column store (Cassandra-like)
 
-Alongside this: OSS contributions to Airflow and Dagster, German language study at A2 level, and GCP certification.
+Each project has milestones and a required reading list drawn from the first-principles books — CS:APP, Kurose, SICP, Effective Java. The idea is to force theory and practice to happen together.
+
+OSS contributions to Airflow and Dagster unlock after P5, once he can read the scheduler code as recognition rather than learning. German continues throughout at A1/A2 level — four to five hours a week.
 
 ## The stack
 
@@ -63,4 +65,4 @@ The blog is intentionally outside the vault. The vault is private working memory
 
 ## What's next
 
-<!-- TODO: Update with current project -->
+Week one of the ramp-up sprint. CS:APP chapters 1–3 and 8, Effective Java chapters 4–5. P1 — the HTTP server — starts next week in Java, then crosses over to Go at the halfway point. That'll be the first proper build post.
