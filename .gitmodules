@@ -7,3 +7,6 @@
 [submodule "vault"]
 	path = vault
 	url = git@github.com:JandyTenedora/jandys-vault.git
+[submodule "themes/hugo-book"]
+	path = themes/hugo-book
+	url = https://github.com/alex-shpak/hugo-book

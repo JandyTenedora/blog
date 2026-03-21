@@ -1,0 +1,79 @@
+// Tufte-inspired overrides for Hugo Book
+// Redefine both theme mixins so dark-mode OS preference doesn't override us.
+// SCSS uses the last mixin definition — these are imported before book.scss
+// calls @include theme-light, so our versions win.
+
+$tufte-serif: Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
+$tufte-bg:     #fffff8;
+$tufte-text:   #111111;
+$tufte-subtle: #555555;
+$tufte-border: #ddddd8;
+
+@mixin theme-light {
+  --body-background:      #{$tufte-bg};
+  --body-background-tint: none;
+  --body-font-color:      #{$tufte-text};
+
+  --color-link:         #{$tufte-subtle};
+  --color-visited-link: #777777;
+
+  --icon-filter: none;
+
+  --gray-100: #{darken($tufte-bg, 4%)};
+  --gray-200: #{darken($tufte-bg, 8%)};
+  --gray-500: #adb5bd;
+
+  @include accent("default",   #64748b);
+  @include accent("note",      #4486dd);
+  @include accent("tip",       #3bad3b);
+  @include accent("important", #8144dd);
+  @include accent("warning",   #f59e42);
+  @include accent("caution",   #d84747);
+  @include accent("info",      #4486dd);
+  @include accent("success",   #3bad3b);
+  @include accent("danger",    #d84747);
+}
+
+// Force same palette even if browser is in dark mode
+@mixin theme-dark {
+  @include theme-light;
+}
+
+// Typography
+body {
+  font-family: $tufte-serif;
+  font-size: 18px;
+  line-height: 1.65;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $tufte-serif;
+  font-weight: normal;
+}
+
+.book-menu nav,
+.book-brand a {
+  font-family: $tufte-serif;
+}
+
+.book-brand a {
+  font-size: 1.05rem;
+  font-weight: bold;
+}
+
+// Keep code monospace
+code, pre, kbd {
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+  font-size: 0.85em;
+}
+
+// Sidebar border
+.book-menu {
+  border-right: 1px solid $tufte-border;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid $tufte-border;
+  margin: 2rem 0;
+}

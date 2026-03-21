@@ -17,7 +17,7 @@ This blog documents a return to first principles — building systems from scrat
 
 ## The setup
 
-The underlying system is an Obsidian vault running as a personal learning OS, with Claude Code handling daily planning and note generation. He wrote about how it works in the [first post](/posts/building-my-learning-os/).
+The underlying system is an Obsidian vault running as a personal learning OS, with Claude Code handling daily planning and note generation. He wrote about how it works in the [first post](/learning-os/building-my-learning-os/).
 
 ## Elsewhere
 

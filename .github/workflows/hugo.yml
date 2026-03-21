@@ -36,7 +36,7 @@ jobs:
 
       - name: Checkout theme submodules
         run: |
-          git submodule update --init themes/PaperMod themes/hugo-tufte
+          git submodule update --init themes/hugo-book
 
       - name: Setup Pages
         id: pages

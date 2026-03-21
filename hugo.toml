@@ -1,24 +1,28 @@
 baseURL = "https://jandytenedora.github.io/"
 languageCode = "en-gb"
 title = "Jandy Tenedora"
-theme = "hugo-tufte"
+theme = "hugo-book"
 paginate = 10
 
+disablePathToLower = true
+
 [markup]
-  [markup.goldmark]
-    [markup.goldmark.renderer]
-      unsafe = true
+  [markup.goldmark.renderer]
+    unsafe = true
+  [markup.tableOfContents]
+    startLevel = 2
+    endLevel = 4
   [markup.highlight]
     noClasses = false
     guessSyntax = true
 
 [params]
-  subtitle = "Senior Data Engineer. Back to first principles."
-  showSummary = true
-  showPoweredBy = false
-  math = false
-  github = "JandyTenedora"
-  linkedin = "jandytenedora"
+  BookTheme = "light"
+  BookSection = "*"
+  BookSearch = true
+  BookToC = true
+  BookDateFormat = "2 January 2006"
+  BookComments = false
 
 [taxonomies]
   category = "categories"
@@ -26,23 +30,11 @@ paginate = 10
   tag = "tags"
 
 [menu]
-  [[menu.nav]]
-    name = "Learning OS"
-    url = "/learning-os/"
-    weight = 1
-  [[menu.nav]]
-    name = "Language"
-    url = "/language/"
-    weight = 2
-  [[menu.nav]]
-    name = "General"
-    url = "/general/"
-    weight = 3
-  [[menu.nav]]
+  [[menu.after]]
     name = "About"
     url = "/about/"
-    weight = 4
-  [[menu.nav]]
+    weight = 1
+  [[menu.after]]
     name = "Graph"
     url = "/graph/"
-    weight = 5
+    weight = 2

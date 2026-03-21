@@ -15,7 +15,7 @@ Live at **https://jandytenedora.github.io/**
 
 | Date | Title |
 |------|-------|
-| 2026-03-07 | [Building a learning OS with Obsidian and Claude Code](/content/posts/building-my-learning-os.md) |
+| 2026-03-07 | [Building a learning OS with Obsidian and Claude Code](https://jandytenedora.github.io/posts/building-my-learning-os/) |
 
 ---
 
