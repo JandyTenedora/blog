@@ -1,6 +1,7 @@
 ---
-title: "Building a learning OS with Obsidian and Claude Code"
+title: "01 — Building a learning OS with Obsidian and Claude Code"
 date: 2026-03-07
+weight: 1
 draft: false
 tags: ["meta", "obsidian", "claude-code", "learning", "data-engineering"]
 description: "How I built a structured learning system to upskill to senior data engineer level — and why I'm writing about it publicly."
@@ -33,13 +34,11 @@ The vault lives in a git repo. CLAUDE.md at the root tells Claude Code how the v
 
 ## The roadmap
 
-The plan changed in March after he accepted an offer at Spotify. The SQL cram sprint was dropped — not because SQL doesn't matter, but because it was the wrong thing to optimise for with eight weeks before day one.
+The plan has two tracks running in parallel.
 
-The new plan has two tracks running in parallel.
+**Track 1: closing gaps.** Fifteen specific areas to work through — OS-level process and thread models, HTTP internals, Go fluency, Kubernetes operational model, I/O tracing, distinguishing DDoS from retry storms. Each has a named resource and a deadline.
 
-**Track 1: Spotify ramp-up.** Fifteen specific gaps surfaced during the interview process — things like OS-level process and thread models, HTTP internals, Go fluency, Kubernetes operational model, I/O tracing, distinguishing DDoS from retry storms. Each gap has a named resource and a deadline. The sprint runs March 19 to May 17.
-
-**Track 2: deep-systems.** Seven projects, building progressively more complex infrastructure from scratch. Each one is implemented twice: first a Java prototype to learn the concepts, then a Go production version to build fluency in the language he'll be using at work.
+**Track 2: deep-systems.** Seven projects, building progressively more complex infrastructure from scratch. Each one is implemented twice: first a Java prototype to learn the concepts, then a Go production version to build fluency in the language.
 
 1. HTTP/1.1 server from raw TCP
 2. Relational database (B-tree storage, WAL, SQL parser)
@@ -72,4 +71,4 @@ Every note in the vault is a node. Every wikilink between notes is an edge. The 
 
 ## What's next
 
-Week one of the ramp-up sprint. CS:APP chapters 1–3 and 8, Effective Java chapters 4–5. P1 — the HTTP server — starts this week in Java, then crosses over to Go at the halfway point. That'll be the first proper build post.
+CS:APP chapters 1–3 and 8, Effective Java chapters 4–5. P1 — the HTTP server — starts this week in Java, then crosses over to Go at the halfway point. That'll be the first proper build post.

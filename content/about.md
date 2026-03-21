@@ -22,4 +22,4 @@ The underlying system is an Obsidian vault running as a personal learning OS, wi
 ## Elsewhere
 
 - [GitHub](https://github.com/JandyTenedora)
-- [LinkedIn](https://linkedin.com/in/jandytenedora)
+- [LinkedIn](https://www.linkedin.com/in/jandytenedora/)
