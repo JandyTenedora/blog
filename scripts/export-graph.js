@@ -46,13 +46,22 @@ const wikilinkRe = /\[\[([^\]|#]+)(?:[|#][^\]]*)?\]\]/g;
 // Extract internal markdown links [text](target.md)
 const mdlinkRe = /\[[^\]]*\]\(([^)]+\.md)(?:#[^)]*)?\)/g;
 
+// Top-level vault folder for a given file path
+function noteGroup(filePath) {
+  const rel = path.relative(vaultPath, filePath);
+  const parts = rel.split(path.sep);
+  return parts.length > 1 ? parts[0] : 'Root';
+}
+
 const files = walkMd(vaultPath);
 const nodeSet = new Set();
+const nodeGroupMap = {}; // id -> top-level folder
 const linkSet = new Set(); // "source|||target" to deduplicate
 
 for (const file of files) {
   const source = noteId(file);
   nodeSet.add(source);
+  nodeGroupMap[source] = noteGroup(file);
 
   const content = fs.readFileSync(file, 'utf8');
 
@@ -86,7 +95,11 @@ for (const { source, target } of links) {
   degree[target] = (degree[target] || 0) + 1;
 }
 
-const nodes = [...nodeSet].map(id => ({ id, degree: degree[id] || 0 }));
+const nodes = [...nodeSet].map(id => ({
+  id,
+  degree: degree[id] || 0,
+  group: nodeGroupMap[id] || 'Other',
+}));
 
 const graph = { nodes, links };
 fs.writeFileSync(outputPath, JSON.stringify(graph, null, 2));

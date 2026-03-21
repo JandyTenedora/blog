@@ -29,6 +29,28 @@
   max-width: none;
 }
 
+#graph-mini-container {
+  width: 100%;
+  height: 560px;
+  background: #fffff8;
+  border: 1px solid #e0e0d8;
+  margin: 1.5rem 0;
+  overflow: hidden;
+  position: relative;
+}
+
+#graph-mini-container svg {
+  display: block;
+}
+
+.graph-mini-caption {
+  font-family: et-book, Palatino, "Palatino Linotype", serif;
+  font-size: 0.85rem;
+  color: #555;
+  margin-top: -1rem;
+  margin-bottom: 1.5rem;
+}
+
 .graph-instructions {
   font-family: et-book, Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
   font-size: 0.9rem;

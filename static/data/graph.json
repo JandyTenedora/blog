@@ -1,4 +1,5215 @@
 {
-  "nodes": [],
-  "links": []
+  "nodes": [
+    {
+      "id": "CLAUDE",
+      "degree": 7,
+      "group": "Root"
+    },
+    {
+      "id": "Note Name",
+      "degree": 2,
+      "group": "Other"
+    },
+    {
+      "id": "Folder/Note Name",
+      "degree": 1,
+      "group": "Other"
+    },
+    {
+      "id": "filename.pdf",
+      "degree": 1,
+      "group": "Other"
+    },
+    {
+      "id": "German/German Hub",
+      "degree": 38,
+      "group": "Other"
+    },
+    {
+      "id": "Engineering/Engineering Hub",
+      "degree": 56,
+      "group": "Other"
+    },
+    {
+      "id": "Engineering/OSS/OSS Hub",
+      "degree": 5,
+      "group": "Other"
+    },
+    {
+      "id": "Library/Library Hub",
+      "degree": 14,
+      "group": "Other"
+    },
+    {
+      "id": "2024-12-27",
+      "degree": 1,
+      "group": "Daily Notes"
+    },
+    {
+      "id": "Daily Notes/Daily Log",
+      "degree": 126,
+      "group": "Other"
+    },
+    {
+      "id": "2025-01-04",
+      "degree": 1,
+      "group": "Daily Notes"
+    },
+    {
+      "id": "2025-01-06",
+      "degree": 1,
+      "group": "Daily Notes"
+    },
+    {
+      "id": "2025-01-09",
+      "degree": 1,
+      "group": "Daily Notes"
+    },
+    {
+      "id": "2025-01-14",
+      "degree": 1,
+      "group": "Daily Notes"
+    },
+    {
+      "id": "2025-02-13",
+      "degree": 1,
+      "group": "Daily Notes"
+    },
+    {
+      "id": "2025-02-14",
+      "degree": 1,
+      "group": "Daily Notes"
+    },
+    {
+      "id": "2025-04-14",
+      "degree": 1,
+      "group": "Daily Notes"
+    },
+    {
+      "id": "2025-05-13",
+      "degree": 1,
+      "group": "Daily Notes"
+    },
+    {
+      "id": "2025-05-25",
+      "degree": 1,
+      "group": "Daily Notes"
+    },
+    {
+      "id": "2025-05-26",
+      "degree": 1,
+      "group": "Daily Notes"
+    },
+    {
+      "id": "2025-05-28",
+      "degree": 1,
+      "group": "Daily Notes"
+    },
+    {
+      "id": "2025-05-29",
+      "degree": 1,
+      "group": "Daily Notes"
+    },
+    {
+      "id": "2025-05-30",
+      "degree": 1,
+      "group": "Daily Notes"
+    },
+    {
+      "id": "2025-06-01",
+      "degree": 1,
+      "group": "Daily Notes"
+    },
+    {
+      "id": "2025-06-03",
+      "degree": 1,
+      "group": "Daily Notes"
+    },
+    {
+      "id": "2025-06-08",
+      "degree": 1,
+      "group": "Daily Notes"
+    },
+    {
+      "id": "2025-06-11",
+      "degree": 1,
+      "group": "Daily Notes"
+    },
+    {
+      "id": "2025-06-12",
+      "degree": 1,
+      "group": "Daily Notes"
+    },
+    {
+      "id": "2025-06-14",
+      "degree": 1,
+      "group": "Daily Notes"
+    },
+    {
+      "id": "2025-06-15",
+      "degree": 1,
+      "group": "Daily Notes"
+    },
+    {
+      "id": "2025-06-16",
+      "degree": 1,
+      "group": "Daily Notes"
+    },
+    {
+      "id": "2025-06-18",
+      "degree": 1,
+      "group": "Daily Notes"
+    },
+    {
+      "id": "2025-06-24",
+      "degree": 1,
+      "group": "Daily Notes"
+    },
+    {
+      "id": "2025-06-26",
+      "degree": 1,
+      "group": "Daily Notes"
+    },
+    {
+      "id": "2025-06-28",
+      "degree": 1,
+      "group": "Daily Notes"
+    },
+    {
+      "id": "2025-07-02",
+      "degree": 1,
+      "group": "Daily Notes"
+    },
+    {
+      "id": "2025-07-03",
+      "degree": 1,
+      "group": "Daily Notes"
+    },
+    {
+      "id": "2025-07-04",
+      "degree": 1,
+      "group": "Daily Notes"
+    },
+    {
+      "id": "2025-07-07",
+      "degree": 1,
+      "group": "Daily Notes"
+    },
+    {
+      "id": "2025-07-08",
+      "degree": 1,
+      "group": "Daily Notes"
+    },
+    {
+      "id": "2025-07-11",
+      "degree": 1,
+      "group": "Daily Notes"
+    },
+    {
+      "id": "2025-07-12",
+      "degree": 1,
+      "group": "Daily Notes"
+    },
+    {
+      "id": "2025-07-18",
+      "degree": 1,
+      "group": "Daily Notes"
+    },
+    {
+      "id": "2025-07-24",
+      "degree": 1,
+      "group": "Daily Notes"
+    },
+    {
+      "id": "2025-07-29",
+      "degree": 1,
+      "group": "Daily Notes"
+    },
+    {
+      "id": "2025-08-02",
+      "degree": 1,
+      "group": "Daily Notes"
+    },
+    {
+      "id": "2025-08-04",
+      "degree": 1,
+      "group": "Daily Notes"
+    },
+    {
+      "id": "2025-08-05",
+      "degree": 1,
+      "group": "Daily Notes"
+    },
+    {
+      "id": "2025-08-06",
+      "degree": 1,
+      "group": "Daily Notes"
+    },
+    {
+      "id": "2025-08-08",
+      "degree": 1,
+      "group": "Daily Notes"
+    },
+    {
+      "id": "2025-08-12",
+      "degree": 1,
+      "group": "Daily Notes"
+    },
+    {
+      "id": "2025-08-19",
+      "degree": 1,
+      "group": "Daily Notes"
+    },
+    {
+      "id": "2025-08-21",
+      "degree": 1,
+      "group": "Daily Notes"
+    },
+    {
+      "id": "2025-08-29",
+      "degree": 1,
+      "group": "Daily Notes"
+    },
+    {
+      "id": "2025-09-04",
+      "degree": 1,
+      "group": "Daily Notes"
+    },
+    {
+      "id": "2025-09-11",
+      "degree": 1,
+      "group": "Daily Notes"
+    },
+    {
+      "id": "2025-09-15",
+      "degree": 1,
+      "group": "Daily Notes"
+    },
+    {
+      "id": "2025-09-25",
+      "degree": 1,
+      "group": "Daily Notes"
+    },
+    {
+      "id": "2025-10-05",
+      "degree": 1,
+      "group": "Daily Notes"
+    },
+    {
+      "id": "2025-10-06",
+      "degree": 1,
+      "group": "Daily Notes"
+    },
+    {
+      "id": "2025-10-07",
+      "degree": 1,
+      "group": "Daily Notes"
+    },
+    {
+      "id": "2025-10-10",
+      "degree": 1,
+      "group": "Daily Notes"
+    },
+    {
+      "id": "2025-10-13",
+      "degree": 1,
+      "group": "Daily Notes"
+    },
+    {
+      "id": "2025-10-16",
+      "degree": 1,
+      "group": "Daily Notes"
+    },
+    {
+      "id": "2025-10-17",
+      "degree": 1,
+      "group": "Daily Notes"
+    },
+    {
+      "id": "2025-10-20",
+      "degree": 1,
+      "group": "Daily Notes"
+    },
+    {
+      "id": "2025-10-21",
+      "degree": 1,
+      "group": "Daily Notes"
+    },
+    {
+      "id": "2025-10-22",
+      "degree": 1,
+      "group": "Daily Notes"
+    },
+    {
+      "id": "2025-10-23",
+      "degree": 1,
+      "group": "Daily Notes"
+    },
+    {
+      "id": "2025-10-27",
+      "degree": 1,
+      "group": "Daily Notes"
+    },
+    {
+      "id": "2025-10-28",
+      "degree": 1,
+      "group": "Daily Notes"
+    },
+    {
+      "id": "2025-10-29",
+      "degree": 1,
+      "group": "Daily Notes"
+    },
+    {
+      "id": "2025-10-30",
+      "degree": 1,
+      "group": "Daily Notes"
+    },
+    {
+      "id": "2025-10-31",
+      "degree": 1,
+      "group": "Daily Notes"
+    },
+    {
+      "id": "2025-11-01",
+      "degree": 1,
+      "group": "Daily Notes"
+    },
+    {
+      "id": "2025-11-02",
+      "degree": 1,
+      "group": "Daily Notes"
+    },
+    {
+      "id": "2025-11-03",
+      "degree": 1,
+      "group": "Daily Notes"
+    },
+    {
+      "id": "2025-11-04",
+      "degree": 1,
+      "group": "Daily Notes"
+    },
+    {
+      "id": "2025-11-05",
+      "degree": 1,
+      "group": "Daily Notes"
+    },
+    {
+      "id": "2025-11-09",
+      "degree": 1,
+      "group": "Daily Notes"
+    },
+    {
+      "id": "2025-11-10",
+      "degree": 1,
+      "group": "Daily Notes"
+    },
+    {
+      "id": "2025-11-11",
+      "degree": 1,
+      "group": "Daily Notes"
+    },
+    {
+      "id": "2025-11-14",
+      "degree": 1,
+      "group": "Daily Notes"
+    },
+    {
+      "id": "2025-11-16",
+      "degree": 1,
+      "group": "Daily Notes"
+    },
+    {
+      "id": "2025-11-17",
+      "degree": 1,
+      "group": "Daily Notes"
+    },
+    {
+      "id": "2025-11-19",
+      "degree": 1,
+      "group": "Daily Notes"
+    },
+    {
+      "id": "2025-11-22",
+      "degree": 1,
+      "group": "Daily Notes"
+    },
+    {
+      "id": "2025-11-30",
+      "degree": 1,
+      "group": "Daily Notes"
+    },
+    {
+      "id": "2025-12-02",
+      "degree": 1,
+      "group": "Daily Notes"
+    },
+    {
+      "id": "2025-12-12",
+      "degree": 1,
+      "group": "Daily Notes"
+    },
+    {
+      "id": "2025-12-18",
+      "degree": 1,
+      "group": "Daily Notes"
+    },
+    {
+      "id": "2025-12-20",
+      "degree": 1,
+      "group": "Daily Notes"
+    },
+    {
+      "id": "2025-12-22",
+      "degree": 1,
+      "group": "Daily Notes"
+    },
+    {
+      "id": "2026-01-06",
+      "degree": 1,
+      "group": "Daily Notes"
+    },
+    {
+      "id": "2026-01-07",
+      "degree": 1,
+      "group": "Daily Notes"
+    },
+    {
+      "id": "2026-01-09",
+      "degree": 1,
+      "group": "Daily Notes"
+    },
+    {
+      "id": "2026-01-11",
+      "degree": 1,
+      "group": "Daily Notes"
+    },
+    {
+      "id": "2026-01-12",
+      "degree": 1,
+      "group": "Daily Notes"
+    },
+    {
+      "id": "2026-01-22",
+      "degree": 1,
+      "group": "Daily Notes"
+    },
+    {
+      "id": "2026-01-25",
+      "degree": 1,
+      "group": "Daily Notes"
+    },
+    {
+      "id": "2026-01-29",
+      "degree": 1,
+      "group": "Daily Notes"
+    },
+    {
+      "id": "2026-01-30",
+      "degree": 1,
+      "group": "Daily Notes"
+    },
+    {
+      "id": "2026-02-03",
+      "degree": 9,
+      "group": "German"
+    },
+    {
+      "id": "2026-02-05",
+      "degree": 9,
+      "group": "German"
+    },
+    {
+      "id": "2026-02-12",
+      "degree": 9,
+      "group": "German"
+    },
+    {
+      "id": "2026-02-13",
+      "degree": 9,
+      "group": "German"
+    },
+    {
+      "id": "2026-02-14",
+      "degree": 9,
+      "group": "German"
+    },
+    {
+      "id": "2026-02-15",
+      "degree": 9,
+      "group": "German"
+    },
+    {
+      "id": "2026-02-16",
+      "degree": 1,
+      "group": "Daily Notes"
+    },
+    {
+      "id": "2026-02-17",
+      "degree": 1,
+      "group": "Daily Notes"
+    },
+    {
+      "id": "2026-02-18",
+      "degree": 1,
+      "group": "Daily Notes"
+    },
+    {
+      "id": "2026-02-19",
+      "degree": 1,
+      "group": "Daily Notes"
+    },
+    {
+      "id": "2026-02-20",
+      "degree": 1,
+      "group": "Daily Notes"
+    },
+    {
+      "id": "2026-02-21",
+      "degree": 1,
+      "group": "Daily Notes"
+    },
+    {
+      "id": "2026-02-22",
+      "degree": 1,
+      "group": "Daily Notes"
+    },
+    {
+      "id": "2026-02-23",
+      "degree": 1,
+      "group": "Daily Notes"
+    },
+    {
+      "id": "2026-02-24",
+      "degree": 1,
+      "group": "Daily Notes"
+    },
+    {
+      "id": "2026-02-25",
+      "degree": 1,
+      "group": "Daily Notes"
+    },
+    {
+      "id": "2026-02-26",
+      "degree": 1,
+      "group": "Daily Notes"
+    },
+    {
+      "id": "2026-02-27",
+      "degree": 1,
+      "group": "Daily Notes"
+    },
+    {
+      "id": "2026-02-28",
+      "degree": 1,
+      "group": "Daily Notes"
+    },
+    {
+      "id": "2026-03-01",
+      "degree": 1,
+      "group": "Daily Notes"
+    },
+    {
+      "id": "2026-03-02",
+      "degree": 1,
+      "group": "Daily Notes"
+    },
+    {
+      "id": "2026-03-03",
+      "degree": 1,
+      "group": "Daily Notes"
+    },
+    {
+      "id": "2026-03-04",
+      "degree": 1,
+      "group": "Daily Notes"
+    },
+    {
+      "id": "2026-03-05",
+      "degree": 9,
+      "group": "German"
+    },
+    {
+      "id": "Learning/Learning Goals",
+      "degree": 6,
+      "group": "Other"
+    },
+    {
+      "id": "Library/Backend Engineering/Computer Networking A Top-Down Approach/Computer Networking A Top-Down Approach - Notes",
+      "degree": 5,
+      "group": "Other"
+    },
+    {
+      "id": "Learning/Backlog",
+      "degree": 1,
+      "group": "Other"
+    },
+    {
+      "id": "2026-03-06",
+      "degree": 1,
+      "group": "Daily Notes"
+    },
+    {
+      "id": "2026-03-07",
+      "degree": 11,
+      "group": "German"
+    },
+    {
+      "id": "Engineering/Backend Engineering/Networking/Kurose - Chapter 2 - Application Layer",
+      "degree": 1,
+      "group": "Other"
+    },
+    {
+      "id": "2026-03-09",
+      "degree": 0,
+      "group": "Daily Notes"
+    },
+    {
+      "id": "2026-03-12",
+      "degree": 3,
+      "group": "Daily Notes"
+    },
+    {
+      "id": "Library/Backend Engineering/The Linux Programming Interface/The Linux Programming Interface - Notes",
+      "degree": 1,
+      "group": "Other"
+    },
+    {
+      "id": "2026-03-13",
+      "degree": 0,
+      "group": "Daily Notes"
+    },
+    {
+      "id": "2026-03-19",
+      "degree": 5,
+      "group": "Daily Notes"
+    },
+    {
+      "id": "Library/Backend Engineering/Computer Systems A Programmers Perspective/Computer Systems A Programmers Perspective - Notes",
+      "degree": 8,
+      "group": "Other"
+    },
+    {
+      "id": "Engineering/Backend Engineering/Computer Systems/CSAPP - Chapter 1 - A Tour of Computer Systems",
+      "degree": 2,
+      "group": "Other"
+    },
+    {
+      "id": "Engineering/Backend Engineering/Computer Systems/CSAPP - Chapter 2 - Representing and Manipulating Information",
+      "degree": 2,
+      "group": "Other"
+    },
+    {
+      "id": "2026-03-20",
+      "degree": 0,
+      "group": "Daily Notes"
+    },
+    {
+      "id": "2026-03-21",
+      "degree": 2,
+      "group": "Daily Notes"
+    },
+    {
+      "id": "2026-03-22",
+      "degree": 2,
+      "group": "Daily Notes"
+    },
+    {
+      "id": "2026-03-23",
+      "degree": 3,
+      "group": "Daily Notes"
+    },
+    {
+      "id": "Engineering/Backend Engineering/Computer Systems/CSAPP - Chapter 3 - Machine-Level Representation of Programs",
+      "degree": 2,
+      "group": "Other"
+    },
+    {
+      "id": "2026-03-24",
+      "degree": 3,
+      "group": "Daily Notes"
+    },
+    {
+      "id": "Daily Log",
+      "degree": 3,
+      "group": "Daily Notes"
+    },
+    {
+      "id": "Habit Tracker",
+      "degree": 1,
+      "group": "Other"
+    },
+    {
+      "id": "Habit-Engineering",
+      "degree": 0,
+      "group": "Dashboard"
+    },
+    {
+      "id": "Habit-German",
+      "degree": 0,
+      "group": "Dashboard"
+    },
+    {
+      "id": "Habit-Training",
+      "degree": 0,
+      "group": "Dashboard"
+    },
+    {
+      "id": "Habits",
+      "degree": 0,
+      "group": "Dashboard"
+    },
+    {
+      "id": "Missed",
+      "degree": 0,
+      "group": "Dashboard"
+    },
+    {
+      "id": "Today",
+      "degree": 0,
+      "group": "Dashboard"
+    },
+    {
+      "id": "CSAPP - Chapter 1 - A Tour of Computer Systems",
+      "degree": 5,
+      "group": "Engineering"
+    },
+    {
+      "id": "Library/Backend Engineering/Computer Systems A Programmers Perspective/Computer Systems A Programmers Perspective - Bryant, O'Hallaron.pdf",
+      "degree": 2,
+      "group": "Other"
+    },
+    {
+      "id": "CSAPP - Chapter 11 - Network Programming",
+      "degree": 1,
+      "group": "Engineering"
+    },
+    {
+      "id": "CSAPP - Chapter 8 - Exceptional Control Flow",
+      "degree": 2,
+      "group": "Engineering"
+    },
+    {
+      "id": "CSAPP - Chapter 2 - Representing and Manipulating Information",
+      "degree": 5,
+      "group": "Engineering"
+    },
+    {
+      "id": "CSAPP - Chapter 3 - Machine-Level Representation of Programs",
+      "degree": 3,
+      "group": "Engineering"
+    },
+    {
+      "id": "Apache Beam",
+      "degree": 1,
+      "group": "Engineering"
+    },
+    {
+      "id": "Realtime Government Weather Data",
+      "degree": 1,
+      "group": "Engineering"
+    },
+    {
+      "id": "2024-03-30",
+      "degree": 4,
+      "group": "Engineering"
+    },
+    {
+      "id": "Engineering/Backend Engineering/Kafka/Kafka Hub",
+      "degree": 11,
+      "group": "Other"
+    },
+    {
+      "id": "Kafka Connect Tutorials",
+      "degree": 7,
+      "group": "Engineering"
+    },
+    {
+      "id": "Kafka Brokers",
+      "degree": 16,
+      "group": "Engineering"
+    },
+    {
+      "id": "Overview",
+      "degree": 13,
+      "group": "Engineering"
+    },
+    {
+      "id": "Kafka Hub",
+      "degree": 10,
+      "group": "Engineering"
+    },
+    {
+      "id": "ZooKeeper",
+      "degree": 9,
+      "group": "Engineering"
+    },
+    {
+      "id": "Part One - Distributed Logging",
+      "degree": 10,
+      "group": "Engineering"
+    },
+    {
+      "id": "Part Two - Confluent Modules",
+      "degree": 9,
+      "group": "Engineering"
+    },
+    {
+      "id": "2024-01-26 - Progress Report",
+      "degree": 7,
+      "group": "Engineering"
+    },
+    {
+      "id": "AWS Glue",
+      "degree": 7,
+      "group": "Engineering"
+    },
+    {
+      "id": "Kurose - Chapter 2 - Application Layer",
+      "degree": 3,
+      "group": "Engineering"
+    },
+    {
+      "id": "Kurose, James F._ Ross, Keith W. - Computer networking _ a top-down approach (2017).pdf",
+      "degree": 2,
+      "group": "Other"
+    },
+    {
+      "id": "Control Plane and Nodes",
+      "degree": 2,
+      "group": "Engineering"
+    },
+    {
+      "id": "kubernetes-control-plane-fault-zones.png",
+      "degree": 1,
+      "group": "Other"
+    },
+    {
+      "id": "Database Internals - Chapter 1 - Introduction and Overview",
+      "degree": 5,
+      "group": "Engineering"
+    },
+    {
+      "id": "dbms-architecture-overview.png",
+      "degree": 1,
+      "group": "Other"
+    },
+    {
+      "id": "Senior Data Engineer UpSkilling Plan",
+      "degree": 6,
+      "group": "Engineering"
+    },
+    {
+      "id": "Grain",
+      "degree": 9,
+      "group": "Engineering"
+    },
+    {
+      "id": "Kimball Dimensional Modelling Techniques - Overview",
+      "degree": 17,
+      "group": "Engineering"
+    },
+    {
+      "id": "Surrogate Keys",
+      "degree": 10,
+      "group": "Engineering"
+    },
+    {
+      "id": "Kimball Dimensional Modelling - Summary",
+      "degree": 11,
+      "group": "Engineering"
+    },
+    {
+      "id": "Kimball Dimensional Modelling Techniques - Dealing with Slowly Changing Dimension Attributes",
+      "degree": 9,
+      "group": "Engineering"
+    },
+    {
+      "id": "Kimball Dimensional Modelling Techniques - Basic Dimension Table Techniques",
+      "degree": 11,
+      "group": "Engineering"
+    },
+    {
+      "id": "Kimball Dimensional Modelling Techniques - Basic Fact Table Techniques",
+      "degree": 9,
+      "group": "Engineering"
+    },
+    {
+      "id": "Kimball Dimensional Modelling - Chapter 3 - Findings - Dimension Table Details",
+      "degree": 8,
+      "group": "Engineering"
+    },
+    {
+      "id": "Kimball Dimensional Modelling Techniques - Integration via Conformed Dimensions",
+      "degree": 7,
+      "group": "Engineering"
+    },
+    {
+      "id": "edw-bus-high-level-view.png",
+      "degree": 1,
+      "group": "Other"
+    },
+    {
+      "id": "Curriculum",
+      "degree": 0,
+      "group": "Engineering"
+    },
+    {
+      "id": "L&D",
+      "degree": 2,
+      "group": "Engineering"
+    },
+    {
+      "id": "SQL in a Nutshell, 4th Edition",
+      "degree": 1,
+      "group": "Engineering"
+    },
+    {
+      "id": "Designing Data Intensive Applications",
+      "degree": 2,
+      "group": "Engineering"
+    },
+    {
+      "id": "Lakehouse Essentials - Unit 1 - Lakehouse Fundamentals",
+      "degree": 2,
+      "group": "Engineering"
+    },
+    {
+      "id": "data-platform-components-overview.png",
+      "degree": 1,
+      "group": "Other"
+    },
+    {
+      "id": "storage-abstractions-and-systems.png",
+      "degree": 1,
+      "group": "Other"
+    },
+    {
+      "id": "Lakehouse Essentials - Unit 2 - Storage",
+      "degree": 5,
+      "group": "Engineering"
+    },
+    {
+      "id": "parquet-file-format-layout.png",
+      "degree": 1,
+      "group": "Other"
+    },
+    {
+      "id": "orc-file-format-layout.png",
+      "degree": 1,
+      "group": "Other"
+    },
+    {
+      "id": "avro-file-format-layout.png",
+      "degree": 1,
+      "group": "Other"
+    },
+    {
+      "id": "hive-table-directory-structure.png",
+      "degree": 1,
+      "group": "Other"
+    },
+    {
+      "id": "lakehouse-open-table-formats.png",
+      "degree": 1,
+      "group": "Other"
+    },
+    {
+      "id": "MySQL Fundamentals - Unit 1 - MySQL Architecture and History",
+      "degree": 2,
+      "group": "Engineering"
+    },
+    {
+      "id": "mysql-logical-architecture.png",
+      "degree": 1,
+      "group": "Other"
+    },
+    {
+      "id": "Engineering Hub",
+      "degree": 76,
+      "group": "Engineering"
+    },
+    {
+      "id": "Database Internals - Chapter 1 - Introduction and Overview\\",
+      "degree": 1,
+      "group": "Other"
+    },
+    {
+      "id": "Designing Data Intensive Applications\\",
+      "degree": 1,
+      "group": "Other"
+    },
+    {
+      "id": "SQL in a Nutshell, 4th Edition\\",
+      "degree": 1,
+      "group": "Other"
+    },
+    {
+      "id": "Lakehouse Essentials - Unit 1 - Lakehouse Fundamentals\\",
+      "degree": 1,
+      "group": "Other"
+    },
+    {
+      "id": "Lakehouse Essentials - Unit 2 - Storage\\",
+      "degree": 1,
+      "group": "Other"
+    },
+    {
+      "id": "MySQL Fundamentals - Unit 1 - MySQL Architecture and History\\",
+      "degree": 1,
+      "group": "Other"
+    },
+    {
+      "id": "Library/Library Hub\\",
+      "degree": 1,
+      "group": "Other"
+    },
+    {
+      "id": "UW data",
+      "degree": 1,
+      "group": "Engineering"
+    },
+    {
+      "id": "Engineering/OSS/Airflow Contributions\\",
+      "degree": 3,
+      "group": "Other"
+    },
+    {
+      "id": "Engineering/OSS/Dagster Contributions\\",
+      "degree": 3,
+      "group": "Other"
+    },
+    {
+      "id": "Engineering/GCP Study/GCP Hub",
+      "degree": 21,
+      "group": "Other"
+    },
+    {
+      "id": "GCP Syllabus",
+      "degree": 9,
+      "group": "Engineering"
+    },
+    {
+      "id": "Exam Study",
+      "degree": 8,
+      "group": "Engineering"
+    },
+    {
+      "id": "Introduction to Data Engineering on Google Cloud - Module 1 - Data Engineering Tasks And Components",
+      "degree": 4,
+      "group": "Engineering"
+    },
+    {
+      "id": "Introduction to Data Engineering on Google Cloud - Module 1 - Storage Solution Options on Google Cloud",
+      "degree": 4,
+      "group": "Engineering"
+    },
+    {
+      "id": "Introduction to Data Engineering on Google Cloud - Module 2 - Database Replication and Migration",
+      "degree": 4,
+      "group": "Engineering"
+    },
+    {
+      "id": "Introduction to Data Engineering on Google Cloud - Module 3 - The ETL Data Pipeline Pattern",
+      "degree": 4,
+      "group": "Engineering"
+    },
+    {
+      "id": "Data Lakehouse Essentials - Quick Study Guide",
+      "degree": 4,
+      "group": "Engineering"
+    },
+    {
+      "id": "Section 1.1 Setting up cloud projects and accounts",
+      "degree": 7,
+      "group": "Engineering"
+    },
+    {
+      "id": "Billing Accounts",
+      "degree": 4,
+      "group": "Engineering"
+    },
+    {
+      "id": "Service Accounts",
+      "degree": 5,
+      "group": "Engineering"
+    },
+    {
+      "id": "Review Questions 1.1, 1.2",
+      "degree": 6,
+      "group": "Engineering"
+    },
+    {
+      "id": "Section 2.1, 2.2 Planning, Estimating Pricing & Compute Resources",
+      "degree": 9,
+      "group": "Engineering"
+    },
+    {
+      "id": "Section 2.3 Planning and Configuring Data Storage Options",
+      "degree": 4,
+      "group": "Engineering"
+    },
+    {
+      "id": "Virtual Machines",
+      "degree": 5,
+      "group": "Engineering"
+    },
+    {
+      "id": "Cloud Run",
+      "degree": 5,
+      "group": "Engineering"
+    },
+    {
+      "id": "Kubernetes Engine",
+      "degree": 5,
+      "group": "Engineering"
+    },
+    {
+      "id": "Anthos",
+      "degree": 5,
+      "group": "Engineering"
+    },
+    {
+      "id": "Review Questions 2.1, 2.2",
+      "degree": 4,
+      "group": "Engineering"
+    },
+    {
+      "id": "Review Questions 2.3",
+      "degree": 4,
+      "group": "Engineering"
+    },
+    {
+      "id": "Engineering/GCP Study/A Cloud Guru/Cloud Functions",
+      "degree": 3,
+      "group": "Other"
+    },
+    {
+      "id": "Engineering/GCP Study/OReilly/Section 2/Subpages/Cloud Functions",
+      "degree": 3,
+      "group": "Other"
+    },
+    {
+      "id": "Interview Hub",
+      "degree": 1,
+      "group": "Other"
+    },
+    {
+      "id": "DE Interview - KANBAN",
+      "degree": 1,
+      "group": "Other"
+    },
+    {
+      "id": "Prepping for FAANG Interview",
+      "degree": 1,
+      "group": "Other"
+    },
+    {
+      "id": "Design Twitter",
+      "degree": 1,
+      "group": "Other"
+    },
+    {
+      "id": "Sequencer",
+      "degree": 1,
+      "group": "Other"
+    },
+    {
+      "id": "UUID",
+      "degree": 1,
+      "group": "Other"
+    },
+    {
+      "id": "Metrics Monitoring",
+      "degree": 1,
+      "group": "Other"
+    },
+    {
+      "id": "Data Mesh",
+      "degree": 1,
+      "group": "Other"
+    },
+    {
+      "id": "Spotify - Backend - DataPlatform",
+      "degree": 1,
+      "group": "Other"
+    },
+    {
+      "id": "JD Senior Backend - Data Platform",
+      "degree": 1,
+      "group": "Other"
+    },
+    {
+      "id": "Feedback",
+      "degree": 1,
+      "group": "Other"
+    },
+    {
+      "id": "Interview Experience",
+      "degree": 1,
+      "group": "Other"
+    },
+    {
+      "id": "Feedback - 2024-07-04",
+      "degree": 1,
+      "group": "Other"
+    },
+    {
+      "id": "Job Descriptions",
+      "degree": 1,
+      "group": "Other"
+    },
+    {
+      "id": "Liberty Blume",
+      "degree": 1,
+      "group": "Other"
+    },
+    {
+      "id": "L&D/Curriculum",
+      "degree": 1,
+      "group": "Other"
+    },
+    {
+      "id": "Summary",
+      "degree": 4,
+      "group": "Engineering"
+    },
+    {
+      "id": "Cloud Functions",
+      "degree": 5,
+      "group": "Engineering"
+    },
+    {
+      "id": "How Cloud Functions Work.png",
+      "degree": 1,
+      "group": "Other"
+    },
+    {
+      "id": "CSR, Cloud Build, Cloud Run.png",
+      "degree": 1,
+      "group": "Other"
+    },
+    {
+      "id": "GCP Hub",
+      "degree": 22,
+      "group": "Engineering"
+    },
+    {
+      "id": "Airflow Contributions",
+      "degree": 2,
+      "group": "Engineering"
+    },
+    {
+      "id": "Dagster Contributions",
+      "degree": 2,
+      "group": "Engineering"
+    },
+    {
+      "id": "OSS Hub",
+      "degree": 3,
+      "group": "Engineering"
+    },
+    {
+      "id": "Babbel - Newcomer 2 (A1.2) - German Modal Verbs & Word Order - Complete Guide",
+      "degree": 22,
+      "group": "German"
+    },
+    {
+      "id": "Week 3 - Claude Learnings - Verb Conjugation",
+      "degree": 12,
+      "group": "German"
+    },
+    {
+      "id": "Week 3 - Claude Learnings - German Grammar",
+      "degree": 10,
+      "group": "German"
+    },
+    {
+      "id": "German Hub",
+      "degree": 38,
+      "group": "German"
+    },
+    {
+      "id": "Week 2 - Claude Learnings - German Plural Formation\\",
+      "degree": 1,
+      "group": "Other"
+    },
+    {
+      "id": "Week 3 - Claude Learnings - German Personal Pronouns\\",
+      "degree": 1,
+      "group": "Other"
+    },
+    {
+      "id": "Week 3 - Claude Learnings - Verb Conjugation\\",
+      "degree": 1,
+      "group": "Other"
+    },
+    {
+      "id": "Week 3 - Claude Learnings - German Grammar\\",
+      "degree": 1,
+      "group": "Other"
+    },
+    {
+      "id": "Babbel - Newcomer 2 (A1.2) - German Modal Verbs & Word Order - Complete Guide\\",
+      "degree": 1,
+      "group": "Other"
+    },
+    {
+      "id": "Reference - Starke und unregelmäßige Verben - A1-A2\\",
+      "degree": 1,
+      "group": "Other"
+    },
+    {
+      "id": "Reference - Trennbare Verben - A1\\",
+      "degree": 1,
+      "group": "Other"
+    },
+    {
+      "id": "Reference - Quick Guide - A1\\",
+      "degree": 1,
+      "group": "Other"
+    },
+    {
+      "id": "2025-12-30",
+      "degree": 6,
+      "group": "German"
+    },
+    {
+      "id": "2025-12-31",
+      "degree": 7,
+      "group": "German"
+    },
+    {
+      "id": "2026-01-01",
+      "degree": 8,
+      "group": "German"
+    },
+    {
+      "id": "2026-01-08",
+      "degree": 6,
+      "group": "German"
+    },
+    {
+      "id": "2026-02-01",
+      "degree": 8,
+      "group": "German"
+    },
+    {
+      "id": "2026-02-02",
+      "degree": 8,
+      "group": "German"
+    },
+    {
+      "id": "2026-02-04",
+      "degree": 8,
+      "group": "German"
+    },
+    {
+      "id": "2026-02-06",
+      "degree": 8,
+      "group": "German"
+    },
+    {
+      "id": "2026-02-07",
+      "degree": 8,
+      "group": "German"
+    },
+    {
+      "id": "2026-02-08",
+      "degree": 8,
+      "group": "German"
+    },
+    {
+      "id": "2026-02-09",
+      "degree": 8,
+      "group": "German"
+    },
+    {
+      "id": "2026-02-10",
+      "degree": 8,
+      "group": "German"
+    },
+    {
+      "id": "2026-02-11",
+      "degree": 8,
+      "group": "German"
+    },
+    {
+      "id": "Week 2 - Claude Learnings - German Plural Formation",
+      "degree": 9,
+      "group": "German"
+    },
+    {
+      "id": "Week 3 - Claude Learnings - German Personal Pronouns",
+      "degree": 9,
+      "group": "German"
+    },
+    {
+      "id": "Week 3 - Claude Learnings - Daily Recap - 2025-11-01",
+      "degree": 4,
+      "group": "German"
+    },
+    {
+      "id": "2025-05-04",
+      "degree": 3,
+      "group": "German"
+    },
+    {
+      "id": "Resources",
+      "degree": 3,
+      "group": "German"
+    },
+    {
+      "id": "Reference - Quick Guide - A1",
+      "degree": 24,
+      "group": "German"
+    },
+    {
+      "id": "Reference - Starke und unregelmäßige Verben - A1-A2",
+      "degree": 20,
+      "group": "German"
+    },
+    {
+      "id": "Reference - Trennbare Verben - A1",
+      "degree": 21,
+      "group": "German"
+    },
+    {
+      "id": "German/Tagebuch/2025-12/2025-12-31",
+      "degree": 1,
+      "group": "Other"
+    },
+    {
+      "id": "German/Tagebuch/2026-01/2026-01-01",
+      "degree": 1,
+      "group": "Other"
+    },
+    {
+      "id": "German/Tagebuch/2026-01/2026-01-08",
+      "degree": 2,
+      "group": "Other"
+    },
+    {
+      "id": "German/Tagebuch/2026-02/2026-02-01",
+      "degree": 2,
+      "group": "Other"
+    },
+    {
+      "id": "German/Tagebuch/2026-02/2026-02-02",
+      "degree": 2,
+      "group": "Other"
+    },
+    {
+      "id": "German/Tagebuch/2026-02/2026-02-03",
+      "degree": 2,
+      "group": "Other"
+    },
+    {
+      "id": "German/Tagebuch/2026-02/2026-02-04",
+      "degree": 2,
+      "group": "Other"
+    },
+    {
+      "id": "German/Tagebuch/2026-02/2026-02-05",
+      "degree": 2,
+      "group": "Other"
+    },
+    {
+      "id": "German/Tagebuch/2026-02/2026-02-06",
+      "degree": 2,
+      "group": "Other"
+    },
+    {
+      "id": "German/Tagebuch/2026-02/2026-02-07",
+      "degree": 2,
+      "group": "Other"
+    },
+    {
+      "id": "German/Tagebuch/2026-02/2026-02-08",
+      "degree": 2,
+      "group": "Other"
+    },
+    {
+      "id": "German/Tagebuch/2026-02/2026-02-09",
+      "degree": 2,
+      "group": "Other"
+    },
+    {
+      "id": "German/Tagebuch/2026-02/2026-02-10",
+      "degree": 2,
+      "group": "Other"
+    },
+    {
+      "id": "German/Tagebuch/2026-02/2026-02-11",
+      "degree": 2,
+      "group": "Other"
+    },
+    {
+      "id": "German/Tagebuch/2026-02/2026-02-12",
+      "degree": 2,
+      "group": "Other"
+    },
+    {
+      "id": "German/Tagebuch/2026-02/2026-02-13",
+      "degree": 2,
+      "group": "Other"
+    },
+    {
+      "id": "German/Tagebuch/2026-02/2026-02-14",
+      "degree": 2,
+      "group": "Other"
+    },
+    {
+      "id": "German/Tagebuch/2026-02/2026-02-15",
+      "degree": 1,
+      "group": "Other"
+    },
+    {
+      "id": "German/Tagebuch/2026-03/2026-03-05",
+      "degree": 2,
+      "group": "Other"
+    },
+    {
+      "id": "German/Tagebuch/2026-03/2026-03-07",
+      "degree": 2,
+      "group": "Other"
+    },
+    {
+      "id": "German/Tagebuch/2026-03/2026-03-08",
+      "degree": 1,
+      "group": "Other"
+    },
+    {
+      "id": "2026-03-08",
+      "degree": 6,
+      "group": "German"
+    },
+    {
+      "id": "Backlog",
+      "degree": 2,
+      "group": "Learning"
+    },
+    {
+      "id": "Learning Goals",
+      "degree": 18,
+      "group": "Learning"
+    },
+    {
+      "id": "Library/Backend Engineering/Site Reliability Engineering/Site Reliability Engineering - Notes\\",
+      "degree": 2,
+      "group": "Other"
+    },
+    {
+      "id": "Learning/Repos/deep-systems",
+      "degree": 1,
+      "group": "Other"
+    },
+    {
+      "id": "Designing Data-Intensive Applications.pdf",
+      "degree": 2,
+      "group": "Other"
+    },
+    {
+      "id": "Library/Data Engineering/Database Internals/Database Internals - Notes",
+      "degree": 1,
+      "group": "Other"
+    },
+    {
+      "id": "Library/Backend Engineering/Structure and Interpretation of Computer Programs/Structure and Interpretation of Computer Programs - Notes",
+      "degree": 1,
+      "group": "Other"
+    },
+    {
+      "id": "Library/Backend Engineering/Computer Systems A Programmers Perspective/Computer Systems A Programmers Perspective - Notes\\",
+      "degree": 2,
+      "group": "Other"
+    },
+    {
+      "id": "Library/Backend Engineering/Structure and Interpretation of Computer Programs/Structure and Interpretation of Computer Programs - Notes\\",
+      "degree": 2,
+      "group": "Other"
+    },
+    {
+      "id": "Library/Backend Engineering/Computer Networking A Top-Down Approach/Computer Networking A Top-Down Approach - Notes\\",
+      "degree": 2,
+      "group": "Other"
+    },
+    {
+      "id": "Library/Backend Engineering/Kubernetes in Action/Kubernetes in Action - Notes\\",
+      "degree": 2,
+      "group": "Other"
+    },
+    {
+      "id": "Library/Backend Engineering/The Linux Programming Interface/The Linux Programming Interface - Notes\\",
+      "degree": 2,
+      "group": "Other"
+    },
+    {
+      "id": "Library/Backend Engineering/Effective Java/Effective Java - Notes\\",
+      "degree": 2,
+      "group": "Other"
+    },
+    {
+      "id": "AmazonInterviewPrep",
+      "degree": 0,
+      "group": "Learning"
+    },
+    {
+      "id": "Dashboard",
+      "degree": 1,
+      "group": "Learning"
+    },
+    {
+      "id": "Learning/Repos/Repos",
+      "degree": 1,
+      "group": "Other"
+    },
+    {
+      "id": "Repos",
+      "degree": 0,
+      "group": "Learning"
+    },
+    {
+      "id": "deep-systems",
+      "degree": 0,
+      "group": "Learning"
+    },
+    {
+      "id": "AI Engineering - Notes",
+      "degree": 0,
+      "group": "Library"
+    },
+    {
+      "id": "AI and ML for Coders - Notes",
+      "degree": 0,
+      "group": "Library"
+    },
+    {
+      "id": "Building Applications with AI Agents - Notes",
+      "degree": 0,
+      "group": "Library"
+    },
+    {
+      "id": "Crafting Engineering Strategy - Notes",
+      "degree": 0,
+      "group": "Library"
+    },
+    {
+      "id": "Designing Machine Learning Systems - Notes",
+      "degree": 0,
+      "group": "Library"
+    },
+    {
+      "id": "Developer's Playbook for Large Language Model Security - Notes",
+      "degree": 0,
+      "group": "Library"
+    },
+    {
+      "id": "Engineering Executive's Primer - Notes",
+      "degree": 0,
+      "group": "Library"
+    },
+    {
+      "id": "Generative AI Design Patterns - Notes",
+      "degree": 0,
+      "group": "Library"
+    },
+    {
+      "id": "Hands-On Large Language Models - Notes",
+      "degree": 0,
+      "group": "Library"
+    },
+    {
+      "id": "Hands-On Machine Learning with Scikit-Learn and PyTorch - Notes",
+      "degree": 0,
+      "group": "Library"
+    },
+    {
+      "id": "LLM Ops - Notes",
+      "degree": 0,
+      "group": "Library"
+    },
+    {
+      "id": "Learning LangChain - Notes",
+      "degree": 0,
+      "group": "Library"
+    },
+    {
+      "id": "Prompt Engineering for Generative AI - Notes",
+      "degree": 0,
+      "group": "Library"
+    },
+    {
+      "id": "Visualizing Generative AI - Notes",
+      "degree": 0,
+      "group": "Library"
+    },
+    {
+      "id": "Computer Networking A Top-Down Approach - Notes",
+      "degree": 4,
+      "group": "Library"
+    },
+    {
+      "id": "Library/Backend Engineering/Unix and Linux System Administration Handbook - Notes",
+      "degree": 1,
+      "group": "Other"
+    },
+    {
+      "id": "Computer Systems A Programmers Perspective - Notes",
+      "degree": 2,
+      "group": "Library"
+    },
+    {
+      "id": "Randal E. Bryant_ David R. O'Hallaron - Computer Systems A Programmer's Perspective (2015, Pearson Education).pdf",
+      "degree": 1,
+      "group": "Other"
+    },
+    {
+      "id": "Effective Java - Notes",
+      "degree": 0,
+      "group": "Library"
+    },
+    {
+      "id": "Kubernetes in Action - Notes",
+      "degree": 0,
+      "group": "Library"
+    },
+    {
+      "id": "Site Reliability Engineering - Notes",
+      "degree": 0,
+      "group": "Library"
+    },
+    {
+      "id": "Structure and Interpretation of Computer Programs - Notes",
+      "degree": 2,
+      "group": "Library"
+    },
+    {
+      "id": "Structure and Interpretation of Computer Programs - Abelson, Sussman.pdf",
+      "degree": 1,
+      "group": "Other"
+    },
+    {
+      "id": "Systems Performance - Notes",
+      "degree": 0,
+      "group": "Library"
+    },
+    {
+      "id": "The Linux Command Line - Notes",
+      "degree": 3,
+      "group": "Library"
+    },
+    {
+      "id": "The Linux Command Line - William Shotts.pdf",
+      "degree": 1,
+      "group": "Other"
+    },
+    {
+      "id": "Engineering/Backend Engineering/Platform Engineering",
+      "degree": 2,
+      "group": "Other"
+    },
+    {
+      "id": "The Linux Programming Interface - Notes",
+      "degree": 0,
+      "group": "Library"
+    },
+    {
+      "id": "Unix and Linux System Administration Handbook - Notes",
+      "degree": 3,
+      "group": "Library"
+    },
+    {
+      "id": "Unix and Linux System Administration Handbook - Nemeth et al.pdf",
+      "degree": 1,
+      "group": "Other"
+    },
+    {
+      "id": "Database Internals - Notes",
+      "degree": 3,
+      "group": "Library"
+    },
+    {
+      "id": "Database Internals.pdf",
+      "degree": 1,
+      "group": "Other"
+    },
+    {
+      "id": "Designing Data-Intensive Applications - Notes",
+      "degree": 3,
+      "group": "Library"
+    },
+    {
+      "id": "Fluent Python - Notes",
+      "degree": 2,
+      "group": "Library"
+    },
+    {
+      "id": "Fluent Python.pdf",
+      "degree": 1,
+      "group": "Other"
+    },
+    {
+      "id": "Kafka - The Definitive Guide - Notes",
+      "degree": 5,
+      "group": "Library"
+    },
+    {
+      "id": "Kafka - The Definitive Guide.pdf",
+      "degree": 1,
+      "group": "Other"
+    },
+    {
+      "id": "Learning Go - Notes",
+      "degree": 4,
+      "group": "Library"
+    },
+    {
+      "id": "Learning Go.pdf",
+      "degree": 1,
+      "group": "Other"
+    },
+    {
+      "id": "The Go Programming Language - Notes",
+      "degree": 4,
+      "group": "Library"
+    },
+    {
+      "id": "Streaming Systems - Notes",
+      "degree": 4,
+      "group": "Library"
+    },
+    {
+      "id": "Streaming Systems - Tyler Akidau.pdf",
+      "degree": 1,
+      "group": "Other"
+    },
+    {
+      "id": "The Go Programming Language.pdf",
+      "degree": 1,
+      "group": "Other"
+    },
+    {
+      "id": "Library Hub",
+      "degree": 34,
+      "group": "Library"
+    },
+    {
+      "id": "Library/Data Engineering/Book Title - Notes",
+      "degree": 1,
+      "group": "Other"
+    },
+    {
+      "id": "Library/Data Engineering/Kafka - The Definitive Guide/Kafka - The Definitive Guide - Notes\\",
+      "degree": 1,
+      "group": "Other"
+    },
+    {
+      "id": "Library/Data Engineering/Database Internals/Database Internals - Notes\\",
+      "degree": 1,
+      "group": "Other"
+    },
+    {
+      "id": "Library/Data Engineering/Designing Data-Intensive Applications/Designing Data-Intensive Applications - Notes\\",
+      "degree": 1,
+      "group": "Other"
+    },
+    {
+      "id": "Library/Data Engineering/Learning Go/Learning Go - Notes\\",
+      "degree": 1,
+      "group": "Other"
+    },
+    {
+      "id": "Library/Data Engineering/Fluent Python/Fluent Python - Notes\\",
+      "degree": 1,
+      "group": "Other"
+    },
+    {
+      "id": "Library/Data Engineering/The Go Programming Language/The Go Programming Language - Notes\\",
+      "degree": 1,
+      "group": "Other"
+    },
+    {
+      "id": "Library/Data Engineering/Streaming Systems/Streaming Systems - Notes\\",
+      "degree": 1,
+      "group": "Other"
+    },
+    {
+      "id": "Library/Backend Engineering/Unix and Linux System Administration Handbook/Unix and Linux System Administration Handbook - Notes\\",
+      "degree": 1,
+      "group": "Other"
+    },
+    {
+      "id": "Library/Backend Engineering/The Linux Command Line/The Linux Command Line - Notes\\",
+      "degree": 1,
+      "group": "Other"
+    },
+    {
+      "id": "Library/Backend Engineering/Systems Performance/Systems Performance - Notes\\",
+      "degree": 1,
+      "group": "Other"
+    },
+    {
+      "id": "Library/AI/Designing Machine Learning Systems/Designing Machine Learning Systems - Notes\\",
+      "degree": 1,
+      "group": "Other"
+    },
+    {
+      "id": "Library/AI/AI Engineering/AI Engineering - Notes\\",
+      "degree": 1,
+      "group": "Other"
+    },
+    {
+      "id": "Library/AI/Engineering Executive's Primer/Engineering Executive's Primer - Notes\\",
+      "degree": 1,
+      "group": "Other"
+    },
+    {
+      "id": "Library/AI/Hands-On Machine Learning with Scikit-Learn and PyTorch/Hands-On Machine Learning with Scikit-Learn and PyTorch - Notes\\",
+      "degree": 1,
+      "group": "Other"
+    },
+    {
+      "id": "Library/AI/Visualizing Generative AI/Visualizing Generative AI - Notes\\",
+      "degree": 1,
+      "group": "Other"
+    },
+    {
+      "id": "Library/AI/LLM Ops/LLM Ops - Notes\\",
+      "degree": 1,
+      "group": "Other"
+    },
+    {
+      "id": "Library/AI/Developer's Playbook for Large Language Model Security/Developer's Playbook for Large Language Model Security - Notes\\",
+      "degree": 1,
+      "group": "Other"
+    },
+    {
+      "id": "Library/AI/Generative AI Design Patterns/Generative AI Design Patterns - Notes\\",
+      "degree": 1,
+      "group": "Other"
+    },
+    {
+      "id": "Library/AI/Learning LangChain/Learning LangChain - Notes\\",
+      "degree": 1,
+      "group": "Other"
+    },
+    {
+      "id": "Library/AI/Building Applications with AI Agents/Building Applications with AI Agents - Notes\\",
+      "degree": 1,
+      "group": "Other"
+    },
+    {
+      "id": "Library/AI/Prompt Engineering for Generative AI/Prompt Engineering for Generative AI - Notes\\",
+      "degree": 1,
+      "group": "Other"
+    },
+    {
+      "id": "Library/AI/Hands-On Large Language Models/Hands-On Large Language Models - Notes\\",
+      "degree": 1,
+      "group": "Other"
+    },
+    {
+      "id": "Library/AI/AI and ML for Coders/AI and ML for Coders - Notes\\",
+      "degree": 1,
+      "group": "Other"
+    },
+    {
+      "id": "Library/AI/Crafting Engineering Strategy/Crafting Engineering Strategy - Notes\\",
+      "degree": 1,
+      "group": "Other"
+    },
+    {
+      "id": "Obsidian Graph Colour Affinity Plugin",
+      "degree": 0,
+      "group": "Projects"
+    },
+    {
+      "id": "Satellite Vaults",
+      "degree": 3,
+      "group": "Setup"
+    },
+    {
+      "id": "Setup/new-vault-setup",
+      "degree": 1,
+      "group": "Other"
+    },
+    {
+      "id": "Setup/Setup Hub",
+      "degree": 4,
+      "group": "Other"
+    },
+    {
+      "id": "Setup Hub",
+      "degree": 6,
+      "group": "Setup"
+    },
+    {
+      "id": "Setup/tmux\\",
+      "degree": 1,
+      "group": "Other"
+    },
+    {
+      "id": "Setup/neovim\\",
+      "degree": 1,
+      "group": "Other"
+    },
+    {
+      "id": "Setup/new-vault-setup\\",
+      "degree": 1,
+      "group": "Other"
+    },
+    {
+      "id": "Setup/Satellite Vaults\\",
+      "degree": 1,
+      "group": "Other"
+    },
+    {
+      "id": "Setup/tmux",
+      "degree": 2,
+      "group": "Other"
+    },
+    {
+      "id": "Setup/neovim",
+      "degree": 1,
+      "group": "Other"
+    },
+    {
+      "id": "neovim",
+      "degree": 3,
+      "group": "Setup"
+    },
+    {
+      "id": "autocmd VimEnter * Neotree filesystem reveal left",
+      "degree": 1,
+      "group": "Other"
+    },
+    {
+      "id": "new-vault-setup",
+      "degree": 8,
+      "group": "Setup"
+    },
+    {
+      "id": "Folder/Note",
+      "degree": 1,
+      "group": "Other"
+    },
+    {
+      "id": "<Vault Name>",
+      "degree": 1,
+      "group": "Other"
+    },
+    {
+      "id": "link",
+      "degree": 1,
+      "group": "Other"
+    },
+    {
+      "id": "jandys-vault goals",
+      "degree": 1,
+      "group": "Other"
+    },
+    {
+      "id": "link to vault goals",
+      "degree": 1,
+      "group": "Other"
+    },
+    {
+      "id": "tmux",
+      "degree": 1,
+      "group": "Setup"
+    },
+    {
+      "id": "Ayla - Design Commission",
+      "degree": 0,
+      "group": "Tattoo"
+    },
+    {
+      "id": "Daily Notes",
+      "degree": 0,
+      "group": "Templates"
+    },
+    {
+      "id": "0000-01-01 - Catchup",
+      "degree": 0,
+      "group": "Templates"
+    },
+    {
+      "id": "Sprint Tasks",
+      "degree": 0,
+      "group": "Templates"
+    },
+    {
+      "id": "European Trip - Spring 2025",
+      "degree": 0,
+      "group": "Travel"
+    }
+  ],
+  "links": [
+    {
+      "source": "CLAUDE",
+      "target": "Note Name"
+    },
+    {
+      "source": "CLAUDE",
+      "target": "Folder/Note Name"
+    },
+    {
+      "source": "CLAUDE",
+      "target": "filename.pdf"
+    },
+    {
+      "source": "CLAUDE",
+      "target": "German/German Hub"
+    },
+    {
+      "source": "CLAUDE",
+      "target": "Engineering/Engineering Hub"
+    },
+    {
+      "source": "CLAUDE",
+      "target": "Engineering/OSS/OSS Hub"
+    },
+    {
+      "source": "CLAUDE",
+      "target": "Library/Library Hub"
+    },
+    {
+      "source": "2024-12-27",
+      "target": "Daily Notes/Daily Log"
+    },
+    {
+      "source": "2025-01-04",
+      "target": "Daily Notes/Daily Log"
+    },
+    {
+      "source": "2025-01-06",
+      "target": "Daily Notes/Daily Log"
+    },
+    {
+      "source": "2025-01-09",
+      "target": "Daily Notes/Daily Log"
+    },
+    {
+      "source": "2025-01-14",
+      "target": "Daily Notes/Daily Log"
+    },
+    {
+      "source": "2025-02-13",
+      "target": "Daily Notes/Daily Log"
+    },
+    {
+      "source": "2025-02-14",
+      "target": "Daily Notes/Daily Log"
+    },
+    {
+      "source": "2025-04-14",
+      "target": "Daily Notes/Daily Log"
+    },
+    {
+      "source": "2025-05-13",
+      "target": "Daily Notes/Daily Log"
+    },
+    {
+      "source": "2025-05-25",
+      "target": "Daily Notes/Daily Log"
+    },
+    {
+      "source": "2025-05-26",
+      "target": "Daily Notes/Daily Log"
+    },
+    {
+      "source": "2025-05-28",
+      "target": "Daily Notes/Daily Log"
+    },
+    {
+      "source": "2025-05-29",
+      "target": "Daily Notes/Daily Log"
+    },
+    {
+      "source": "2025-05-30",
+      "target": "Daily Notes/Daily Log"
+    },
+    {
+      "source": "2025-06-01",
+      "target": "Daily Notes/Daily Log"
+    },
+    {
+      "source": "2025-06-03",
+      "target": "Daily Notes/Daily Log"
+    },
+    {
+      "source": "2025-06-08",
+      "target": "Daily Notes/Daily Log"
+    },
+    {
+      "source": "2025-06-11",
+      "target": "Daily Notes/Daily Log"
+    },
+    {
+      "source": "2025-06-12",
+      "target": "Daily Notes/Daily Log"
+    },
+    {
+      "source": "2025-06-14",
+      "target": "Daily Notes/Daily Log"
+    },
+    {
+      "source": "2025-06-15",
+      "target": "Daily Notes/Daily Log"
+    },
+    {
+      "source": "2025-06-16",
+      "target": "Daily Notes/Daily Log"
+    },
+    {
+      "source": "2025-06-18",
+      "target": "Daily Notes/Daily Log"
+    },
+    {
+      "source": "2025-06-24",
+      "target": "Daily Notes/Daily Log"
+    },
+    {
+      "source": "2025-06-26",
+      "target": "Daily Notes/Daily Log"
+    },
+    {
+      "source": "2025-06-28",
+      "target": "Daily Notes/Daily Log"
+    },
+    {
+      "source": "2025-07-02",
+      "target": "Daily Notes/Daily Log"
+    },
+    {
+      "source": "2025-07-03",
+      "target": "Daily Notes/Daily Log"
+    },
+    {
+      "source": "2025-07-04",
+      "target": "Daily Notes/Daily Log"
+    },
+    {
+      "source": "2025-07-07",
+      "target": "Daily Notes/Daily Log"
+    },
+    {
+      "source": "2025-07-08",
+      "target": "Daily Notes/Daily Log"
+    },
+    {
+      "source": "2025-07-11",
+      "target": "Daily Notes/Daily Log"
+    },
+    {
+      "source": "2025-07-12",
+      "target": "Daily Notes/Daily Log"
+    },
+    {
+      "source": "2025-07-18",
+      "target": "Daily Notes/Daily Log"
+    },
+    {
+      "source": "2025-07-24",
+      "target": "Daily Notes/Daily Log"
+    },
+    {
+      "source": "2025-07-29",
+      "target": "Daily Notes/Daily Log"
+    },
+    {
+      "source": "2025-08-02",
+      "target": "Daily Notes/Daily Log"
+    },
+    {
+      "source": "2025-08-04",
+      "target": "Daily Notes/Daily Log"
+    },
+    {
+      "source": "2025-08-05",
+      "target": "Daily Notes/Daily Log"
+    },
+    {
+      "source": "2025-08-06",
+      "target": "Daily Notes/Daily Log"
+    },
+    {
+      "source": "2025-08-08",
+      "target": "Daily Notes/Daily Log"
+    },
+    {
+      "source": "2025-08-12",
+      "target": "Daily Notes/Daily Log"
+    },
+    {
+      "source": "2025-08-19",
+      "target": "Daily Notes/Daily Log"
+    },
+    {
+      "source": "2025-08-21",
+      "target": "Daily Notes/Daily Log"
+    },
+    {
+      "source": "2025-08-29",
+      "target": "Daily Notes/Daily Log"
+    },
+    {
+      "source": "2025-09-04",
+      "target": "Daily Notes/Daily Log"
+    },
+    {
+      "source": "2025-09-11",
+      "target": "Daily Notes/Daily Log"
+    },
+    {
+      "source": "2025-09-15",
+      "target": "Daily Notes/Daily Log"
+    },
+    {
+      "source": "2025-09-25",
+      "target": "Daily Notes/Daily Log"
+    },
+    {
+      "source": "2025-10-05",
+      "target": "Daily Notes/Daily Log"
+    },
+    {
+      "source": "2025-10-06",
+      "target": "Daily Notes/Daily Log"
+    },
+    {
+      "source": "2025-10-07",
+      "target": "Daily Notes/Daily Log"
+    },
+    {
+      "source": "2025-10-10",
+      "target": "Daily Notes/Daily Log"
+    },
+    {
+      "source": "2025-10-13",
+      "target": "Daily Notes/Daily Log"
+    },
+    {
+      "source": "2025-10-16",
+      "target": "Daily Notes/Daily Log"
+    },
+    {
+      "source": "2025-10-17",
+      "target": "Daily Notes/Daily Log"
+    },
+    {
+      "source": "2025-10-20",
+      "target": "Daily Notes/Daily Log"
+    },
+    {
+      "source": "2025-10-21",
+      "target": "Daily Notes/Daily Log"
+    },
+    {
+      "source": "2025-10-22",
+      "target": "Daily Notes/Daily Log"
+    },
+    {
+      "source": "2025-10-23",
+      "target": "Daily Notes/Daily Log"
+    },
+    {
+      "source": "2025-10-27",
+      "target": "Daily Notes/Daily Log"
+    },
+    {
+      "source": "2025-10-28",
+      "target": "Daily Notes/Daily Log"
+    },
+    {
+      "source": "2025-10-29",
+      "target": "Daily Notes/Daily Log"
+    },
+    {
+      "source": "2025-10-30",
+      "target": "Daily Notes/Daily Log"
+    },
+    {
+      "source": "2025-10-31",
+      "target": "Daily Notes/Daily Log"
+    },
+    {
+      "source": "2025-11-01",
+      "target": "Daily Notes/Daily Log"
+    },
+    {
+      "source": "2025-11-02",
+      "target": "Daily Notes/Daily Log"
+    },
+    {
+      "source": "2025-11-03",
+      "target": "Daily Notes/Daily Log"
+    },
+    {
+      "source": "2025-11-04",
+      "target": "Daily Notes/Daily Log"
+    },
+    {
+      "source": "2025-11-05",
+      "target": "Daily Notes/Daily Log"
+    },
+    {
+      "source": "2025-11-09",
+      "target": "Daily Notes/Daily Log"
+    },
+    {
+      "source": "2025-11-10",
+      "target": "Daily Notes/Daily Log"
+    },
+    {
+      "source": "2025-11-11",
+      "target": "Daily Notes/Daily Log"
+    },
+    {
+      "source": "2025-11-14",
+      "target": "Daily Notes/Daily Log"
+    },
+    {
+      "source": "2025-11-16",
+      "target": "Daily Notes/Daily Log"
+    },
+    {
+      "source": "2025-11-17",
+      "target": "Daily Notes/Daily Log"
+    },
+    {
+      "source": "2025-11-19",
+      "target": "Daily Notes/Daily Log"
+    },
+    {
+      "source": "2025-11-22",
+      "target": "Daily Notes/Daily Log"
+    },
+    {
+      "source": "2025-11-30",
+      "target": "Daily Notes/Daily Log"
+    },
+    {
+      "source": "2025-12-02",
+      "target": "Daily Notes/Daily Log"
+    },
+    {
+      "source": "2025-12-12",
+      "target": "Daily Notes/Daily Log"
+    },
+    {
+      "source": "2025-12-18",
+      "target": "Daily Notes/Daily Log"
+    },
+    {
+      "source": "2025-12-20",
+      "target": "Daily Notes/Daily Log"
+    },
+    {
+      "source": "2025-12-22",
+      "target": "Daily Notes/Daily Log"
+    },
+    {
+      "source": "2026-01-06",
+      "target": "Daily Notes/Daily Log"
+    },
+    {
+      "source": "2026-01-07",
+      "target": "Daily Notes/Daily Log"
+    },
+    {
+      "source": "2026-01-09",
+      "target": "Daily Notes/Daily Log"
+    },
+    {
+      "source": "2026-01-11",
+      "target": "Daily Notes/Daily Log"
+    },
+    {
+      "source": "2026-01-12",
+      "target": "Daily Notes/Daily Log"
+    },
+    {
+      "source": "2026-01-22",
+      "target": "Daily Notes/Daily Log"
+    },
+    {
+      "source": "2026-01-25",
+      "target": "Daily Notes/Daily Log"
+    },
+    {
+      "source": "2026-01-29",
+      "target": "Daily Notes/Daily Log"
+    },
+    {
+      "source": "2026-01-30",
+      "target": "Daily Notes/Daily Log"
+    },
+    {
+      "source": "2026-02-03",
+      "target": "Daily Notes/Daily Log"
+    },
+    {
+      "source": "2026-02-05",
+      "target": "Daily Notes/Daily Log"
+    },
+    {
+      "source": "2026-02-12",
+      "target": "Daily Notes/Daily Log"
+    },
+    {
+      "source": "2026-02-13",
+      "target": "Daily Notes/Daily Log"
+    },
+    {
+      "source": "2026-02-14",
+      "target": "Daily Notes/Daily Log"
+    },
+    {
+      "source": "2026-02-15",
+      "target": "Daily Notes/Daily Log"
+    },
+    {
+      "source": "2026-02-16",
+      "target": "Daily Notes/Daily Log"
+    },
+    {
+      "source": "2026-02-17",
+      "target": "Daily Notes/Daily Log"
+    },
+    {
+      "source": "2026-02-18",
+      "target": "Daily Notes/Daily Log"
+    },
+    {
+      "source": "2026-02-19",
+      "target": "Daily Notes/Daily Log"
+    },
+    {
+      "source": "2026-02-20",
+      "target": "Daily Notes/Daily Log"
+    },
+    {
+      "source": "2026-02-21",
+      "target": "Daily Notes/Daily Log"
+    },
+    {
+      "source": "2026-02-22",
+      "target": "Daily Notes/Daily Log"
+    },
+    {
+      "source": "2026-02-23",
+      "target": "Daily Notes/Daily Log"
+    },
+    {
+      "source": "2026-02-24",
+      "target": "Daily Notes/Daily Log"
+    },
+    {
+      "source": "2026-02-25",
+      "target": "Daily Notes/Daily Log"
+    },
+    {
+      "source": "2026-02-26",
+      "target": "Daily Notes/Daily Log"
+    },
+    {
+      "source": "2026-02-27",
+      "target": "Daily Notes/Daily Log"
+    },
+    {
+      "source": "2026-02-28",
+      "target": "Daily Notes/Daily Log"
+    },
+    {
+      "source": "2026-03-01",
+      "target": "Daily Notes/Daily Log"
+    },
+    {
+      "source": "2026-03-02",
+      "target": "Daily Notes/Daily Log"
+    },
+    {
+      "source": "2026-03-03",
+      "target": "Daily Notes/Daily Log"
+    },
+    {
+      "source": "2026-03-04",
+      "target": "Daily Notes/Daily Log"
+    },
+    {
+      "source": "2026-03-05",
+      "target": "Engineering/Engineering Hub"
+    },
+    {
+      "source": "2026-03-05",
+      "target": "Learning/Learning Goals"
+    },
+    {
+      "source": "2026-03-05",
+      "target": "Library/Backend Engineering/Computer Networking A Top-Down Approach/Computer Networking A Top-Down Approach - Notes"
+    },
+    {
+      "source": "2026-03-05",
+      "target": "Learning/Backlog"
+    },
+    {
+      "source": "2026-03-05",
+      "target": "Daily Notes/Daily Log"
+    },
+    {
+      "source": "2026-03-06",
+      "target": "Daily Notes/Daily Log"
+    },
+    {
+      "source": "2026-03-07",
+      "target": "Library/Backend Engineering/Computer Networking A Top-Down Approach/Computer Networking A Top-Down Approach - Notes"
+    },
+    {
+      "source": "2026-03-07",
+      "target": "Engineering/Backend Engineering/Networking/Kurose - Chapter 2 - Application Layer"
+    },
+    {
+      "source": "2026-03-07",
+      "target": "Daily Notes/Daily Log"
+    },
+    {
+      "source": "2026-03-12",
+      "target": "Learning/Learning Goals"
+    },
+    {
+      "source": "2026-03-12",
+      "target": "Library/Backend Engineering/The Linux Programming Interface/The Linux Programming Interface - Notes"
+    },
+    {
+      "source": "2026-03-12",
+      "target": "Daily Notes/Daily Log"
+    },
+    {
+      "source": "2026-03-19",
+      "target": "Library/Backend Engineering/Computer Systems A Programmers Perspective/Computer Systems A Programmers Perspective - Notes"
+    },
+    {
+      "source": "2026-03-19",
+      "target": "Learning/Learning Goals"
+    },
+    {
+      "source": "2026-03-19",
+      "target": "Engineering/Backend Engineering/Computer Systems/CSAPP - Chapter 1 - A Tour of Computer Systems"
+    },
+    {
+      "source": "2026-03-19",
+      "target": "Engineering/Backend Engineering/Computer Systems/CSAPP - Chapter 2 - Representing and Manipulating Information"
+    },
+    {
+      "source": "2026-03-19",
+      "target": "Daily Notes/Daily Log"
+    },
+    {
+      "source": "2026-03-21",
+      "target": "Library/Backend Engineering/Computer Systems A Programmers Perspective/Computer Systems A Programmers Perspective - Notes"
+    },
+    {
+      "source": "2026-03-21",
+      "target": "Daily Notes/Daily Log"
+    },
+    {
+      "source": "2026-03-22",
+      "target": "Library/Backend Engineering/Computer Systems A Programmers Perspective/Computer Systems A Programmers Perspective - Notes"
+    },
+    {
+      "source": "2026-03-22",
+      "target": "Daily Notes/Daily Log"
+    },
+    {
+      "source": "2026-03-23",
+      "target": "Library/Backend Engineering/Computer Systems A Programmers Perspective/Computer Systems A Programmers Perspective - Notes"
+    },
+    {
+      "source": "2026-03-23",
+      "target": "Engineering/Backend Engineering/Computer Systems/CSAPP - Chapter 3 - Machine-Level Representation of Programs"
+    },
+    {
+      "source": "2026-03-23",
+      "target": "Daily Notes/Daily Log"
+    },
+    {
+      "source": "2026-03-24",
+      "target": "Library/Backend Engineering/Computer Systems A Programmers Perspective/Computer Systems A Programmers Perspective - Notes"
+    },
+    {
+      "source": "2026-03-24",
+      "target": "Engineering/Backend Engineering/Computer Systems/CSAPP - Chapter 3 - Machine-Level Representation of Programs"
+    },
+    {
+      "source": "2026-03-24",
+      "target": "Daily Notes/Daily Log"
+    },
+    {
+      "source": "Daily Log",
+      "target": "Habit Tracker"
+    },
+    {
+      "source": "Daily Log",
+      "target": "German/German Hub"
+    },
+    {
+      "source": "Daily Log",
+      "target": "Engineering/Engineering Hub"
+    },
+    {
+      "source": "CSAPP - Chapter 1 - A Tour of Computer Systems",
+      "target": "Library/Backend Engineering/Computer Systems A Programmers Perspective/Computer Systems A Programmers Perspective - Notes"
+    },
+    {
+      "source": "CSAPP - Chapter 1 - A Tour of Computer Systems",
+      "target": "Library/Backend Engineering/Computer Systems A Programmers Perspective/Computer Systems A Programmers Perspective - Bryant, O'Hallaron.pdf"
+    },
+    {
+      "source": "CSAPP - Chapter 1 - A Tour of Computer Systems",
+      "target": "Engineering/Backend Engineering/Computer Systems/CSAPP - Chapter 2 - Representing and Manipulating Information"
+    },
+    {
+      "source": "CSAPP - Chapter 1 - A Tour of Computer Systems",
+      "target": "Engineering/Engineering Hub"
+    },
+    {
+      "source": "CSAPP - Chapter 11 - Network Programming",
+      "target": "CSAPP - Chapter 8 - Exceptional Control Flow"
+    },
+    {
+      "source": "CSAPP - Chapter 2 - Representing and Manipulating Information",
+      "target": "Library/Backend Engineering/Computer Systems A Programmers Perspective/Computer Systems A Programmers Perspective - Notes"
+    },
+    {
+      "source": "CSAPP - Chapter 2 - Representing and Manipulating Information",
+      "target": "Library/Backend Engineering/Computer Systems A Programmers Perspective/Computer Systems A Programmers Perspective - Bryant, O'Hallaron.pdf"
+    },
+    {
+      "source": "CSAPP - Chapter 2 - Representing and Manipulating Information",
+      "target": "Engineering/Backend Engineering/Computer Systems/CSAPP - Chapter 1 - A Tour of Computer Systems"
+    },
+    {
+      "source": "CSAPP - Chapter 2 - Representing and Manipulating Information",
+      "target": "Engineering/Engineering Hub"
+    },
+    {
+      "source": "CSAPP - Chapter 3 - Machine-Level Representation of Programs",
+      "target": "CSAPP - Chapter 1 - A Tour of Computer Systems"
+    },
+    {
+      "source": "CSAPP - Chapter 3 - Machine-Level Representation of Programs",
+      "target": "CSAPP - Chapter 2 - Representing and Manipulating Information"
+    },
+    {
+      "source": "CSAPP - Chapter 8 - Exceptional Control Flow",
+      "target": "CSAPP - Chapter 3 - Machine-Level Representation of Programs"
+    },
+    {
+      "source": "2024-03-30",
+      "target": "Engineering/Backend Engineering/Kafka/Kafka Hub"
+    },
+    {
+      "source": "2024-03-30",
+      "target": "Engineering/Engineering Hub"
+    },
+    {
+      "source": "Kafka Connect Tutorials",
+      "target": "Engineering/Engineering Hub"
+    },
+    {
+      "source": "Kafka Connect Tutorials",
+      "target": "Kafka Brokers"
+    },
+    {
+      "source": "Kafka Connect Tutorials",
+      "target": "Overview"
+    },
+    {
+      "source": "Kafka Connect Tutorials",
+      "target": "Engineering/Backend Engineering/Kafka/Kafka Hub"
+    },
+    {
+      "source": "Kafka Hub",
+      "target": "Kafka Brokers"
+    },
+    {
+      "source": "Kafka Hub",
+      "target": "ZooKeeper"
+    },
+    {
+      "source": "Kafka Hub",
+      "target": "Kafka Connect Tutorials"
+    },
+    {
+      "source": "Kafka Hub",
+      "target": "Overview"
+    },
+    {
+      "source": "Kafka Hub",
+      "target": "Part One - Distributed Logging"
+    },
+    {
+      "source": "Kafka Hub",
+      "target": "Part Two - Confluent Modules"
+    },
+    {
+      "source": "Kafka Hub",
+      "target": "2024-03-30"
+    },
+    {
+      "source": "Kafka Hub",
+      "target": "2024-01-26 - Progress Report"
+    },
+    {
+      "source": "Kafka Hub",
+      "target": "AWS Glue"
+    },
+    {
+      "source": "Kafka Hub",
+      "target": "Engineering/Engineering Hub"
+    },
+    {
+      "source": "Kafka Brokers",
+      "target": "Engineering/Backend Engineering/Kafka/Kafka Hub"
+    },
+    {
+      "source": "Kafka Brokers",
+      "target": "Engineering/Engineering Hub"
+    },
+    {
+      "source": "Kafka Brokers",
+      "target": "Overview"
+    },
+    {
+      "source": "Kafka Brokers",
+      "target": "Part One - Distributed Logging"
+    },
+    {
+      "source": "Kafka Brokers",
+      "target": "ZooKeeper"
+    },
+    {
+      "source": "Kafka Brokers",
+      "target": "Kafka Connect Tutorials"
+    },
+    {
+      "source": "Overview",
+      "target": "Engineering/Backend Engineering/Kafka/Kafka Hub"
+    },
+    {
+      "source": "Overview",
+      "target": "Engineering/Engineering Hub"
+    },
+    {
+      "source": "Overview",
+      "target": "Kafka Brokers"
+    },
+    {
+      "source": "Overview",
+      "target": "Part One - Distributed Logging"
+    },
+    {
+      "source": "Overview",
+      "target": "Part Two - Confluent Modules"
+    },
+    {
+      "source": "Part One - Distributed Logging",
+      "target": "Engineering/Engineering Hub"
+    },
+    {
+      "source": "Part One - Distributed Logging",
+      "target": "Overview"
+    },
+    {
+      "source": "Part One - Distributed Logging",
+      "target": "Part Two - Confluent Modules"
+    },
+    {
+      "source": "Part One - Distributed Logging",
+      "target": "Kafka Brokers"
+    },
+    {
+      "source": "Part One - Distributed Logging",
+      "target": "Engineering/Backend Engineering/Kafka/Kafka Hub"
+    },
+    {
+      "source": "Part Two - Confluent Modules",
+      "target": "Engineering/Engineering Hub"
+    },
+    {
+      "source": "Part Two - Confluent Modules",
+      "target": "Overview"
+    },
+    {
+      "source": "Part Two - Confluent Modules",
+      "target": "Part One - Distributed Logging"
+    },
+    {
+      "source": "Part Two - Confluent Modules",
+      "target": "Kafka Brokers"
+    },
+    {
+      "source": "Part Two - Confluent Modules",
+      "target": "Engineering/Backend Engineering/Kafka/Kafka Hub"
+    },
+    {
+      "source": "2024-01-26 - Progress Report",
+      "target": "ZooKeeper"
+    },
+    {
+      "source": "2024-01-26 - Progress Report",
+      "target": "AWS Glue"
+    },
+    {
+      "source": "2024-01-26 - Progress Report",
+      "target": "Engineering/Engineering Hub"
+    },
+    {
+      "source": "2024-01-26 - Progress Report",
+      "target": "Kafka Brokers"
+    },
+    {
+      "source": "2024-01-26 - Progress Report",
+      "target": "Engineering/Backend Engineering/Kafka/Kafka Hub"
+    },
+    {
+      "source": "AWS Glue",
+      "target": "Engineering/Engineering Hub"
+    },
+    {
+      "source": "AWS Glue",
+      "target": "Kafka Brokers"
+    },
+    {
+      "source": "AWS Glue",
+      "target": "ZooKeeper"
+    },
+    {
+      "source": "AWS Glue",
+      "target": "Engineering/Backend Engineering/Kafka/Kafka Hub"
+    },
+    {
+      "source": "ZooKeeper",
+      "target": "Engineering/Engineering Hub"
+    },
+    {
+      "source": "ZooKeeper",
+      "target": "Kafka Brokers"
+    },
+    {
+      "source": "ZooKeeper",
+      "target": "Overview"
+    },
+    {
+      "source": "ZooKeeper",
+      "target": "Engineering/Backend Engineering/Kafka/Kafka Hub"
+    },
+    {
+      "source": "Kurose - Chapter 2 - Application Layer",
+      "target": "Library/Backend Engineering/Computer Networking A Top-Down Approach/Computer Networking A Top-Down Approach - Notes"
+    },
+    {
+      "source": "Kurose - Chapter 2 - Application Layer",
+      "target": "Kurose, James F._ Ross, Keith W. - Computer networking _ a top-down approach (2017).pdf"
+    },
+    {
+      "source": "Kurose - Chapter 2 - Application Layer",
+      "target": "Engineering/Engineering Hub"
+    },
+    {
+      "source": "Control Plane and Nodes",
+      "target": "kubernetes-control-plane-fault-zones.png"
+    },
+    {
+      "source": "Database Internals - Chapter 1 - Introduction and Overview",
+      "target": "dbms-architecture-overview.png"
+    },
+    {
+      "source": "Database Internals - Chapter 1 - Introduction and Overview",
+      "target": "Engineering/Engineering Hub"
+    },
+    {
+      "source": "Database Internals - Chapter 1 - Introduction and Overview",
+      "target": "Senior Data Engineer UpSkilling Plan"
+    },
+    {
+      "source": "Grain",
+      "target": "Engineering/Engineering Hub"
+    },
+    {
+      "source": "Grain",
+      "target": "Kimball Dimensional Modelling Techniques - Overview"
+    },
+    {
+      "source": "Grain",
+      "target": "Surrogate Keys"
+    },
+    {
+      "source": "Grain",
+      "target": "Kimball Dimensional Modelling - Summary"
+    },
+    {
+      "source": "Surrogate Keys",
+      "target": "Engineering/Engineering Hub"
+    },
+    {
+      "source": "Surrogate Keys",
+      "target": "Grain"
+    },
+    {
+      "source": "Surrogate Keys",
+      "target": "Kimball Dimensional Modelling Techniques - Overview"
+    },
+    {
+      "source": "Surrogate Keys",
+      "target": "Kimball Dimensional Modelling Techniques - Dealing with Slowly Changing Dimension Attributes"
+    },
+    {
+      "source": "Kimball Dimensional Modelling Techniques - Basic Dimension Table Techniques",
+      "target": "Surrogate Keys"
+    },
+    {
+      "source": "Kimball Dimensional Modelling Techniques - Basic Dimension Table Techniques",
+      "target": "Engineering/Engineering Hub"
+    },
+    {
+      "source": "Kimball Dimensional Modelling Techniques - Basic Dimension Table Techniques",
+      "target": "Kimball Dimensional Modelling Techniques - Overview"
+    },
+    {
+      "source": "Kimball Dimensional Modelling Techniques - Basic Dimension Table Techniques",
+      "target": "Kimball Dimensional Modelling Techniques - Basic Fact Table Techniques"
+    },
+    {
+      "source": "Kimball Dimensional Modelling Techniques - Basic Dimension Table Techniques",
+      "target": "Kimball Dimensional Modelling - Chapter 3 - Findings - Dimension Table Details"
+    },
+    {
+      "source": "Kimball Dimensional Modelling Techniques - Basic Fact Table Techniques",
+      "target": "Engineering/Engineering Hub"
+    },
+    {
+      "source": "Kimball Dimensional Modelling Techniques - Basic Fact Table Techniques",
+      "target": "Kimball Dimensional Modelling Techniques - Overview"
+    },
+    {
+      "source": "Kimball Dimensional Modelling Techniques - Basic Fact Table Techniques",
+      "target": "Kimball Dimensional Modelling Techniques - Basic Dimension Table Techniques"
+    },
+    {
+      "source": "Kimball Dimensional Modelling Techniques - Basic Fact Table Techniques",
+      "target": "Kimball Dimensional Modelling Techniques - Dealing with Slowly Changing Dimension Attributes"
+    },
+    {
+      "source": "Kimball Dimensional Modelling Techniques - Basic Fact Table Techniques",
+      "target": "Grain"
+    },
+    {
+      "source": "Kimball Dimensional Modelling Techniques - Basic Fact Table Techniques",
+      "target": "Surrogate Keys"
+    },
+    {
+      "source": "Kimball Dimensional Modelling Techniques - Dealing with Slowly Changing Dimension Attributes",
+      "target": "Engineering/Engineering Hub"
+    },
+    {
+      "source": "Kimball Dimensional Modelling Techniques - Dealing with Slowly Changing Dimension Attributes",
+      "target": "Kimball Dimensional Modelling Techniques - Overview"
+    },
+    {
+      "source": "Kimball Dimensional Modelling Techniques - Dealing with Slowly Changing Dimension Attributes",
+      "target": "Kimball Dimensional Modelling Techniques - Basic Dimension Table Techniques"
+    },
+    {
+      "source": "Kimball Dimensional Modelling Techniques - Dealing with Slowly Changing Dimension Attributes",
+      "target": "Surrogate Keys"
+    },
+    {
+      "source": "Kimball Dimensional Modelling Techniques - Dealing with Slowly Changing Dimension Attributes",
+      "target": "Kimball Dimensional Modelling - Chapter 3 - Findings - Dimension Table Details"
+    },
+    {
+      "source": "Kimball Dimensional Modelling Techniques - Integration via Conformed Dimensions",
+      "target": "edw-bus-high-level-view.png"
+    },
+    {
+      "source": "Kimball Dimensional Modelling Techniques - Integration via Conformed Dimensions",
+      "target": "Engineering/Engineering Hub"
+    },
+    {
+      "source": "Kimball Dimensional Modelling Techniques - Integration via Conformed Dimensions",
+      "target": "Kimball Dimensional Modelling Techniques - Overview"
+    },
+    {
+      "source": "Kimball Dimensional Modelling Techniques - Integration via Conformed Dimensions",
+      "target": "Kimball Dimensional Modelling Techniques - Basic Dimension Table Techniques"
+    },
+    {
+      "source": "Kimball Dimensional Modelling Techniques - Integration via Conformed Dimensions",
+      "target": "Kimball Dimensional Modelling - Summary"
+    },
+    {
+      "source": "Kimball Dimensional Modelling Techniques - Overview",
+      "target": "Grain"
+    },
+    {
+      "source": "Kimball Dimensional Modelling Techniques - Overview",
+      "target": "Engineering/Engineering Hub"
+    },
+    {
+      "source": "Kimball Dimensional Modelling Techniques - Overview",
+      "target": "Kimball Dimensional Modelling Techniques - Basic Dimension Table Techniques"
+    },
+    {
+      "source": "Kimball Dimensional Modelling Techniques - Overview",
+      "target": "Kimball Dimensional Modelling Techniques - Basic Fact Table Techniques"
+    },
+    {
+      "source": "Kimball Dimensional Modelling Techniques - Overview",
+      "target": "Kimball Dimensional Modelling Techniques - Dealing with Slowly Changing Dimension Attributes"
+    },
+    {
+      "source": "Kimball Dimensional Modelling Techniques - Overview",
+      "target": "Kimball Dimensional Modelling Techniques - Integration via Conformed Dimensions"
+    },
+    {
+      "source": "Kimball Dimensional Modelling Techniques - Overview",
+      "target": "Kimball Dimensional Modelling - Summary"
+    },
+    {
+      "source": "Kimball Dimensional Modelling - Chapter 3 - Findings - Dimension Table Details",
+      "target": "Engineering/Engineering Hub"
+    },
+    {
+      "source": "Kimball Dimensional Modelling - Chapter 3 - Findings - Dimension Table Details",
+      "target": "Kimball Dimensional Modelling Techniques - Overview"
+    },
+    {
+      "source": "Kimball Dimensional Modelling - Chapter 3 - Findings - Dimension Table Details",
+      "target": "Kimball Dimensional Modelling Techniques - Basic Dimension Table Techniques"
+    },
+    {
+      "source": "Kimball Dimensional Modelling - Chapter 3 - Findings - Dimension Table Details",
+      "target": "Kimball Dimensional Modelling - Summary"
+    },
+    {
+      "source": "Kimball Dimensional Modelling - Summary",
+      "target": "Engineering/Engineering Hub"
+    },
+    {
+      "source": "Kimball Dimensional Modelling - Summary",
+      "target": "Kimball Dimensional Modelling Techniques - Overview"
+    },
+    {
+      "source": "Kimball Dimensional Modelling - Summary",
+      "target": "Kimball Dimensional Modelling - Chapter 3 - Findings - Dimension Table Details"
+    },
+    {
+      "source": "Kimball Dimensional Modelling - Summary",
+      "target": "Grain"
+    },
+    {
+      "source": "Kimball Dimensional Modelling - Summary",
+      "target": "Surrogate Keys"
+    },
+    {
+      "source": "L&D",
+      "target": "Engineering/Engineering Hub"
+    },
+    {
+      "source": "Lakehouse Essentials - Unit 1 - Lakehouse Fundamentals",
+      "target": "data-platform-components-overview.png"
+    },
+    {
+      "source": "Lakehouse Essentials - Unit 1 - Lakehouse Fundamentals",
+      "target": "storage-abstractions-and-systems.png"
+    },
+    {
+      "source": "Lakehouse Essentials - Unit 2 - Storage",
+      "target": "parquet-file-format-layout.png"
+    },
+    {
+      "source": "Lakehouse Essentials - Unit 2 - Storage",
+      "target": "orc-file-format-layout.png"
+    },
+    {
+      "source": "Lakehouse Essentials - Unit 2 - Storage",
+      "target": "avro-file-format-layout.png"
+    },
+    {
+      "source": "Lakehouse Essentials - Unit 2 - Storage",
+      "target": "hive-table-directory-structure.png"
+    },
+    {
+      "source": "Lakehouse Essentials - Unit 2 - Storage",
+      "target": "lakehouse-open-table-formats.png"
+    },
+    {
+      "source": "MySQL Fundamentals - Unit 1 - MySQL Architecture and History",
+      "target": "mysql-logical-architecture.png"
+    },
+    {
+      "source": "Engineering Hub",
+      "target": "Senior Data Engineer UpSkilling Plan"
+    },
+    {
+      "source": "Engineering Hub",
+      "target": "Database Internals - Chapter 1 - Introduction and Overview\\"
+    },
+    {
+      "source": "Engineering Hub",
+      "target": "Designing Data Intensive Applications\\"
+    },
+    {
+      "source": "Engineering Hub",
+      "target": "SQL in a Nutshell, 4th Edition\\"
+    },
+    {
+      "source": "Engineering Hub",
+      "target": "Lakehouse Essentials - Unit 1 - Lakehouse Fundamentals\\"
+    },
+    {
+      "source": "Engineering Hub",
+      "target": "Lakehouse Essentials - Unit 2 - Storage\\"
+    },
+    {
+      "source": "Engineering Hub",
+      "target": "MySQL Fundamentals - Unit 1 - MySQL Architecture and History\\"
+    },
+    {
+      "source": "Engineering Hub",
+      "target": "Library/Library Hub\\"
+    },
+    {
+      "source": "Engineering Hub",
+      "target": "Kafka Brokers"
+    },
+    {
+      "source": "Engineering Hub",
+      "target": "Overview"
+    },
+    {
+      "source": "Engineering Hub",
+      "target": "Part One - Distributed Logging"
+    },
+    {
+      "source": "Engineering Hub",
+      "target": "Part Two - Confluent Modules"
+    },
+    {
+      "source": "Engineering Hub",
+      "target": "Kafka Connect Tutorials"
+    },
+    {
+      "source": "Engineering Hub",
+      "target": "ZooKeeper"
+    },
+    {
+      "source": "Engineering Hub",
+      "target": "AWS Glue"
+    },
+    {
+      "source": "Engineering Hub",
+      "target": "2024-03-30"
+    },
+    {
+      "source": "Engineering Hub",
+      "target": "2024-01-26 - Progress Report"
+    },
+    {
+      "source": "Engineering Hub",
+      "target": "Kimball Dimensional Modelling Techniques - Overview"
+    },
+    {
+      "source": "Engineering Hub",
+      "target": "Kimball Dimensional Modelling Techniques - Basic Dimension Table Techniques"
+    },
+    {
+      "source": "Engineering Hub",
+      "target": "Kimball Dimensional Modelling Techniques - Basic Fact Table Techniques"
+    },
+    {
+      "source": "Engineering Hub",
+      "target": "Kimball Dimensional Modelling Techniques - Dealing with Slowly Changing Dimension Attributes"
+    },
+    {
+      "source": "Engineering Hub",
+      "target": "Kimball Dimensional Modelling Techniques - Integration via Conformed Dimensions"
+    },
+    {
+      "source": "Engineering Hub",
+      "target": "Kimball Dimensional Modelling - Chapter 3 - Findings - Dimension Table Details"
+    },
+    {
+      "source": "Engineering Hub",
+      "target": "Kimball Dimensional Modelling - Summary"
+    },
+    {
+      "source": "Engineering Hub",
+      "target": "Grain"
+    },
+    {
+      "source": "Engineering Hub",
+      "target": "Surrogate Keys"
+    },
+    {
+      "source": "Engineering Hub",
+      "target": "Control Plane and Nodes"
+    },
+    {
+      "source": "Engineering Hub",
+      "target": "Apache Beam"
+    },
+    {
+      "source": "Engineering Hub",
+      "target": "Realtime Government Weather Data"
+    },
+    {
+      "source": "Engineering Hub",
+      "target": "UW data"
+    },
+    {
+      "source": "Engineering Hub",
+      "target": "SQL in a Nutshell, 4th Edition"
+    },
+    {
+      "source": "Engineering Hub",
+      "target": "MySQL Fundamentals - Unit 1 - MySQL Architecture and History"
+    },
+    {
+      "source": "Engineering Hub",
+      "target": "Designing Data Intensive Applications"
+    },
+    {
+      "source": "Engineering Hub",
+      "target": "Engineering/OSS/OSS Hub"
+    },
+    {
+      "source": "Engineering Hub",
+      "target": "Engineering/OSS/Airflow Contributions\\"
+    },
+    {
+      "source": "Engineering Hub",
+      "target": "Engineering/OSS/Dagster Contributions\\"
+    },
+    {
+      "source": "Engineering Hub",
+      "target": "Engineering/GCP Study/GCP Hub"
+    },
+    {
+      "source": "Engineering Hub",
+      "target": "GCP Syllabus"
+    },
+    {
+      "source": "Engineering Hub",
+      "target": "Exam Study"
+    },
+    {
+      "source": "Engineering Hub",
+      "target": "Introduction to Data Engineering on Google Cloud - Module 1 - Data Engineering Tasks And Components"
+    },
+    {
+      "source": "Engineering Hub",
+      "target": "Introduction to Data Engineering on Google Cloud - Module 1 - Storage Solution Options on Google Cloud"
+    },
+    {
+      "source": "Engineering Hub",
+      "target": "Introduction to Data Engineering on Google Cloud - Module 2 - Database Replication and Migration"
+    },
+    {
+      "source": "Engineering Hub",
+      "target": "Introduction to Data Engineering on Google Cloud - Module 3 - The ETL Data Pipeline Pattern"
+    },
+    {
+      "source": "Engineering Hub",
+      "target": "Data Lakehouse Essentials - Quick Study Guide"
+    },
+    {
+      "source": "Engineering Hub",
+      "target": "Section 1.1 Setting up cloud projects and accounts"
+    },
+    {
+      "source": "Engineering Hub",
+      "target": "Billing Accounts"
+    },
+    {
+      "source": "Engineering Hub",
+      "target": "Service Accounts"
+    },
+    {
+      "source": "Engineering Hub",
+      "target": "Review Questions 1.1, 1.2"
+    },
+    {
+      "source": "Engineering Hub",
+      "target": "Section 2.1, 2.2 Planning, Estimating Pricing & Compute Resources"
+    },
+    {
+      "source": "Engineering Hub",
+      "target": "Section 2.3 Planning and Configuring Data Storage Options"
+    },
+    {
+      "source": "Engineering Hub",
+      "target": "Virtual Machines"
+    },
+    {
+      "source": "Engineering Hub",
+      "target": "Cloud Run"
+    },
+    {
+      "source": "Engineering Hub",
+      "target": "Kubernetes Engine"
+    },
+    {
+      "source": "Engineering Hub",
+      "target": "Anthos"
+    },
+    {
+      "source": "Engineering Hub",
+      "target": "Review Questions 2.1, 2.2"
+    },
+    {
+      "source": "Engineering Hub",
+      "target": "Review Questions 2.3"
+    },
+    {
+      "source": "Engineering Hub",
+      "target": "Engineering/GCP Study/A Cloud Guru/Cloud Functions"
+    },
+    {
+      "source": "Engineering Hub",
+      "target": "Engineering/GCP Study/OReilly/Section 2/Subpages/Cloud Functions"
+    },
+    {
+      "source": "Engineering Hub",
+      "target": "Interview Hub"
+    },
+    {
+      "source": "Engineering Hub",
+      "target": "DE Interview - KANBAN"
+    },
+    {
+      "source": "Engineering Hub",
+      "target": "Prepping for FAANG Interview"
+    },
+    {
+      "source": "Engineering Hub",
+      "target": "Design Twitter"
+    },
+    {
+      "source": "Engineering Hub",
+      "target": "Sequencer"
+    },
+    {
+      "source": "Engineering Hub",
+      "target": "UUID"
+    },
+    {
+      "source": "Engineering Hub",
+      "target": "Metrics Monitoring"
+    },
+    {
+      "source": "Engineering Hub",
+      "target": "Data Mesh"
+    },
+    {
+      "source": "Engineering Hub",
+      "target": "Spotify - Backend - DataPlatform"
+    },
+    {
+      "source": "Engineering Hub",
+      "target": "JD Senior Backend - Data Platform"
+    },
+    {
+      "source": "Engineering Hub",
+      "target": "Feedback"
+    },
+    {
+      "source": "Engineering Hub",
+      "target": "Interview Experience"
+    },
+    {
+      "source": "Engineering Hub",
+      "target": "Feedback - 2024-07-04"
+    },
+    {
+      "source": "Engineering Hub",
+      "target": "Job Descriptions"
+    },
+    {
+      "source": "Engineering Hub",
+      "target": "Liberty Blume"
+    },
+    {
+      "source": "Engineering Hub",
+      "target": "L&D"
+    },
+    {
+      "source": "Engineering Hub",
+      "target": "L&D/Curriculum"
+    },
+    {
+      "source": "Engineering Hub",
+      "target": "Summary"
+    },
+    {
+      "source": "Cloud Functions",
+      "target": "How Cloud Functions Work.png"
+    },
+    {
+      "source": "Cloud Functions",
+      "target": "CSR, Cloud Build, Cloud Run.png"
+    },
+    {
+      "source": "Cloud Functions",
+      "target": "Engineering/GCP Study/GCP Hub"
+    },
+    {
+      "source": "Cloud Functions",
+      "target": "Engineering/Engineering Hub"
+    },
+    {
+      "source": "Data Lakehouse Essentials - Quick Study Guide",
+      "target": "Engineering/GCP Study/GCP Hub"
+    },
+    {
+      "source": "Data Lakehouse Essentials - Quick Study Guide",
+      "target": "Engineering/Engineering Hub"
+    },
+    {
+      "source": "Introduction to Data Engineering on Google Cloud - Module 1 - Data Engineering Tasks And Components",
+      "target": "Engineering/GCP Study/GCP Hub"
+    },
+    {
+      "source": "Introduction to Data Engineering on Google Cloud - Module 1 - Data Engineering Tasks And Components",
+      "target": "Engineering/Engineering Hub"
+    },
+    {
+      "source": "Introduction to Data Engineering on Google Cloud - Module 1 - Storage Solution Options on Google Cloud",
+      "target": "Engineering/GCP Study/GCP Hub"
+    },
+    {
+      "source": "Introduction to Data Engineering on Google Cloud - Module 1 - Storage Solution Options on Google Cloud",
+      "target": "Engineering/Engineering Hub"
+    },
+    {
+      "source": "Introduction to Data Engineering on Google Cloud - Module 2 - Database Replication and Migration",
+      "target": "Engineering/GCP Study/GCP Hub"
+    },
+    {
+      "source": "Introduction to Data Engineering on Google Cloud - Module 2 - Database Replication and Migration",
+      "target": "Engineering/Engineering Hub"
+    },
+    {
+      "source": "Introduction to Data Engineering on Google Cloud - Module 3 - The ETL Data Pipeline Pattern",
+      "target": "Engineering/GCP Study/GCP Hub"
+    },
+    {
+      "source": "Introduction to Data Engineering on Google Cloud - Module 3 - The ETL Data Pipeline Pattern",
+      "target": "Engineering/Engineering Hub"
+    },
+    {
+      "source": "Exam Study",
+      "target": "Engineering/GCP Study/GCP Hub"
+    },
+    {
+      "source": "Exam Study",
+      "target": "Engineering/Engineering Hub"
+    },
+    {
+      "source": "Exam Study",
+      "target": "GCP Syllabus"
+    },
+    {
+      "source": "Exam Study",
+      "target": "Section 1.1 Setting up cloud projects and accounts"
+    },
+    {
+      "source": "Exam Study",
+      "target": "Section 2.1, 2.2 Planning, Estimating Pricing & Compute Resources"
+    },
+    {
+      "source": "GCP Hub",
+      "target": "Engineering/Engineering Hub"
+    },
+    {
+      "source": "GCP Hub",
+      "target": "GCP Syllabus"
+    },
+    {
+      "source": "GCP Hub",
+      "target": "Exam Study"
+    },
+    {
+      "source": "GCP Hub",
+      "target": "Introduction to Data Engineering on Google Cloud - Module 1 - Data Engineering Tasks And Components"
+    },
+    {
+      "source": "GCP Hub",
+      "target": "Introduction to Data Engineering on Google Cloud - Module 1 - Storage Solution Options on Google Cloud"
+    },
+    {
+      "source": "GCP Hub",
+      "target": "Introduction to Data Engineering on Google Cloud - Module 2 - Database Replication and Migration"
+    },
+    {
+      "source": "GCP Hub",
+      "target": "Introduction to Data Engineering on Google Cloud - Module 3 - The ETL Data Pipeline Pattern"
+    },
+    {
+      "source": "GCP Hub",
+      "target": "Data Lakehouse Essentials - Quick Study Guide"
+    },
+    {
+      "source": "GCP Hub",
+      "target": "Section 1.1 Setting up cloud projects and accounts"
+    },
+    {
+      "source": "GCP Hub",
+      "target": "Billing Accounts"
+    },
+    {
+      "source": "GCP Hub",
+      "target": "Service Accounts"
+    },
+    {
+      "source": "GCP Hub",
+      "target": "Review Questions 1.1, 1.2"
+    },
+    {
+      "source": "GCP Hub",
+      "target": "Section 2.1, 2.2 Planning, Estimating Pricing & Compute Resources"
+    },
+    {
+      "source": "GCP Hub",
+      "target": "Section 2.3 Planning and Configuring Data Storage Options"
+    },
+    {
+      "source": "GCP Hub",
+      "target": "Virtual Machines"
+    },
+    {
+      "source": "GCP Hub",
+      "target": "Cloud Run"
+    },
+    {
+      "source": "GCP Hub",
+      "target": "Kubernetes Engine"
+    },
+    {
+      "source": "GCP Hub",
+      "target": "Anthos"
+    },
+    {
+      "source": "GCP Hub",
+      "target": "Review Questions 2.1, 2.2"
+    },
+    {
+      "source": "GCP Hub",
+      "target": "Review Questions 2.3"
+    },
+    {
+      "source": "GCP Hub",
+      "target": "Engineering/GCP Study/A Cloud Guru/Cloud Functions"
+    },
+    {
+      "source": "GCP Hub",
+      "target": "Engineering/GCP Study/OReilly/Section 2/Subpages/Cloud Functions"
+    },
+    {
+      "source": "GCP Syllabus",
+      "target": "Section 1.1 Setting up cloud projects and accounts"
+    },
+    {
+      "source": "GCP Syllabus",
+      "target": "Section 2.1, 2.2 Planning, Estimating Pricing & Compute Resources"
+    },
+    {
+      "source": "GCP Syllabus",
+      "target": "Engineering/GCP Study/GCP Hub"
+    },
+    {
+      "source": "GCP Syllabus",
+      "target": "Engineering/Engineering Hub"
+    },
+    {
+      "source": "GCP Syllabus",
+      "target": "Exam Study"
+    },
+    {
+      "source": "Review Questions 1.1, 1.2",
+      "target": "Service Accounts"
+    },
+    {
+      "source": "Review Questions 1.1, 1.2",
+      "target": "Engineering/GCP Study/GCP Hub"
+    },
+    {
+      "source": "Review Questions 1.1, 1.2",
+      "target": "Engineering/Engineering Hub"
+    },
+    {
+      "source": "Section 1.1 Setting up cloud projects and accounts",
+      "target": "Review Questions 1.1, 1.2"
+    },
+    {
+      "source": "Section 1.1 Setting up cloud projects and accounts",
+      "target": "Engineering/GCP Study/GCP Hub"
+    },
+    {
+      "source": "Section 1.1 Setting up cloud projects and accounts",
+      "target": "Engineering/Engineering Hub"
+    },
+    {
+      "source": "Billing Accounts",
+      "target": "Engineering/GCP Study/GCP Hub"
+    },
+    {
+      "source": "Billing Accounts",
+      "target": "Engineering/Engineering Hub"
+    },
+    {
+      "source": "Service Accounts",
+      "target": "Engineering/GCP Study/GCP Hub"
+    },
+    {
+      "source": "Service Accounts",
+      "target": "Engineering/Engineering Hub"
+    },
+    {
+      "source": "Review Questions 2.1, 2.2",
+      "target": "Engineering/GCP Study/GCP Hub"
+    },
+    {
+      "source": "Review Questions 2.1, 2.2",
+      "target": "Engineering/Engineering Hub"
+    },
+    {
+      "source": "Review Questions 2.3",
+      "target": "Engineering/GCP Study/GCP Hub"
+    },
+    {
+      "source": "Review Questions 2.3",
+      "target": "Engineering/Engineering Hub"
+    },
+    {
+      "source": "Section 2.1, 2.2 Planning, Estimating Pricing & Compute Resources",
+      "target": "Virtual Machines"
+    },
+    {
+      "source": "Section 2.1, 2.2 Planning, Estimating Pricing & Compute Resources",
+      "target": "Cloud Run"
+    },
+    {
+      "source": "Section 2.1, 2.2 Planning, Estimating Pricing & Compute Resources",
+      "target": "Engineering/GCP Study/OReilly/Section 2/Subpages/Cloud Functions"
+    },
+    {
+      "source": "Section 2.1, 2.2 Planning, Estimating Pricing & Compute Resources",
+      "target": "Engineering/GCP Study/GCP Hub"
+    },
+    {
+      "source": "Section 2.1, 2.2 Planning, Estimating Pricing & Compute Resources",
+      "target": "Engineering/Engineering Hub"
+    },
+    {
+      "source": "Section 2.3 Planning and Configuring Data Storage Options",
+      "target": "Engineering/GCP Study/GCP Hub"
+    },
+    {
+      "source": "Section 2.3 Planning and Configuring Data Storage Options",
+      "target": "Engineering/Engineering Hub"
+    },
+    {
+      "source": "Anthos",
+      "target": "Engineering/GCP Study/GCP Hub"
+    },
+    {
+      "source": "Anthos",
+      "target": "Engineering/Engineering Hub"
+    },
+    {
+      "source": "Cloud Functions",
+      "target": "Engineering/GCP Study/A Cloud Guru/Cloud Functions"
+    },
+    {
+      "source": "Cloud Run",
+      "target": "Engineering/GCP Study/GCP Hub"
+    },
+    {
+      "source": "Cloud Run",
+      "target": "Engineering/Engineering Hub"
+    },
+    {
+      "source": "Kubernetes Engine",
+      "target": "Anthos"
+    },
+    {
+      "source": "Kubernetes Engine",
+      "target": "Engineering/GCP Study/GCP Hub"
+    },
+    {
+      "source": "Kubernetes Engine",
+      "target": "Engineering/Engineering Hub"
+    },
+    {
+      "source": "Virtual Machines",
+      "target": "Engineering/GCP Study/GCP Hub"
+    },
+    {
+      "source": "Virtual Machines",
+      "target": "Engineering/Engineering Hub"
+    },
+    {
+      "source": "Airflow Contributions",
+      "target": "Engineering/OSS/OSS Hub"
+    },
+    {
+      "source": "Airflow Contributions",
+      "target": "Engineering/Engineering Hub"
+    },
+    {
+      "source": "Dagster Contributions",
+      "target": "Engineering/OSS/OSS Hub"
+    },
+    {
+      "source": "Dagster Contributions",
+      "target": "Engineering/Engineering Hub"
+    },
+    {
+      "source": "OSS Hub",
+      "target": "Engineering/OSS/Airflow Contributions\\"
+    },
+    {
+      "source": "OSS Hub",
+      "target": "Engineering/OSS/Dagster Contributions\\"
+    },
+    {
+      "source": "OSS Hub",
+      "target": "Engineering/Engineering Hub"
+    },
+    {
+      "source": "Senior Data Engineer UpSkilling Plan",
+      "target": "Engineering/Engineering Hub"
+    },
+    {
+      "source": "Senior Data Engineer UpSkilling Plan",
+      "target": "German/German Hub"
+    },
+    {
+      "source": "Senior Data Engineer UpSkilling Plan",
+      "target": "Database Internals - Chapter 1 - Introduction and Overview"
+    },
+    {
+      "source": "Senior Data Engineer UpSkilling Plan",
+      "target": "GCP Syllabus"
+    },
+    {
+      "source": "Summary",
+      "target": "Engineering/Engineering Hub"
+    },
+    {
+      "source": "Summary",
+      "target": "Kimball Dimensional Modelling - Summary"
+    },
+    {
+      "source": "Summary",
+      "target": "Kimball Dimensional Modelling Techniques - Overview"
+    },
+    {
+      "source": "Babbel - Newcomer 2 (A1.2) - German Modal Verbs & Word Order - Complete Guide",
+      "target": "German/German Hub"
+    },
+    {
+      "source": "Babbel - Newcomer 2 (A1.2) - German Modal Verbs & Word Order - Complete Guide",
+      "target": "Week 3 - Claude Learnings - Verb Conjugation"
+    },
+    {
+      "source": "Babbel - Newcomer 2 (A1.2) - German Modal Verbs & Word Order - Complete Guide",
+      "target": "Week 3 - Claude Learnings - German Grammar"
+    },
+    {
+      "source": "German Hub",
+      "target": "Week 2 - Claude Learnings - German Plural Formation\\"
+    },
+    {
+      "source": "German Hub",
+      "target": "Week 3 - Claude Learnings - German Personal Pronouns\\"
+    },
+    {
+      "source": "German Hub",
+      "target": "Week 3 - Claude Learnings - Verb Conjugation\\"
+    },
+    {
+      "source": "German Hub",
+      "target": "Week 3 - Claude Learnings - German Grammar\\"
+    },
+    {
+      "source": "German Hub",
+      "target": "Babbel - Newcomer 2 (A1.2) - German Modal Verbs & Word Order - Complete Guide\\"
+    },
+    {
+      "source": "German Hub",
+      "target": "Reference - Starke und unregelmäßige Verben - A1-A2\\"
+    },
+    {
+      "source": "German Hub",
+      "target": "Reference - Trennbare Verben - A1\\"
+    },
+    {
+      "source": "German Hub",
+      "target": "Reference - Quick Guide - A1\\"
+    },
+    {
+      "source": "German Hub",
+      "target": "2025-12-30"
+    },
+    {
+      "source": "German Hub",
+      "target": "2025-12-31"
+    },
+    {
+      "source": "German Hub",
+      "target": "2026-01-01"
+    },
+    {
+      "source": "German Hub",
+      "target": "2026-01-08"
+    },
+    {
+      "source": "German Hub",
+      "target": "2026-02-01"
+    },
+    {
+      "source": "German Hub",
+      "target": "2026-02-02"
+    },
+    {
+      "source": "German Hub",
+      "target": "2026-02-03"
+    },
+    {
+      "source": "German Hub",
+      "target": "2026-02-04"
+    },
+    {
+      "source": "German Hub",
+      "target": "2026-02-05"
+    },
+    {
+      "source": "German Hub",
+      "target": "2026-02-06"
+    },
+    {
+      "source": "German Hub",
+      "target": "2026-02-07"
+    },
+    {
+      "source": "German Hub",
+      "target": "2026-02-08"
+    },
+    {
+      "source": "German Hub",
+      "target": "2026-02-09"
+    },
+    {
+      "source": "German Hub",
+      "target": "2026-02-10"
+    },
+    {
+      "source": "German Hub",
+      "target": "2026-02-11"
+    },
+    {
+      "source": "German Hub",
+      "target": "2026-02-12"
+    },
+    {
+      "source": "German Hub",
+      "target": "2026-02-13"
+    },
+    {
+      "source": "German Hub",
+      "target": "2026-02-14"
+    },
+    {
+      "source": "German Hub",
+      "target": "2026-02-15"
+    },
+    {
+      "source": "German Hub",
+      "target": "2026-03-05"
+    },
+    {
+      "source": "German Hub",
+      "target": "2026-03-07"
+    },
+    {
+      "source": "German Hub",
+      "target": "Week 2 - Claude Learnings - German Plural Formation"
+    },
+    {
+      "source": "German Hub",
+      "target": "Week 3 - Claude Learnings - German Personal Pronouns"
+    },
+    {
+      "source": "German Hub",
+      "target": "Week 3 - Claude Learnings - Verb Conjugation"
+    },
+    {
+      "source": "German Hub",
+      "target": "Week 3 - Claude Learnings - Daily Recap - 2025-11-01"
+    },
+    {
+      "source": "German Hub",
+      "target": "Week 3 - Claude Learnings - German Grammar"
+    },
+    {
+      "source": "German Hub",
+      "target": "Babbel - Newcomer 2 (A1.2) - German Modal Verbs & Word Order - Complete Guide"
+    },
+    {
+      "source": "German Hub",
+      "target": "2025-05-04"
+    },
+    {
+      "source": "German Hub",
+      "target": "Library/Library Hub"
+    },
+    {
+      "source": "German Hub",
+      "target": "Resources"
+    },
+    {
+      "source": "Reference - Quick Guide - A1",
+      "target": "Week 3 - Claude Learnings - German Personal Pronouns"
+    },
+    {
+      "source": "Reference - Quick Guide - A1",
+      "target": "Reference - Starke und unregelmäßige Verben - A1-A2"
+    },
+    {
+      "source": "Reference - Quick Guide - A1",
+      "target": "Week 3 - Claude Learnings - Verb Conjugation"
+    },
+    {
+      "source": "Reference - Quick Guide - A1",
+      "target": "Babbel - Newcomer 2 (A1.2) - German Modal Verbs & Word Order - Complete Guide"
+    },
+    {
+      "source": "Reference - Quick Guide - A1",
+      "target": "Reference - Trennbare Verben - A1"
+    },
+    {
+      "source": "Reference - Quick Guide - A1",
+      "target": "Week 2 - Claude Learnings - German Plural Formation"
+    },
+    {
+      "source": "Reference - Quick Guide - A1",
+      "target": "German/German Hub"
+    },
+    {
+      "source": "Reference - Starke und unregelmäßige Verben - A1-A2",
+      "target": "German/German Hub"
+    },
+    {
+      "source": "Reference - Trennbare Verben - A1",
+      "target": "Reference - Starke und unregelmäßige Verben - A1-A2"
+    },
+    {
+      "source": "Reference - Trennbare Verben - A1",
+      "target": "Week 3 - Claude Learnings - Verb Conjugation"
+    },
+    {
+      "source": "Reference - Trennbare Verben - A1",
+      "target": "German/German Hub"
+    },
+    {
+      "source": "Week 2 - Claude Learnings - German Plural Formation",
+      "target": "German/German Hub"
+    },
+    {
+      "source": "Week 2 - Claude Learnings - German Plural Formation",
+      "target": "Week 3 - Claude Learnings - German Grammar"
+    },
+    {
+      "source": "Week 2 - Claude Learnings - German Plural Formation",
+      "target": "Week 3 - Claude Learnings - German Personal Pronouns"
+    },
+    {
+      "source": "Week 2 - Claude Learnings - German Plural Formation",
+      "target": "Week 3 - Claude Learnings - Verb Conjugation"
+    },
+    {
+      "source": "Week 3 - Claude Learnings - Daily Recap - 2025-11-01",
+      "target": "German/German Hub"
+    },
+    {
+      "source": "Week 3 - Claude Learnings - Daily Recap - 2025-11-01",
+      "target": "Week 3 - Claude Learnings - German Grammar"
+    },
+    {
+      "source": "Week 3 - Claude Learnings - Daily Recap - 2025-11-01",
+      "target": "Week 3 - Claude Learnings - Verb Conjugation"
+    },
+    {
+      "source": "Week 3 - Claude Learnings - German Grammar",
+      "target": "German/German Hub"
+    },
+    {
+      "source": "Week 3 - Claude Learnings - German Grammar",
+      "target": "Week 3 - Claude Learnings - German Personal Pronouns"
+    },
+    {
+      "source": "Week 3 - Claude Learnings - German Grammar",
+      "target": "Week 3 - Claude Learnings - Verb Conjugation"
+    },
+    {
+      "source": "Week 3 - Claude Learnings - German Grammar",
+      "target": "Week 2 - Claude Learnings - German Plural Formation"
+    },
+    {
+      "source": "Week 3 - Claude Learnings - German Personal Pronouns",
+      "target": "German/German Hub"
+    },
+    {
+      "source": "Week 3 - Claude Learnings - German Personal Pronouns",
+      "target": "Week 3 - Claude Learnings - Verb Conjugation"
+    },
+    {
+      "source": "Week 3 - Claude Learnings - German Personal Pronouns",
+      "target": "Week 3 - Claude Learnings - German Grammar"
+    },
+    {
+      "source": "Week 3 - Claude Learnings - German Personal Pronouns",
+      "target": "Week 2 - Claude Learnings - German Plural Formation"
+    },
+    {
+      "source": "Week 3 - Claude Learnings - Verb Conjugation",
+      "target": "German/German Hub"
+    },
+    {
+      "source": "Week 3 - Claude Learnings - Verb Conjugation",
+      "target": "Week 3 - Claude Learnings - German Personal Pronouns"
+    },
+    {
+      "source": "Week 3 - Claude Learnings - Verb Conjugation",
+      "target": "Week 3 - Claude Learnings - German Grammar"
+    },
+    {
+      "source": "Week 3 - Claude Learnings - Verb Conjugation",
+      "target": "Week 2 - Claude Learnings - German Plural Formation"
+    },
+    {
+      "source": "2025-05-04",
+      "target": "German/German Hub"
+    },
+    {
+      "source": "2025-05-04",
+      "target": "Resources"
+    },
+    {
+      "source": "Resources",
+      "target": "German/German Hub"
+    },
+    {
+      "source": "2025-12-30",
+      "target": "German/German Hub"
+    },
+    {
+      "source": "2025-12-30",
+      "target": "2025-12-31"
+    },
+    {
+      "source": "2025-12-30",
+      "target": "2026-01-01"
+    },
+    {
+      "source": "2025-12-30",
+      "target": "German/Tagebuch/2025-12/2025-12-31"
+    },
+    {
+      "source": "2025-12-31",
+      "target": "German/German Hub"
+    },
+    {
+      "source": "2025-12-31",
+      "target": "2025-12-30"
+    },
+    {
+      "source": "2025-12-31",
+      "target": "2026-01-01"
+    },
+    {
+      "source": "2025-12-31",
+      "target": "German/Tagebuch/2026-01/2026-01-01"
+    },
+    {
+      "source": "2026-01-01",
+      "target": "German/German Hub"
+    },
+    {
+      "source": "2026-01-01",
+      "target": "2025-12-31"
+    },
+    {
+      "source": "2026-01-01",
+      "target": "2026-01-08"
+    },
+    {
+      "source": "2026-01-01",
+      "target": "German/Tagebuch/2026-01/2026-01-08"
+    },
+    {
+      "source": "2026-01-08",
+      "target": "German/German Hub"
+    },
+    {
+      "source": "2026-01-08",
+      "target": "2026-01-01"
+    },
+    {
+      "source": "2026-01-08",
+      "target": "German/Tagebuch/2026-02/2026-02-01"
+    },
+    {
+      "source": "2026-02-01",
+      "target": "Reference - Trennbare Verben - A1"
+    },
+    {
+      "source": "2026-02-01",
+      "target": "Reference - Starke und unregelmäßige Verben - A1-A2"
+    },
+    {
+      "source": "2026-02-01",
+      "target": "Babbel - Newcomer 2 (A1.2) - German Modal Verbs & Word Order - Complete Guide"
+    },
+    {
+      "source": "2026-02-01",
+      "target": "Reference - Quick Guide - A1"
+    },
+    {
+      "source": "2026-02-01",
+      "target": "German/German Hub"
+    },
+    {
+      "source": "2026-02-01",
+      "target": "German/Tagebuch/2026-01/2026-01-08"
+    },
+    {
+      "source": "2026-02-01",
+      "target": "German/Tagebuch/2026-02/2026-02-02"
+    },
+    {
+      "source": "2026-02-02",
+      "target": "Reference - Trennbare Verben - A1"
+    },
+    {
+      "source": "2026-02-02",
+      "target": "Reference - Starke und unregelmäßige Verben - A1-A2"
+    },
+    {
+      "source": "2026-02-02",
+      "target": "Babbel - Newcomer 2 (A1.2) - German Modal Verbs & Word Order - Complete Guide"
+    },
+    {
+      "source": "2026-02-02",
+      "target": "Reference - Quick Guide - A1"
+    },
+    {
+      "source": "2026-02-02",
+      "target": "German/German Hub"
+    },
+    {
+      "source": "2026-02-02",
+      "target": "German/Tagebuch/2026-02/2026-02-01"
+    },
+    {
+      "source": "2026-02-02",
+      "target": "German/Tagebuch/2026-02/2026-02-03"
+    },
+    {
+      "source": "2026-02-03",
+      "target": "Reference - Trennbare Verben - A1"
+    },
+    {
+      "source": "2026-02-03",
+      "target": "Reference - Starke und unregelmäßige Verben - A1-A2"
+    },
+    {
+      "source": "2026-02-03",
+      "target": "Babbel - Newcomer 2 (A1.2) - German Modal Verbs & Word Order - Complete Guide"
+    },
+    {
+      "source": "2026-02-03",
+      "target": "Reference - Quick Guide - A1"
+    },
+    {
+      "source": "2026-02-03",
+      "target": "German/German Hub"
+    },
+    {
+      "source": "2026-02-03",
+      "target": "German/Tagebuch/2026-02/2026-02-02"
+    },
+    {
+      "source": "2026-02-03",
+      "target": "German/Tagebuch/2026-02/2026-02-04"
+    },
+    {
+      "source": "2026-02-04",
+      "target": "Reference - Trennbare Verben - A1"
+    },
+    {
+      "source": "2026-02-04",
+      "target": "Reference - Starke und unregelmäßige Verben - A1-A2"
+    },
+    {
+      "source": "2026-02-04",
+      "target": "Babbel - Newcomer 2 (A1.2) - German Modal Verbs & Word Order - Complete Guide"
+    },
+    {
+      "source": "2026-02-04",
+      "target": "Reference - Quick Guide - A1"
+    },
+    {
+      "source": "2026-02-04",
+      "target": "German/German Hub"
+    },
+    {
+      "source": "2026-02-04",
+      "target": "German/Tagebuch/2026-02/2026-02-03"
+    },
+    {
+      "source": "2026-02-04",
+      "target": "German/Tagebuch/2026-02/2026-02-05"
+    },
+    {
+      "source": "2026-02-05",
+      "target": "Reference - Trennbare Verben - A1"
+    },
+    {
+      "source": "2026-02-05",
+      "target": "Reference - Starke und unregelmäßige Verben - A1-A2"
+    },
+    {
+      "source": "2026-02-05",
+      "target": "Babbel - Newcomer 2 (A1.2) - German Modal Verbs & Word Order - Complete Guide"
+    },
+    {
+      "source": "2026-02-05",
+      "target": "Reference - Quick Guide - A1"
+    },
+    {
+      "source": "2026-02-05",
+      "target": "German/German Hub"
+    },
+    {
+      "source": "2026-02-05",
+      "target": "German/Tagebuch/2026-02/2026-02-04"
+    },
+    {
+      "source": "2026-02-05",
+      "target": "German/Tagebuch/2026-02/2026-02-06"
+    },
+    {
+      "source": "2026-02-06",
+      "target": "Reference - Trennbare Verben - A1"
+    },
+    {
+      "source": "2026-02-06",
+      "target": "Reference - Starke und unregelmäßige Verben - A1-A2"
+    },
+    {
+      "source": "2026-02-06",
+      "target": "Babbel - Newcomer 2 (A1.2) - German Modal Verbs & Word Order - Complete Guide"
+    },
+    {
+      "source": "2026-02-06",
+      "target": "Reference - Quick Guide - A1"
+    },
+    {
+      "source": "2026-02-06",
+      "target": "German/German Hub"
+    },
+    {
+      "source": "2026-02-06",
+      "target": "German/Tagebuch/2026-02/2026-02-05"
+    },
+    {
+      "source": "2026-02-06",
+      "target": "German/Tagebuch/2026-02/2026-02-07"
+    },
+    {
+      "source": "2026-02-07",
+      "target": "Reference - Trennbare Verben - A1"
+    },
+    {
+      "source": "2026-02-07",
+      "target": "Reference - Starke und unregelmäßige Verben - A1-A2"
+    },
+    {
+      "source": "2026-02-07",
+      "target": "Babbel - Newcomer 2 (A1.2) - German Modal Verbs & Word Order - Complete Guide"
+    },
+    {
+      "source": "2026-02-07",
+      "target": "Reference - Quick Guide - A1"
+    },
+    {
+      "source": "2026-02-07",
+      "target": "German/German Hub"
+    },
+    {
+      "source": "2026-02-07",
+      "target": "German/Tagebuch/2026-02/2026-02-06"
+    },
+    {
+      "source": "2026-02-07",
+      "target": "German/Tagebuch/2026-02/2026-02-08"
+    },
+    {
+      "source": "2026-02-08",
+      "target": "Reference - Trennbare Verben - A1"
+    },
+    {
+      "source": "2026-02-08",
+      "target": "Reference - Starke und unregelmäßige Verben - A1-A2"
+    },
+    {
+      "source": "2026-02-08",
+      "target": "Babbel - Newcomer 2 (A1.2) - German Modal Verbs & Word Order - Complete Guide"
+    },
+    {
+      "source": "2026-02-08",
+      "target": "Reference - Quick Guide - A1"
+    },
+    {
+      "source": "2026-02-08",
+      "target": "German/German Hub"
+    },
+    {
+      "source": "2026-02-08",
+      "target": "German/Tagebuch/2026-02/2026-02-07"
+    },
+    {
+      "source": "2026-02-08",
+      "target": "German/Tagebuch/2026-02/2026-02-09"
+    },
+    {
+      "source": "2026-02-09",
+      "target": "Reference - Trennbare Verben - A1"
+    },
+    {
+      "source": "2026-02-09",
+      "target": "Reference - Starke und unregelmäßige Verben - A1-A2"
+    },
+    {
+      "source": "2026-02-09",
+      "target": "Babbel - Newcomer 2 (A1.2) - German Modal Verbs & Word Order - Complete Guide"
+    },
+    {
+      "source": "2026-02-09",
+      "target": "Reference - Quick Guide - A1"
+    },
+    {
+      "source": "2026-02-09",
+      "target": "German/German Hub"
+    },
+    {
+      "source": "2026-02-09",
+      "target": "German/Tagebuch/2026-02/2026-02-08"
+    },
+    {
+      "source": "2026-02-09",
+      "target": "German/Tagebuch/2026-02/2026-02-10"
+    },
+    {
+      "source": "2026-02-10",
+      "target": "Reference - Trennbare Verben - A1"
+    },
+    {
+      "source": "2026-02-10",
+      "target": "Reference - Starke und unregelmäßige Verben - A1-A2"
+    },
+    {
+      "source": "2026-02-10",
+      "target": "Babbel - Newcomer 2 (A1.2) - German Modal Verbs & Word Order - Complete Guide"
+    },
+    {
+      "source": "2026-02-10",
+      "target": "Reference - Quick Guide - A1"
+    },
+    {
+      "source": "2026-02-10",
+      "target": "German/German Hub"
+    },
+    {
+      "source": "2026-02-10",
+      "target": "German/Tagebuch/2026-02/2026-02-09"
+    },
+    {
+      "source": "2026-02-10",
+      "target": "German/Tagebuch/2026-02/2026-02-11"
+    },
+    {
+      "source": "2026-02-11",
+      "target": "Reference - Trennbare Verben - A1"
+    },
+    {
+      "source": "2026-02-11",
+      "target": "Reference - Starke und unregelmäßige Verben - A1-A2"
+    },
+    {
+      "source": "2026-02-11",
+      "target": "Babbel - Newcomer 2 (A1.2) - German Modal Verbs & Word Order - Complete Guide"
+    },
+    {
+      "source": "2026-02-11",
+      "target": "Reference - Quick Guide - A1"
+    },
+    {
+      "source": "2026-02-11",
+      "target": "German/German Hub"
+    },
+    {
+      "source": "2026-02-11",
+      "target": "German/Tagebuch/2026-02/2026-02-10"
+    },
+    {
+      "source": "2026-02-11",
+      "target": "German/Tagebuch/2026-02/2026-02-12"
+    },
+    {
+      "source": "2026-02-12",
+      "target": "Reference - Trennbare Verben - A1"
+    },
+    {
+      "source": "2026-02-12",
+      "target": "Reference - Starke und unregelmäßige Verben - A1-A2"
+    },
+    {
+      "source": "2026-02-12",
+      "target": "Babbel - Newcomer 2 (A1.2) - German Modal Verbs & Word Order - Complete Guide"
+    },
+    {
+      "source": "2026-02-12",
+      "target": "Reference - Quick Guide - A1"
+    },
+    {
+      "source": "2026-02-12",
+      "target": "German/German Hub"
+    },
+    {
+      "source": "2026-02-12",
+      "target": "German/Tagebuch/2026-02/2026-02-11"
+    },
+    {
+      "source": "2026-02-12",
+      "target": "German/Tagebuch/2026-02/2026-02-13"
+    },
+    {
+      "source": "2026-02-13",
+      "target": "Reference - Trennbare Verben - A1"
+    },
+    {
+      "source": "2026-02-13",
+      "target": "Reference - Starke und unregelmäßige Verben - A1-A2"
+    },
+    {
+      "source": "2026-02-13",
+      "target": "Babbel - Newcomer 2 (A1.2) - German Modal Verbs & Word Order - Complete Guide"
+    },
+    {
+      "source": "2026-02-13",
+      "target": "Reference - Quick Guide - A1"
+    },
+    {
+      "source": "2026-02-13",
+      "target": "German/German Hub"
+    },
+    {
+      "source": "2026-02-13",
+      "target": "German/Tagebuch/2026-02/2026-02-12"
+    },
+    {
+      "source": "2026-02-13",
+      "target": "German/Tagebuch/2026-02/2026-02-14"
+    },
+    {
+      "source": "2026-02-14",
+      "target": "Reference - Trennbare Verben - A1"
+    },
+    {
+      "source": "2026-02-14",
+      "target": "Reference - Starke und unregelmäßige Verben - A1-A2"
+    },
+    {
+      "source": "2026-02-14",
+      "target": "Babbel - Newcomer 2 (A1.2) - German Modal Verbs & Word Order - Complete Guide"
+    },
+    {
+      "source": "2026-02-14",
+      "target": "Reference - Quick Guide - A1"
+    },
+    {
+      "source": "2026-02-14",
+      "target": "German/German Hub"
+    },
+    {
+      "source": "2026-02-14",
+      "target": "German/Tagebuch/2026-02/2026-02-13"
+    },
+    {
+      "source": "2026-02-14",
+      "target": "German/Tagebuch/2026-02/2026-02-15"
+    },
+    {
+      "source": "2026-02-15",
+      "target": "Reference - Trennbare Verben - A1"
+    },
+    {
+      "source": "2026-02-15",
+      "target": "Reference - Starke und unregelmäßige Verben - A1-A2"
+    },
+    {
+      "source": "2026-02-15",
+      "target": "Babbel - Newcomer 2 (A1.2) - German Modal Verbs & Word Order - Complete Guide"
+    },
+    {
+      "source": "2026-02-15",
+      "target": "Reference - Quick Guide - A1"
+    },
+    {
+      "source": "2026-02-15",
+      "target": "German/German Hub"
+    },
+    {
+      "source": "2026-02-15",
+      "target": "German/Tagebuch/2026-02/2026-02-14"
+    },
+    {
+      "source": "2026-02-15",
+      "target": "German/Tagebuch/2026-03/2026-03-05"
+    },
+    {
+      "source": "2026-03-05",
+      "target": "German/German Hub"
+    },
+    {
+      "source": "2026-03-05",
+      "target": "2026-01-08"
+    },
+    {
+      "source": "2026-03-05",
+      "target": "German/Tagebuch/2026-03/2026-03-07"
+    },
+    {
+      "source": "2026-03-07",
+      "target": "Reference - Trennbare Verben - A1"
+    },
+    {
+      "source": "2026-03-07",
+      "target": "Reference - Starke und unregelmäßige Verben - A1-A2"
+    },
+    {
+      "source": "2026-03-07",
+      "target": "Babbel - Newcomer 2 (A1.2) - German Modal Verbs & Word Order - Complete Guide"
+    },
+    {
+      "source": "2026-03-07",
+      "target": "Reference - Quick Guide - A1"
+    },
+    {
+      "source": "2026-03-07",
+      "target": "German/German Hub"
+    },
+    {
+      "source": "2026-03-07",
+      "target": "German/Tagebuch/2026-03/2026-03-05"
+    },
+    {
+      "source": "2026-03-07",
+      "target": "German/Tagebuch/2026-03/2026-03-08"
+    },
+    {
+      "source": "2026-03-08",
+      "target": "Reference - Trennbare Verben - A1"
+    },
+    {
+      "source": "2026-03-08",
+      "target": "Reference - Starke und unregelmäßige Verben - A1-A2"
+    },
+    {
+      "source": "2026-03-08",
+      "target": "Babbel - Newcomer 2 (A1.2) - German Modal Verbs & Word Order - Complete Guide"
+    },
+    {
+      "source": "2026-03-08",
+      "target": "Reference - Quick Guide - A1"
+    },
+    {
+      "source": "2026-03-08",
+      "target": "German/German Hub"
+    },
+    {
+      "source": "2026-03-08",
+      "target": "German/Tagebuch/2026-03/2026-03-07"
+    },
+    {
+      "source": "Backlog",
+      "target": "Learning/Learning Goals"
+    },
+    {
+      "source": "Backlog",
+      "target": "Library/Backend Engineering/Computer Networking A Top-Down Approach/Computer Networking A Top-Down Approach - Notes"
+    },
+    {
+      "source": "Learning Goals",
+      "target": "Library/Backend Engineering/Site Reliability Engineering/Site Reliability Engineering - Notes\\"
+    },
+    {
+      "source": "Learning Goals",
+      "target": "Learning/Repos/deep-systems"
+    },
+    {
+      "source": "Learning Goals",
+      "target": "Library/Backend Engineering/Computer Systems A Programmers Perspective/Computer Systems A Programmers Perspective - Notes"
+    },
+    {
+      "source": "Learning Goals",
+      "target": "Library/Backend Engineering/Computer Networking A Top-Down Approach/Computer Networking A Top-Down Approach - Notes"
+    },
+    {
+      "source": "Learning Goals",
+      "target": "Designing Data-Intensive Applications.pdf"
+    },
+    {
+      "source": "Learning Goals",
+      "target": "Library/Data Engineering/Database Internals/Database Internals - Notes"
+    },
+    {
+      "source": "Learning Goals",
+      "target": "Library/Backend Engineering/Structure and Interpretation of Computer Programs/Structure and Interpretation of Computer Programs - Notes"
+    },
+    {
+      "source": "Learning Goals",
+      "target": "Engineering/OSS/OSS Hub"
+    },
+    {
+      "source": "Learning Goals",
+      "target": "Library/Backend Engineering/Computer Systems A Programmers Perspective/Computer Systems A Programmers Perspective - Notes\\"
+    },
+    {
+      "source": "Learning Goals",
+      "target": "Library/Backend Engineering/Structure and Interpretation of Computer Programs/Structure and Interpretation of Computer Programs - Notes\\"
+    },
+    {
+      "source": "Learning Goals",
+      "target": "Library/Backend Engineering/Computer Networking A Top-Down Approach/Computer Networking A Top-Down Approach - Notes\\"
+    },
+    {
+      "source": "Learning Goals",
+      "target": "Library/Backend Engineering/Kubernetes in Action/Kubernetes in Action - Notes\\"
+    },
+    {
+      "source": "Learning Goals",
+      "target": "Library/Backend Engineering/The Linux Programming Interface/The Linux Programming Interface - Notes\\"
+    },
+    {
+      "source": "Learning Goals",
+      "target": "Library/Backend Engineering/Effective Java/Effective Java - Notes\\"
+    },
+    {
+      "source": "Learning Goals",
+      "target": "Engineering/OSS/Airflow Contributions\\"
+    },
+    {
+      "source": "Learning Goals",
+      "target": "Engineering/OSS/Dagster Contributions\\"
+    },
+    {
+      "source": "Learning Goals",
+      "target": "Engineering/Engineering Hub"
+    },
+    {
+      "source": "Learning Goals",
+      "target": "German/German Hub"
+    },
+    {
+      "source": "Dashboard",
+      "target": "Learning/Repos/Repos"
+    },
+    {
+      "source": "Computer Networking A Top-Down Approach - Notes",
+      "target": "Kurose, James F._ Ross, Keith W. - Computer networking _ a top-down approach (2017).pdf"
+    },
+    {
+      "source": "Computer Networking A Top-Down Approach - Notes",
+      "target": "Learning/Learning Goals"
+    },
+    {
+      "source": "Computer Networking A Top-Down Approach - Notes",
+      "target": "Library/Backend Engineering/Unix and Linux System Administration Handbook - Notes"
+    },
+    {
+      "source": "Computer Networking A Top-Down Approach - Notes",
+      "target": "Library/Library Hub"
+    },
+    {
+      "source": "Computer Systems A Programmers Perspective - Notes",
+      "target": "Randal E. Bryant_ David R. O'Hallaron - Computer Systems A Programmer's Perspective (2015, Pearson Education).pdf"
+    },
+    {
+      "source": "Computer Systems A Programmers Perspective - Notes",
+      "target": "Library/Library Hub"
+    },
+    {
+      "source": "Structure and Interpretation of Computer Programs - Notes",
+      "target": "Structure and Interpretation of Computer Programs - Abelson, Sussman.pdf"
+    },
+    {
+      "source": "Structure and Interpretation of Computer Programs - Notes",
+      "target": "Library/Library Hub"
+    },
+    {
+      "source": "The Linux Command Line - Notes",
+      "target": "The Linux Command Line - William Shotts.pdf"
+    },
+    {
+      "source": "The Linux Command Line - Notes",
+      "target": "Engineering/Backend Engineering/Platform Engineering"
+    },
+    {
+      "source": "The Linux Command Line - Notes",
+      "target": "Library/Library Hub"
+    },
+    {
+      "source": "Unix and Linux System Administration Handbook - Notes",
+      "target": "Unix and Linux System Administration Handbook - Nemeth et al.pdf"
+    },
+    {
+      "source": "Unix and Linux System Administration Handbook - Notes",
+      "target": "Engineering/Backend Engineering/Platform Engineering"
+    },
+    {
+      "source": "Unix and Linux System Administration Handbook - Notes",
+      "target": "Library/Library Hub"
+    },
+    {
+      "source": "Database Internals - Notes",
+      "target": "Database Internals.pdf"
+    },
+    {
+      "source": "Database Internals - Notes",
+      "target": "Database Internals - Chapter 1 - Introduction and Overview"
+    },
+    {
+      "source": "Database Internals - Notes",
+      "target": "Library/Library Hub"
+    },
+    {
+      "source": "Designing Data-Intensive Applications - Notes",
+      "target": "Designing Data-Intensive Applications.pdf"
+    },
+    {
+      "source": "Designing Data-Intensive Applications - Notes",
+      "target": "Designing Data Intensive Applications"
+    },
+    {
+      "source": "Designing Data-Intensive Applications - Notes",
+      "target": "Library/Library Hub"
+    },
+    {
+      "source": "Fluent Python - Notes",
+      "target": "Fluent Python.pdf"
+    },
+    {
+      "source": "Fluent Python - Notes",
+      "target": "Library/Library Hub"
+    },
+    {
+      "source": "Kafka - The Definitive Guide - Notes",
+      "target": "Kafka - The Definitive Guide.pdf"
+    },
+    {
+      "source": "Kafka - The Definitive Guide - Notes",
+      "target": "Engineering/Backend Engineering/Kafka/Kafka Hub"
+    },
+    {
+      "source": "Kafka - The Definitive Guide - Notes",
+      "target": "Kafka Brokers"
+    },
+    {
+      "source": "Kafka - The Definitive Guide - Notes",
+      "target": "Overview"
+    },
+    {
+      "source": "Kafka - The Definitive Guide - Notes",
+      "target": "Library/Library Hub"
+    },
+    {
+      "source": "Learning Go - Notes",
+      "target": "Learning Go.pdf"
+    },
+    {
+      "source": "Learning Go - Notes",
+      "target": "The Go Programming Language - Notes"
+    },
+    {
+      "source": "Learning Go - Notes",
+      "target": "Library/Library Hub"
+    },
+    {
+      "source": "Streaming Systems - Notes",
+      "target": "Streaming Systems - Tyler Akidau.pdf"
+    },
+    {
+      "source": "Streaming Systems - Notes",
+      "target": "Engineering/Backend Engineering/Kafka/Kafka Hub"
+    },
+    {
+      "source": "Streaming Systems - Notes",
+      "target": "Engineering/Engineering Hub"
+    },
+    {
+      "source": "Streaming Systems - Notes",
+      "target": "Library/Library Hub"
+    },
+    {
+      "source": "The Go Programming Language - Notes",
+      "target": "The Go Programming Language.pdf"
+    },
+    {
+      "source": "The Go Programming Language - Notes",
+      "target": "Learning Go - Notes"
+    },
+    {
+      "source": "The Go Programming Language - Notes",
+      "target": "Library/Library Hub"
+    },
+    {
+      "source": "Library Hub",
+      "target": "Library/Data Engineering/Book Title - Notes"
+    },
+    {
+      "source": "Library Hub",
+      "target": "Library/Data Engineering/Kafka - The Definitive Guide/Kafka - The Definitive Guide - Notes\\"
+    },
+    {
+      "source": "Library Hub",
+      "target": "Library/Data Engineering/Database Internals/Database Internals - Notes\\"
+    },
+    {
+      "source": "Library Hub",
+      "target": "Library/Data Engineering/Designing Data-Intensive Applications/Designing Data-Intensive Applications - Notes\\"
+    },
+    {
+      "source": "Library Hub",
+      "target": "Library/Data Engineering/Learning Go/Learning Go - Notes\\"
+    },
+    {
+      "source": "Library Hub",
+      "target": "Library/Data Engineering/Fluent Python/Fluent Python - Notes\\"
+    },
+    {
+      "source": "Library Hub",
+      "target": "Library/Data Engineering/The Go Programming Language/The Go Programming Language - Notes\\"
+    },
+    {
+      "source": "Library Hub",
+      "target": "Library/Data Engineering/Streaming Systems/Streaming Systems - Notes\\"
+    },
+    {
+      "source": "Library Hub",
+      "target": "Library/Backend Engineering/Computer Networking A Top-Down Approach/Computer Networking A Top-Down Approach - Notes\\"
+    },
+    {
+      "source": "Library Hub",
+      "target": "Library/Backend Engineering/Unix and Linux System Administration Handbook/Unix and Linux System Administration Handbook - Notes\\"
+    },
+    {
+      "source": "Library Hub",
+      "target": "Library/Backend Engineering/The Linux Command Line/The Linux Command Line - Notes\\"
+    },
+    {
+      "source": "Library Hub",
+      "target": "Library/Backend Engineering/Structure and Interpretation of Computer Programs/Structure and Interpretation of Computer Programs - Notes\\"
+    },
+    {
+      "source": "Library Hub",
+      "target": "Library/Backend Engineering/Computer Systems A Programmers Perspective/Computer Systems A Programmers Perspective - Notes\\"
+    },
+    {
+      "source": "Library Hub",
+      "target": "Library/Backend Engineering/Kubernetes in Action/Kubernetes in Action - Notes\\"
+    },
+    {
+      "source": "Library Hub",
+      "target": "Library/Backend Engineering/Systems Performance/Systems Performance - Notes\\"
+    },
+    {
+      "source": "Library Hub",
+      "target": "Library/Backend Engineering/Site Reliability Engineering/Site Reliability Engineering - Notes\\"
+    },
+    {
+      "source": "Library Hub",
+      "target": "Library/Backend Engineering/The Linux Programming Interface/The Linux Programming Interface - Notes\\"
+    },
+    {
+      "source": "Library Hub",
+      "target": "Library/Backend Engineering/Effective Java/Effective Java - Notes\\"
+    },
+    {
+      "source": "Library Hub",
+      "target": "Library/AI/Designing Machine Learning Systems/Designing Machine Learning Systems - Notes\\"
+    },
+    {
+      "source": "Library Hub",
+      "target": "Library/AI/AI Engineering/AI Engineering - Notes\\"
+    },
+    {
+      "source": "Library Hub",
+      "target": "Library/AI/Engineering Executive's Primer/Engineering Executive's Primer - Notes\\"
+    },
+    {
+      "source": "Library Hub",
+      "target": "Library/AI/Hands-On Machine Learning with Scikit-Learn and PyTorch/Hands-On Machine Learning with Scikit-Learn and PyTorch - Notes\\"
+    },
+    {
+      "source": "Library Hub",
+      "target": "Library/AI/Visualizing Generative AI/Visualizing Generative AI - Notes\\"
+    },
+    {
+      "source": "Library Hub",
+      "target": "Library/AI/LLM Ops/LLM Ops - Notes\\"
+    },
+    {
+      "source": "Library Hub",
+      "target": "Library/AI/Developer's Playbook for Large Language Model Security/Developer's Playbook for Large Language Model Security - Notes\\"
+    },
+    {
+      "source": "Library Hub",
+      "target": "Library/AI/Generative AI Design Patterns/Generative AI Design Patterns - Notes\\"
+    },
+    {
+      "source": "Library Hub",
+      "target": "Library/AI/Learning LangChain/Learning LangChain - Notes\\"
+    },
+    {
+      "source": "Library Hub",
+      "target": "Library/AI/Building Applications with AI Agents/Building Applications with AI Agents - Notes\\"
+    },
+    {
+      "source": "Library Hub",
+      "target": "Library/AI/Prompt Engineering for Generative AI/Prompt Engineering for Generative AI - Notes\\"
+    },
+    {
+      "source": "Library Hub",
+      "target": "Library/AI/Hands-On Large Language Models/Hands-On Large Language Models - Notes\\"
+    },
+    {
+      "source": "Library Hub",
+      "target": "Library/AI/AI and ML for Coders/AI and ML for Coders - Notes\\"
+    },
+    {
+      "source": "Library Hub",
+      "target": "Library/AI/Crafting Engineering Strategy/Crafting Engineering Strategy - Notes\\"
+    },
+    {
+      "source": "Library Hub",
+      "target": "Engineering/Engineering Hub"
+    },
+    {
+      "source": "Library Hub",
+      "target": "German/German Hub"
+    },
+    {
+      "source": "Satellite Vaults",
+      "target": "Learning/Learning Goals"
+    },
+    {
+      "source": "Satellite Vaults",
+      "target": "Setup/new-vault-setup"
+    },
+    {
+      "source": "Satellite Vaults",
+      "target": "Setup/Setup Hub"
+    },
+    {
+      "source": "Setup Hub",
+      "target": "Setup/tmux\\"
+    },
+    {
+      "source": "Setup Hub",
+      "target": "Setup/neovim\\"
+    },
+    {
+      "source": "Setup Hub",
+      "target": "Setup/new-vault-setup\\"
+    },
+    {
+      "source": "Setup Hub",
+      "target": "Setup/Satellite Vaults\\"
+    },
+    {
+      "source": "Setup Hub",
+      "target": "Setup/tmux"
+    },
+    {
+      "source": "Setup Hub",
+      "target": "Setup/neovim"
+    },
+    {
+      "source": "neovim",
+      "target": "autocmd VimEnter * Neotree filesystem reveal left"
+    },
+    {
+      "source": "neovim",
+      "target": "Setup/tmux"
+    },
+    {
+      "source": "neovim",
+      "target": "Setup/Setup Hub"
+    },
+    {
+      "source": "new-vault-setup",
+      "target": "Daily Notes/Daily Log"
+    },
+    {
+      "source": "new-vault-setup",
+      "target": "Note Name"
+    },
+    {
+      "source": "new-vault-setup",
+      "target": "Folder/Note"
+    },
+    {
+      "source": "new-vault-setup",
+      "target": "<Vault Name>"
+    },
+    {
+      "source": "new-vault-setup",
+      "target": "link"
+    },
+    {
+      "source": "new-vault-setup",
+      "target": "jandys-vault goals"
+    },
+    {
+      "source": "new-vault-setup",
+      "target": "link to vault goals"
+    },
+    {
+      "source": "new-vault-setup",
+      "target": "Setup/Setup Hub"
+    },
+    {
+      "source": "tmux",
+      "target": "Setup/Setup Hub"
+    }
+  ]
 }
