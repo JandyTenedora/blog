@@ -68,12 +68,7 @@ The blog is intentionally outside the vault. The vault is private working memory
 
 Every note in the vault is a node. Every wikilink between notes is an edge. The graph below is a live export of that structure — 429 nodes, 766 connections. Red nodes are the most-linked. Drag to reposition, scroll to zoom, hover to identify.
 
-<div id="graph-mini-container"></div>
-<p class="graph-mini-caption">The Obsidian vault graph. Rendered with D3.js from a live export. <a href="/graph/">Full view →</a></p>
-
-<script src="https://cdn.jsdelivr.net/npm/d3@7/dist/d3.min.js"></script>
-<link rel="stylesheet" href="/css/graph.css">
-<script src="/js/graph-mini.js"></script>
+{{< graph-mini >}}
 
 ## What's next
 
