@@ -32,7 +32,11 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
         with:
-          submodules: recursive
+          submodules: false
+
+      - name: Checkout theme submodules
+        run: |
+          git submodule update --init themes/PaperMod themes/hugo-tufte
 
       - name: Setup Pages
         id: pages
