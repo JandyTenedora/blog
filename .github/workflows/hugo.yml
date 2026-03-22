@@ -61,6 +61,19 @@ jobs:
             --minify \
             --baseURL "${{ steps.pages.outputs.base_url }}/"
 
+      - name: Check for root-relative paths missing subpath prefix
+        run: |
+          SUBPATH=$(echo "${{ steps.pages.outputs.base_url }}" | grep -oP '(?<=github\.io).*' | sed 's|/$||')
+          echo "Expected subpath prefix: ${SUBPATH}"
+          ISSUES=$(grep -roh -E '(href|src)="(/[^/"#][^"]*)"' public/ --include="*.html" \
+            | grep -v "=\"${SUBPATH}/" || true)
+          if [ -n "$ISSUES" ]; then
+            echo "ERROR: Found root-relative links missing '${SUBPATH}/' prefix:"
+            echo "$ISSUES"
+            exit 1
+          fi
+          echo "All internal paths include correct subpath prefix."
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
