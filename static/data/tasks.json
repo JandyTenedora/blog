@@ -1,0 +1,55 @@
+{
+  "today": {
+    "date": "2026-03-22",
+    "focus": "Sprint Day 4 — CS:APP Ch 2 (Representing and Manipulating Information). Heavier than Ch 1: integers, two's complement, bitwise ops, floating point. Don't rush — this is the foundation for type safety intuition.",
+    "sections": [
+      {
+        "name": "Engineering",
+        "tasks": [
+          {
+            "title": "CS:APP Ch 2 — Representing and Manipulating Information",
+            "done": false,
+            "duration": "~90 min"
+          }
+        ]
+      },
+      {
+        "name": "German",
+        "tasks": [
+          {
+            "title": "Grammar review",
+            "done": false,
+            "duration": "~45 min"
+          }
+        ]
+      }
+    ]
+  },
+  "missed": [
+    {
+      "date": "2026-03-21",
+      "tasks": [
+        {
+          "title": "Tagebuch entry",
+          "section": "German",
+          "duration": "~45 min"
+        }
+      ]
+    },
+    {
+      "date": "2026-03-19",
+      "tasks": [
+        {
+          "title": "CS:APP Ch 1 — A Tour of Computer Systems",
+          "section": "Engineering (~2 hrs)",
+          "duration": "~50 min"
+        },
+        {
+          "title": "CS:APP Ch 2 — Representing and Manipulating Information",
+          "section": "Engineering (~2 hrs)",
+          "duration": "~70 min"
+        }
+      ]
+    }
+  ]
+}

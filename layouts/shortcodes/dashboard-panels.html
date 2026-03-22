@@ -1,0 +1,7 @@
+<link rel="stylesheet" href="{{ .Site.BaseURL }}css/dashboard-panels.css">
+<div class="dp-grid">
+  <div id="dp-today"></div>
+  <div id="dp-missed"></div>
+</div>
+<script>window.TASKS_DATA_URL = "{{ .Site.BaseURL }}data/tasks.json";</script>
+<script src="{{ .Site.BaseURL }}js/dashboard-panels.js"></script>
