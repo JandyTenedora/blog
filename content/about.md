@@ -19,7 +19,7 @@ But for now, I want to walk away from the temptation we all have to lose sight o
 
 ## What I write about
 
-- **deep-systems projects**: the name I'm giving to a series of projects designed to enact the learning goals above. The inspiration came from [ThePrimeagen](https://www.youtube.com/@ThePrimeagen), who said something in a video that stuck with me: the best way to learn is to build something you already use and take for granted. So that's the plan. HTTP servers, relational databases, message queues, distributed brokers, wide-column stores. Each one built twice: a Java prototype first, then Go. Built to understand the layers of infrastructure I rely on every day but have never had to implement.
+- **deep-systems projects**: the name I'm giving to a series of projects designed to enact the learning goals above. The inspiration came from ThePrimeagen himself, who said something in a video that stuck with me: the best way to learn is to build something you already use and take for granted. So that's the plan. HTTP servers, relational databases, message queues, distributed brokers, wide-column stores. Each one built twice: a Java prototype first, then Go. Built to understand the layers of infrastructure I rely on every day but have never had to implement.
 - **First-principles reading**: notes from CS:APP, Kurose, SICP. The books that most working engineers skip.
 - **Data engineering**: pipelines, orchestration, warehousing, stream processing.
 - **German**: I'm learning German. Occasionally I'll write about that too.
