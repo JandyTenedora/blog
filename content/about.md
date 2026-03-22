@@ -7,10 +7,7 @@ bookHidden: true
 
 # About
 
-<figure style="float:right; margin:0 0 1.5rem 2rem; max-width:240px;">
-  <img src="/images/jandy.jpg" alt="Jandy Tenedora" style="width:100%; border-radius:6px; box-shadow:0 2px 12px rgba(0,0,0,0.12);">
-  <figcaption style="font-size:0.72rem; color:#aaa; margin-top:0.4rem; text-align:center;">State Library Victoria, 2019</figcaption>
-</figure>
+{{< profile-photo >}}
 
 Sydney-raised, stats and CS graduate from the University of Sydney, now a senior data engineer living in the UK.
 
