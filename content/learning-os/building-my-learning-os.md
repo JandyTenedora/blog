@@ -11,9 +11,7 @@ aliases: ["/posts/building-my-learning-os/"]
 
 ## Why
 
-It's easy, as a working engineer, to spend years operating at the level of abstraction the job demands, and only that level. Frameworks, managed services, APIs. Things that work without requiring you to know why they work.
-
-I wanted to go back. Not to fill gaps, but to rediscover the kind of engagement with computing that used to excite me most, the academic days of grappling with things from first principles, building understanding from the ground up. The nostalgia for that mode of thinking turned into a structured project. This post is about how I organised it.
+My full motivations are the same ones behind this blog, [read about them here](/about/). This is the system I built to organise those goals into something visual and intuitive, and to finally make proper use of an Obsidian feature I had never before managed to fully optimise for.
 
 ## The learning OS
 
