@@ -45,13 +45,27 @@ jobs:
         id: pages
         uses: actions/configure-pages@v5
 
-      - name: Build with Hugo (test)
+      - name: Build with Hugo (test — flat paths)
         run: hugo --minify --baseURL "http://localhost/"
 
       - name: Check HTML (internal links and assets)
         run: |
           curl -sSL https://htmltest.wjdp.uk | bash -s -- -b /usr/local/bin
           htmltest --conf .htmltest.yml
+
+      - name: Build with Hugo (test — subpath simulation)
+        run: hugo --minify --baseURL "http://localhost/blog/"
+
+      - name: Check for root-relative paths missing subpath prefix
+        run: |
+          ISSUES=$(grep -roh -E '(href|src)="(/[^/"#][^"]*)"' public/ --include="*.html" \
+            | grep -v '="/blog/' || true)
+          if [ -n "$ISSUES" ]; then
+            echo "ERROR: Found root-relative links missing /blog/ prefix:"
+            echo "$ISSUES"
+            exit 1
+          fi
+          echo "All internal paths include correct subpath prefix."
 
       - name: Build with Hugo (deploy)
         env:
@@ -60,19 +74,6 @@ jobs:
           hugo \
             --minify \
             --baseURL "${{ steps.pages.outputs.base_url }}/"
-
-      - name: Check for root-relative paths missing subpath prefix
-        run: |
-          SUBPATH=$(echo "${{ steps.pages.outputs.base_url }}" | grep -oP '(?<=github\.io).*' | sed 's|/$||')
-          echo "Expected subpath prefix: ${SUBPATH}"
-          ISSUES=$(grep -roh -E '(href|src)="(/[^/"#][^"]*)"' public/ --include="*.html" \
-            | grep -v "=\"${SUBPATH}/" || true)
-          if [ -n "$ISSUES" ]; then
-            echo "ERROR: Found root-relative links missing '${SUBPATH}/' prefix:"
-            echo "$ISSUES"
-            exit 1
-          fi
-          echo "All internal paths include correct subpath prefix."
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
