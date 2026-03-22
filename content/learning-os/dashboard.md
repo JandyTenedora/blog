@@ -10,7 +10,7 @@ showToc: false
 
 # Dashboard
 
-The learning OS described in [the first post](/blog/learning-os/building-my-learning-os/) runs inside a private Obsidian vault. The vault handles everything: daily study plans, habit tracking, reading notes, a 6-month roadmap. This page is its public window.
+The learning OS described in [the first post]({{< ref "/learning-os/building-my-learning-os" >}}) runs inside a private Obsidian vault. The vault handles everything: daily study plans, habit tracking, reading notes, a 6-month roadmap. This page is its public window.
 
 When I built the learning OS I wanted some accountability surface: somewhere the work would be visible, not just tracked privately. The dashboard is that. It pulls from the vault's daily notes, so what you see here reflects what I actually planned and did, not a curated summary written after the fact.
 
