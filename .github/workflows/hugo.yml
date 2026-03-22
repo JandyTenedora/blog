@@ -58,8 +58,8 @@ jobs:
 
       - name: Check for root-relative paths missing subpath prefix
         run: |
-          ISSUES=$(grep -roh -E '(href|src)="(/[^/"#][^"]*)"' public/ --include="*.html" \
-            | grep -v '="/blog/' || true)
+          ISSUES=$(grep -roh -E '(href|src)="?(/[^/"#> ][^"# >]*)' public/ --include="*.html" \
+            | grep -vE '(href|src)="?/blog/' || true)
           if [ -n "$ISSUES" ]; then
             echo "ERROR: Found root-relative links missing /blog/ prefix:"
             echo "$ISSUES"

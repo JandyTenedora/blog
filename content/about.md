@@ -26,7 +26,7 @@ But for now, I want to walk away from the temptation we all have to lose sight o
 
 ## The setup
 
-The underlying system is an Obsidian vault running as a personal learning OS, with Claude Code handling daily planning and note generation. I wrote about how it works in the [first post](/learning-os/building-my-learning-os/).
+The underlying system is an Obsidian vault running as a personal learning OS, with Claude Code handling daily planning and note generation. I wrote about how it works in the [first post]({{< ref "/learning-os/building-my-learning-os" >}}).
 
 ## Elsewhere
 
