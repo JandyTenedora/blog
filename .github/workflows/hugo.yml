@@ -53,6 +53,11 @@ jobs:
             --minify \
             --baseURL "${{ steps.pages.outputs.base_url }}/"
 
+      - name: Check HTML (internal links and assets)
+        uses: wjdp/htmltest-action@v2
+        with:
+          config: .htmltest.yml
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3.0.1
         with:

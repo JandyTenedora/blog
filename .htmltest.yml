@@ -1,0 +1,6 @@
+DirectoryPath: public/
+CheckExternal: false
+CheckMailto: false
+IgnoreURLs:
+  - "^https://fonts\\.gstatic\\.com"
+  - "^https://fonts\\.googleapis\\.com"
