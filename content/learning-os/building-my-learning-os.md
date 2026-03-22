@@ -11,7 +11,7 @@ aliases: ["/posts/building-my-learning-os/"]
 
 ## Why
 
-My full motivations are the same ones behind this blog, [read about them here](/about/). This is the system I built to organise those goals into something visual and intuitive, and to finally make proper use of an Obsidian feature I had never before managed to fully optimise for.
+My full motivations are the same ones behind this blog, read [about](/about/) them here. This is the system I built to organise those goals into something visual and intuitive, and to finally make proper use of an Obsidian feature I had never before managed to fully optimise for.
 
 ## The learning OS
 
