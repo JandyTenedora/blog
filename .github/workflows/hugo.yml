@@ -45,18 +45,21 @@ jobs:
         id: pages
         uses: actions/configure-pages@v5.0.0
 
-      - name: Build with Hugo
+      - name: Build with Hugo (test)
+        run: hugo --minify --baseURL "http://localhost/"
+
+      - name: Check HTML (internal links and assets)
+        run: |
+          curl -sSL https://htmltest.wjdp.uk | bash -s -- -b /usr/local/bin
+          htmltest --conf .htmltest.yml
+
+      - name: Build with Hugo (deploy)
         env:
           HUGO_ENVIRONMENT: production
         run: |
           hugo \
             --minify \
             --baseURL "${{ steps.pages.outputs.base_url }}/"
-
-      - name: Check HTML (internal links and assets)
-        run: |
-          curl -sSL https://htmltest.wjdp.uk | bash -s -- -b /usr/local/bin
-          htmltest --conf .htmltest.yml
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3.0.1
