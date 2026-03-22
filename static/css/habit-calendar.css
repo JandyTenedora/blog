@@ -1,0 +1,108 @@
+.hc-wrap {
+  overflow-x: auto;
+  margin: 2rem 0;
+  font-family: et-book, Palatino, Georgia, serif;
+}
+
+/* header row (month labels) + habit rows share the same column layout */
+.hc-header,
+.hc-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 3px;
+  margin-bottom: 3px;
+}
+
+.hc-row {
+  margin-bottom: 10px;
+}
+
+/* left-hand label area */
+.hc-spacer {
+  width: 150px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-right: 12px;
+}
+
+.hc-habit-name {
+  font-size: 0.82rem;
+  color: #333;
+  display: block;
+}
+
+.hc-streak {
+  font-size: 0.68rem;
+  color: #999;
+  display: block;
+  margin-top: 2px;
+}
+
+/* week column */
+.hc-col {
+  width: 12px;
+  flex-shrink: 0;
+}
+
+.hc-month-lbl {
+  font-size: 0.62rem;
+  color: #aaa;
+  white-space: nowrap;
+  overflow: visible;
+  height: 14px;
+  line-height: 14px;
+}
+
+.hc-week {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+/* individual day cell */
+.hc-cell {
+  width: 12px;
+  height: 12px;
+  border-radius: 2px;
+  background: #eaeae6;
+  box-sizing: border-box;
+}
+
+.hc-cell.hc-future {
+  background: transparent;
+  border: 1px solid #e8e8e4;
+}
+
+.hc-cell.hc-done.hc-german   { background: #9b6467; }
+.hc-cell.hc-done.hc-dataeng  { background: #5a8ab0; }
+.hc-cell.hc-done.hc-training { background: #8a9b5a; }
+
+/* footer legend */
+.hc-footer {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin-top: 8px;
+  padding-left: 150px;
+}
+
+.hc-legend-label {
+  font-size: 0.68rem;
+  color: #aaa;
+}
+
+.hc-legend-cell {
+  display: inline-block;
+}
+
+@media (max-width: 600px) {
+  .hc-spacer {
+    width: 100px;
+    padding-right: 8px;
+  }
+  .hc-footer {
+    padding-left: 100px;
+  }
+}
