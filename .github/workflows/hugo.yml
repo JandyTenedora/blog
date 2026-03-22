@@ -54,9 +54,9 @@ jobs:
             --baseURL "${{ steps.pages.outputs.base_url }}/"
 
       - name: Check HTML (internal links and assets)
-        uses: wjdp/htmltest-action@v2
-        with:
-          config: .htmltest.yml
+        run: |
+          curl -sSL https://htmltest.wjdp.uk | bash -s -- -b /usr/local/bin
+          htmltest --conf .htmltest.yml
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3.0.1
