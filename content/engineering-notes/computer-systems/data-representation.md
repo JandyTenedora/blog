@@ -74,9 +74,9 @@ Range for w-bit two's complement: [−2^(w−1), 2^(w−1) − 1]
 
 For `int32`: [−2,147,483,648, +2,147,483,647]
 
-Note the **asymmetry**: one more negative value than positive. `math.MinInt32` has no positive counterpart — negating it overflows back to itself.
+Note the **asymmetry**: one more negative value than positive. `math.MinInt32` has no positive counterpart, negating it overflows back to itself.
 
-**Why two's complement?** Addition is identical for both signed and unsigned — the CPU uses the *same adder circuit*. The sign bit's negative weight is the only difference.
+**Why two's complement?** Addition is identical for both signed and unsigned, the CPU uses the *same adder circuit*. The sign bit's negative weight is the only difference.
 
 ### The same bits, different values
 
@@ -88,7 +88,7 @@ As int32:    −1
 As float32:  NaN
 ```
 
-**The bits carry no inherent meaning. The type is the contract.** Static typing means the compiler enforces that contract at compile time — a value typed as `int32` cannot be passed where `uint32` is expected without an explicit conversion. Dynamic typing defers this to runtime.
+**The bits carry no inherent meaning. The type is the contract.** Static typing means the compiler enforces that contract at compile time, so a value typed as `int32` cannot be passed where `uint32` is expected without an explicit conversion. Dynamic typing defers this to runtime.
 
 ### Sign extension
 
@@ -109,7 +109,7 @@ For unsigned widening: zero-extend (fill with 0s). Different rule, same result.
 
 ### Unsigned: modular wraparound
 
-w-bit addition discards any carry out from bit w — this is modular arithmetic:
+w-bit addition discards any carry out from bit w, this is modular arithmetic:
 
 ```
 Result = (a + b) mod 2^w
@@ -178,7 +178,7 @@ For normalised values: M = 1.fraction (the leading 1 is implied), E = exponent f
 | all zeros | ±∞ |
 | non-zero | NaN (Not a Number) |
 
-NaN propagates — any arithmetic involving NaN returns NaN. `NaN != NaN` is `true`.
+NaN propagates, any arithmetic involving NaN returns NaN. `NaN != NaN` is `true`.
 
 ### Decimal fractions cannot be represented exactly
 
@@ -212,7 +212,7 @@ This is why compilers cannot freely reorder float expressions for optimisation.
 
 - Everything in memory is bytes. A **type** is a contract about how to interpret those bytes.
 - Static typing enforces that contract at compile time; dynamic typing defers it to runtime.
-- **Two's complement**: MSB has weight −2^(w−1). The same adder circuit works for signed and unsigned. Asymmetric range — one more negative value than positive.
+- **Two's complement**: MSB has weight −2^(w−1). The same adder circuit works for signed and unsigned. Asymmetric range, one more negative value than positive.
 - `0xFFFFFFFF` = 4,294,967,295 as `uint32`, = −1 as `int32`, = NaN as `float32`. Same bits, three different values.
 - **Unsigned overflow**: defined, wraps modularly. **Signed overflow in Go**: defined, wraps two's complement. In C: undefined behaviour.
 - Sign-extend when widening signed integers; zero-extend for unsigned.

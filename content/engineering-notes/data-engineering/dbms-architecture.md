@@ -33,7 +33,7 @@ flowchart TD
 
 1. Transport subsystem receives the query and hands it to the **query processor**, which parses, interprets, and validates it.
 2. The parsed query goes to the **query optimizer**, which selects the most efficient execution plan using internal statistics (index cardinality, approximate intersection sizes, etc.).
-3. The **execution engine** executes the plan — collecting results of local and remote operations. Remote execution involves reading/writing data to other nodes and replication.
+3. The **execution engine** executes the plan, collecting results of local and remote operations. Remote execution involves reading/writing data to other nodes and replication.
 4. Local queries are executed by the **storage engine**.
 
 ### Storage engine components
@@ -42,9 +42,9 @@ flowchart TD
 |-----------|---------------|
 | **Transaction Manager** | Schedules transactions; ensures they cannot leave the database in a logically inconsistent state |
 | **Lock Manager** | Controls locks on database objects to prevent concurrent operations from violating physical data integrity |
-| **Access Methods** | Manage how data is organised and accessed on disk — heap files, B-Trees, LSM Trees |
+| **Access Methods** | Manage how data is organised and accessed on disk: heap files, B-Trees, LSM Trees |
 | **Buffer Manager** | Caches data pages in memory (the buffer pool) |
-| **Recovery Manager** | Maintains the operation log (WAL — Write-Ahead Log); restores system state after failures |
+| **Recovery Manager** | Maintains the operation log (WAL, Write-Ahead Log); restores system state after failures |
 
 ---
 
@@ -60,11 +60,11 @@ Stores data primarily in RAM; uses disk only for durability (the write-ahead log
 
 **Advantages of in-memory:**
 - Orders-of-magnitude faster access (nanoseconds vs microseconds)
-- No page-granularity access overhead — can address at byte granularity
+- No page-granularity access overhead, can address at byte granularity
 - Simpler data structures (no need to serialise to page format)
 
 **Disadvantages of in-memory:**
-- RAM is volatile — a crash without proper logging loses data
+- RAM is volatile, a crash without proper logging loses data
 - More expensive per GB than disk
 - Total dataset must fit in available RAM
 
@@ -78,5 +78,5 @@ Before any operation is considered complete, changes must be written to a **sequ
 
 - DBMS architecture follows client/server: transport → query processor → optimizer → execution engine → storage engine.
 - The storage engine is the innermost layer and contains five sub-components: transaction manager, lock manager, access methods, buffer manager, and recovery manager.
-- The buffer manager is the software equivalent of the hardware cache hierarchy — hot pages in RAM, cold pages on disk.
+- The buffer manager is the software equivalent of the hardware cache hierarchy, hot pages in RAM, cold pages on disk.
 - In-memory databases trade volatile storage for speed; the WAL provides durability.

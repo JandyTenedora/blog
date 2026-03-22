@@ -47,7 +47,7 @@ graph TD
 
 ## Iterative vs recursive resolution
 
-**Recursive query:** each server takes full responsibility for resolving the name and returns the final answer. In practice, only the query from client to local DNS is recursive — root and TLD servers don't want to be burdened with full recursive lookups.
+**Recursive query:** each server takes full responsibility for resolving the name and returns the final answer. In practice, only the query from client to local DNS is recursive, as root and TLD servers don't want to be burdened with full recursive lookups.
 
 **Iterative query:** the local DNS server does the leg work. Root gives a referral, TLD gives a referral, authoritative gives the answer.
 

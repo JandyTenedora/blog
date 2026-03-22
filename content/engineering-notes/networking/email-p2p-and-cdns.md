@@ -127,5 +127,5 @@ sequenceDiagram
 - SMTP pushes mail between servers over TCP port 25; POP3/IMAP let clients pull from their mailbox.
 - SMTP is ASCII-only; binary attachments need MIME encoding.
 - BitTorrent uses **rarest-first** to distribute rare chunks quickly and **tit-for-tat** to incentivise uploading.
-- DASH gives clients adaptive quality control over HTTP — no special streaming protocol needed.
+- DASH gives clients adaptive quality control over HTTP, no special streaming protocol needed.
 - CDNs route requests to nearby clusters via DNS CNAMEs, reducing latency and origin-server load.

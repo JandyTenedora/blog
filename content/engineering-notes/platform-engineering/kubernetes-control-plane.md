@@ -51,7 +51,7 @@ Most clusters run every control plane service on every control plane node for HA
 
 ### API Server
 
-The **front end of Kubernetes**. All requests to change or query cluster state go through it — even internal control-plane services communicate via the API server rather than directly.
+The **front end of Kubernetes**. All requests to change or query cluster state go through it, even internal control-plane services communicate via the API server rather than directly.
 
 It exposes a RESTful API over HTTPS. All requests are subject to authentication and authorisation.
 
@@ -66,18 +66,18 @@ It exposes a RESTful API over HTTPS. All requests are subject to authentication 
 
 The **only stateful part of the control plane**. Holds the desired state of all applications and cluster components.
 
-Based on **etcd** — a strongly consistent, distributed key-value store. Most clusters run an etcd replica on every control plane node. Large clusters with high change rates may run a dedicated etcd cluster for better performance.
+Based on **etcd**, a strongly consistent, distributed key-value store. Most clusters run an etcd replica on every control plane node. Large clusters with high change rates may run a dedicated etcd cluster for better performance.
 
 Key property: etcd uses the Raft consensus algorithm to ensure that all replicas agree on the current state even in the presence of node failures. This is what gives Kubernetes its "source of truth" semantics.
 
 ### Controller Manager
 
-Runs a collection of background **controller loops** — each watching the API server for changes and taking action to move actual state toward desired state.
+Runs a collection of background **controller loops**, each watching the API server for changes and taking action to move actual state toward desired state.
 
 Examples:
-- *ReplicaSet controller* — if a pod dies, creates a replacement to maintain the desired replica count
-- *Deployment controller* — manages rolling updates
-- *Node controller* — monitors node health; marks unreachable nodes as unavailable
+- *ReplicaSet controller*: if a pod dies, creates a replacement to maintain the desired replica count
+- *Deployment controller*: manages rolling updates
+- *Node controller*: monitors node health; marks unreachable nodes as unavailable
 
 Each controller follows the same loop: observe current state → compare to desired state → take action to reconcile.
 
@@ -112,17 +112,17 @@ Kubernetes is built around a **declarative model**: you describe *what you want*
 1. Declare desired state in a YAML manifest and post it to the API server
 2. Kubernetes persists that desired state in etcd
 3. Controllers continuously reconcile actual state toward desired state
-4. If a pod crashes, a controller detects the discrepancy and creates a replacement — no manual intervention required
+4. If a pod crashes, a controller detects the discrepancy and creates a replacement, no manual intervention required
 
-This is fundamentally different from the imperative model ("run this container on that server") — it enables self-healing, scaling, and rollouts as first-class features of the platform.
+This is fundamentally different from the imperative model ("run this container on that server"), and it enables self-healing, scaling, and rollouts as first-class features of the platform.
 
 ---
 
 ## Key takeaways
 
 - A cluster has control plane nodes (brains) and worker nodes (where workloads run).
-- The **API server** is the single entry point for all cluster operations — nothing talks to etcd directly except the API server.
+- The **API server** is the single entry point for all cluster operations, nothing talks to etcd directly except the API server.
 - The **cluster store** (etcd) is the only stateful part of the control plane; everything else is stateless and can be restarted freely.
-- The **controller manager** runs reconciliation loops that continuously drive actual state toward desired state — the mechanism behind self-healing.
+- The **controller manager** runs reconciliation loops that continuously drive actual state toward desired state, the mechanism behind self-healing.
 - The **scheduler** assigns pods to nodes; the **kubelet** on each node carries out the instructions.
 - Kubernetes is declarative: describe what you want, and the platform figures out how to achieve and maintain it.

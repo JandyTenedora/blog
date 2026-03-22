@@ -11,8 +11,8 @@ weight: 20
 
 The operating system sits between application programs and the hardware. Two primary purposes:
 
-1. **Protection** — prevent runaway or malicious applications from corrupting hardware or other applications
-2. **Abstraction** — provide simple, uniform interfaces over complex, varied hardware
+1. **Protection**: prevent runaway or malicious applications from corrupting hardware or other applications
+2. **Abstraction**: provide simple, uniform interfaces over complex, varied hardware
 
 Three fundamental abstractions the OS provides:
 
@@ -28,7 +28,7 @@ Three fundamental abstractions the OS provides:
 
 A **process** is the OS's abstraction for a running program. The key illusion it provides: the program thinks it has exclusive use of the CPU and memory.
 
-In reality, multiple processes run concurrently by **context switching** — the OS rapidly interleaves them:
+In reality, multiple processes run concurrently by **context switching**, where the OS rapidly interleaves them:
 
 ```mermaid
 sequenceDiagram
@@ -46,7 +46,7 @@ sequenceDiagram
     P1->>P1: continues after system call returns
 ```
 
-The **context** is the complete state needed to resume a process: the PC value, all register values, and the contents of main memory. Context switching is managed entirely by the OS kernel — it is invisible to the processes themselves.
+The **context** is the complete state needed to resume a process: the PC value, all register values, and the contents of main memory. Context switching is managed entirely by the OS kernel, invisible to the processes themselves.
 
 ---
 
@@ -64,13 +64,13 @@ Threads vs processes:
 | Data sharing | Via IPC | Direct (same memory) |
 | Risk | Crash is isolated | Crash can corrupt whole process |
 
-Threads require synchronisation when accessing shared data — race conditions arise when two threads read and write the same memory without coordination.
+Threads require synchronisation when accessing shared data, as race conditions arise when two threads read and write the same memory without coordination.
 
 ---
 
 ## Virtual memory
 
-Each process has the illusion of exclusive access to all of main memory. The OS and hardware (the MMU — memory management unit) translate **virtual addresses** to physical addresses on every access.
+Each process has the illusion of exclusive access to all of main memory. The OS and hardware (the MMU, memory management unit) translate **virtual addresses** to physical addresses on every access.
 
 Virtual address space layout (low → high on Linux x86-64):
 
@@ -91,7 +91,7 @@ Address 0
 Address 2^48 (user-space limit on x86-64)
 ```
 
-Stack overflows, null pointer dereferences, and segmentation faults all originate here — the process attempted to access a virtual address that isn't mapped to physical memory, and the OS kills it.
+Stack overflows, null pointer dereferences, and segmentation faults all originate here: the process attempted to access a virtual address that isn't mapped to physical memory, and the OS kills it.
 
 ---
 
@@ -104,7 +104,7 @@ A **file** is a sequence of bytes. The OS models *every* I/O device as a file:
 - The display is a file (you `write()` to it)
 - A network socket is a file (you `read()` and `write()` to it)
 
-All I/O flows through two system calls: `read()` and `write()`. This uniform abstraction is why shell pipelines work — each process reads from `stdin` and writes to `stdout`, unaware of what's actually connected. From a system's perspective, a network connection is just another file descriptor.
+All I/O flows through two system calls: `read()` and `write()`. This uniform abstraction is why shell pipelines work: each process reads from `stdin` and writes to `stdout`, unaware of what's actually connected. From a system's perspective, a network connection is just another file descriptor.
 
 ---
 
@@ -135,8 +135,8 @@ Even making that component infinitely fast: `S = 1 / 0.4 = 2.5×`. The unimprove
 
 Two related but distinct concepts that are frequently conflated:
 
-- **Concurrency**: multiple tasks are *in progress* at the same time (logically simultaneous — one CPU can be concurrent via time-sharing)
-- **Parallelism**: multiple tasks *execute* at the same time (physically simultaneous — requires multiple cores or CPUs)
+- **Concurrency**: multiple tasks are *in progress* at the same time (logically simultaneous, one CPU can be concurrent via time-sharing)
+- **Parallelism**: multiple tasks *execute* at the same time (physically simultaneous, requires multiple cores or CPUs)
 
 Three levels in modern systems:
 
@@ -151,9 +151,9 @@ Three levels in modern systems:
 ## Key takeaways
 
 - The OS provides three abstractions: **processes** (illusion of exclusive CPU + memory), **virtual memory** (illusion of exclusive address space), **files** (uniform interface over all I/O)
-- Context switching is the OS saving one process's state and restoring another's — invisible to programs
+- Context switching is the OS saving one process's state and restoring another's, invisible to programs
 - Threads share address space; processes do not. Thread sharing is efficient but requires synchronisation
-- Stack overflows and segfaults are virtual-memory violations — the OS kills the offending process
-- Every I/O device, including network sockets, is a file — `read()` and `write()` all the way down
-- **Amdahl's Law**: overall speedup is bounded by the fraction you *didn't* improve — profile first
+- Stack overflows and segfaults are virtual-memory violations, the OS kills the offending process
+- Every I/O device, including network sockets, is a file, `read()` and `write()` all the way down
+- **Amdahl's Law**: overall speedup is bounded by the fraction you *didn't* improve, profile first
 - **Concurrency ≠ parallelism**: one is about structure, the other about physical execution
