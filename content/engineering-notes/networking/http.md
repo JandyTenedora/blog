@@ -11,8 +11,8 @@ weight: 10
 
 Network applications run on end systems (hosts), not on routers or switches. Two dominant paradigms:
 
-- **Client-server** — always-on server with a fixed, well-known IP address; clients initiate contact. Clients don't talk directly to each other. Examples: Web, email, FTP. Servers live in data centres for scale.
-- **Peer-to-peer (P2P)** — no always-on server; arbitrary end systems (peers) talk directly to each other. Self-scaling: each new peer adds capacity as well as load. BitTorrent is the canonical example.
+- **Client-server**: always-on server with a fixed, well-known IP address; clients initiate contact. Clients don't talk directly to each other. Examples: Web, email, FTP. Servers live in data centres for scale.
+- **Peer-to-peer (P2P)**: no always-on server; arbitrary end systems (peers) talk directly to each other. Self-scaling: each new peer adds capacity as well as load. BitTorrent is the canonical example.
 
 ```mermaid
 graph LR
@@ -35,7 +35,7 @@ graph LR
 
 ## Sockets
 
-A **process** is a running program. Two processes on different hosts communicate by sending messages across the network. The process sends and receives through its **socket** — the interface between the application layer and the transport layer.
+A **process** is a running program. Two processes on different hosts communicate by sending messages across the network. The process sends and receives through its **socket**, the interface between the application layer and the transport layer.
 
 ```mermaid
 graph TB
@@ -66,7 +66,7 @@ To receive messages, a process needs an address: the **IP address** of the host 
 
 **TCP** provides reliable delivery, in-order bytes, flow control (won't overwhelm the receiver), and congestion control (backs off when the network is congested). It's connection-oriented: a three-way handshake before data flows.
 
-**UDP** is connectionless, unreliable, no ordering guarantee, no congestion control. Lighter and faster — useful when dropping a packet is preferable to waiting for a retransmit (VoIP, live video, DNS).
+**UDP** is connectionless, unreliable, no ordering guarantee, no congestion control. Lighter and faster, useful when dropping a packet is preferable to waiting for a retransmit (VoIP, live video, DNS).
 
 Neither provides encryption natively. **TLS** is built on top of TCP, adding encryption, integrity, and endpoint authentication.
 
@@ -94,13 +94,13 @@ sequenceDiagram
 
 The **HyperText Transfer Protocol** is the Web's application-layer protocol. It runs over TCP.
 
-**Stateless** — the server stores no state about the client between requests. If a client requests the same object twice, the server re-serves it with no memory of the first request. This simplifies server design enormously; cookies solve the statelessness at the application layer when needed.
+**Stateless**: the server stores no state about the client between requests. If a client requests the same object twice, the server re-serves it with no memory of the first request. This simplifies server design enormously; cookies solve the statelessness at the application layer when needed.
 
 ### Persistent vs non-persistent connections
 
 **Non-persistent (HTTP/1.0):** one TCP connection per object. Cost per object: **2 RTTs + transmission time** (1 RTT for TCP handshake, 1 RTT for the HTTP request and first byte of response).
 
-**Persistent (HTTP/1.1 default):** the server leaves the TCP connection open after responding. With pipelining, the client sends all requests back-to-back and responses stream back — roughly 1 RTT for the whole page after the initial handshake.
+**Persistent (HTTP/1.1 default):** the server leaves the TCP connection open after responding. With pipelining, the client sends all requests back-to-back and responses stream back, roughly 1 RTT for the whole page after the initial handshake.
 
 ```mermaid
 sequenceDiagram
@@ -145,7 +145,7 @@ User-Agent: Mozilla/5.0\r\n
 
 Structure: **request line** (method + URL + version) + **header lines** + **blank line** (`\r\n`) + optional **body**.
 
-The blank line is mandatory and signals end of headers. A missing `\r\n` silently breaks parsing — the server won't know where headers end.
+The blank line is mandatory and signals end of headers. A missing `\r\n` silently breaks parsing, the server won't know where headers end.
 
 **Methods:** `GET` (retrieve, no body), `POST` (submit data in body), `HEAD` (headers only, no body), `PUT` (upload), `DELETE`.
 
@@ -165,7 +165,7 @@ Content-Type: text/html\r\n
 |------|---------|
 | 200 OK | Success, object in body |
 | 301 Moved Permanently | Redirect; new URL in `Location:` header |
-| 304 Not Modified | Conditional GET — object unchanged, no body sent |
+| 304 Not Modified | Conditional GET: object unchanged, no body sent |
 | 400 Bad Request | Server couldn't parse the request |
 | 404 Not Found | Object doesn't exist |
 | 505 HTTP Version Not Supported | |
@@ -191,14 +191,14 @@ A **web cache** has its own disk storage and sits between clients and origin ser
 
 Benefits: lower response time for clients (cache is closer), reduced traffic on the access link. CDNs are geographically distributed networks of web caches.
 
-**Conditional GET:** the cache includes `If-Modified-Since: <date>` in its request to origin. If the object hasn't changed, the server returns `304 Not Modified` with no body — saves bandwidth. If it has changed, `200 OK` with the new object.
+**Conditional GET:** the cache includes `If-Modified-Since: <date>` in its request to origin. If the object hasn't changed, the server returns `304 Not Modified` with no body, saving bandwidth. If it has changed, `200 OK` with the new object.
 
 ---
 
 ## Key takeaways
 
 - HTTP is stateless, ASCII-based, runs over TCP.
-- The blank line (`\r\n`) separating headers from body is mandatory — missing it silently breaks parsing.
+- The blank line (`\r\n`) separating headers from body is mandatory, and missing it silently breaks parsing.
 - Persistent connections + pipelining reduce page load time to roughly 1 RTT after the TCP handshake.
 - Cookies add a layer of state on top of the stateless protocol.
 - Web caches reduce latency and access-link traffic; conditional GET (`304 Not Modified`) avoids re-fetching unchanged objects.

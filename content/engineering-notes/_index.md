@@ -1,6 +1,6 @@
 ---
 title: "Engineering Notes"
-weight: 40
+weight: 20
 bookCollapseSection: true
 ---
 

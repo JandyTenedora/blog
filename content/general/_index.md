@@ -1,5 +1,6 @@
 ---
 title: "General"
+weight: 40
 description: "Everything that doesn't fit neatly elsewhere."
 ---
 

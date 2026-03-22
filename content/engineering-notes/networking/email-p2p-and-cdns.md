@@ -13,7 +13,7 @@ Three major components: **user agents** (Outlook, Gmail), **mail servers**, and 
 
 ### SMTP
 
-**Simple Mail Transfer Protocol** is the application-layer protocol for sending email between mail servers. It uses TCP on port 25 and is ASCII-based — humans can read the exchanges on the wire.
+**Simple Mail Transfer Protocol** is the application-layer protocol for sending email between mail servers. It uses TCP on port 25 and is ASCII-based, so humans can read the exchanges on the wire.
 
 ```mermaid
 sequenceDiagram
@@ -36,7 +36,7 @@ sequenceDiagram
     BS->>B: Message delivered
 ```
 
-SMTP is a **push** protocol — the sending server pushes to the receiving server. A key restriction: SMTP requires message bodies to be 7-bit ASCII. Binary attachments must be encoded (MIME base64) first.
+SMTP is a **push** protocol: the sending server pushes to the receiving server. A key restriction: SMTP requires message bodies to be 7-bit ASCII. Binary attachments must be encoded (MIME base64) first.
 
 **SMTP vs HTTP:**
 
@@ -51,9 +51,9 @@ SMTP is a **push** protocol — the sending server pushes to the receiving serve
 
 SMTP moves mail *between* servers. To retrieve mail *from* a server to a local client, a separate protocol is needed:
 
-- **POP3** (Post Office Protocol v3) — simple, three phases: authorisation, transaction (list/download/delete), update. Default behaviour is download-and-delete — reading from multiple devices is awkward. Stateless across sessions.
-- **IMAP** (Internet Message Access Protocol) — keeps all messages on the server; the user organises into folders on the server side. Maintains state across sessions. Supports partial message retrieval (headers only). Better for multi-device access.
-- **HTTP** — web-based email (Gmail) uses HTTP between the browser and the mail server. SMTP still runs between mail servers.
+- **POP3** (Post Office Protocol v3): simple, three phases: authorisation, transaction (list/download/delete), update. Default behaviour is download-and-delete, so reading from multiple devices is awkward. Stateless across sessions.
+- **IMAP** (Internet Message Access Protocol): keeps all messages on the server; the user organises into folders on the server side. Maintains state across sessions. Supports partial message retrieval (headers only). Better for multi-device access.
+- **HTTP**: web-based email (Gmail) uses HTTP between the browser and the mail server. SMTP still runs between mail servers.
 
 ---
 
@@ -69,7 +69,7 @@ The canonical peer-to-peer file sharing protocol.
 
 **Rarest-first:** the peer requests the rarest chunks (those fewest neighbours have) first. This ensures rare chunks propagate quickly through the torrent.
 
-**Tit-for-tat trading:** Alice sends chunks to the four neighbours currently uploading to her at the highest rate (the "unchoked" peers). Every 30 seconds she picks a random additional peer to upload to (optimistic unchoking), giving new peers a chance to get started. Peers that don't upload get choked — their upload is stopped. This creates an incentive to contribute.
+**Tit-for-tat trading:** Alice sends chunks to the four neighbours currently uploading to her at the highest rate (the "unchoked" peers). Every 30 seconds she picks a random additional peer to upload to (optimistic unchoking), giving new peers a chance to get started. Peers that don't upload get choked and their upload is stopped. This creates an incentive to contribute.
 
 BitTorrent is self-scaling: each new peer brings capacity (it uploads to others) as well as demand.
 
@@ -83,8 +83,8 @@ BitTorrent is self-scaling: each new peer brings capacity (it uploads to others)
 
 - Video is encoded at multiple bitrates and stored on HTTP servers
 - A **manifest file** lists the available versions and their URLs
-- The client requests chunks sequentially. Before each chunk, it measures available bandwidth and picks the highest bitrate version that fits — adapting on the fly
-- Uses plain HTTP/TCP — no custom streaming protocol, works through firewalls and NATs
+- The client requests chunks sequentially. Before each chunk, it measures available bandwidth and picks the highest bitrate version that fits, adapting on the fly
+- Uses plain HTTP/TCP, no custom streaming protocol, works through firewalls and NATs
 - The client controls quality selection, not the server
 
 ### Content Delivery Networks (CDNs)
@@ -93,8 +93,8 @@ A **CDN** is a geographically distributed network of servers that cache content 
 
 Two placement strategies:
 
-- **Enter Deep** — deploy clusters in access ISPs close to users. Low RTT, very high maintenance cost (Akamai's approach: thousands of locations).
-- **Bring Home** — fewer, larger clusters at IXPs (Internet Exchange Points). Easier to manage, slightly higher RTT.
+- **Enter Deep**: deploy clusters in access ISPs close to users. Low RTT, very high maintenance cost (Akamai's approach: thousands of locations).
+- **Bring Home**: fewer, larger clusters at IXPs (Internet Exchange Points). Easier to manage, slightly higher RTT.
 
 **How a CDN request is routed:**
 
@@ -118,7 +118,7 @@ sequenceDiagram
     E->>U: Video data (served from cache)
 ```
 
-**OTT (Over The Top)** — delivering content over the existing Internet without special network support. DASH + CDN is the OTT approach.
+**OTT (Over The Top)**: delivering content over the existing Internet without special network support. DASH + CDN is the OTT approach.
 
 ---
 

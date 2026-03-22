@@ -1,5 +1,6 @@
 ---
 title: "Language"
+weight: 30
 description: "German from A1 upward — grammar notes, diary entries, and the occasional reflection on what language learning actually feels like."
 ---
 

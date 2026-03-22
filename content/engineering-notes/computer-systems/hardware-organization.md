@@ -9,9 +9,9 @@ weight: 10
 
 ## Information is bits in context
 
-A C source file is a sequence of bits organised into 8-bit bytes. The source file is a **text file** (ASCII throughout). Everything else — executables, images, packets — is a **binary file**.
+A C source file is a sequence of bits organised into 8-bit bytes. The source file is a **text file** (ASCII throughout). Everything else (executables, images, packets) is a **binary file**.
 
-The fundamental point: all information in a computer system is represented as a sequence of bits. What distinguishes one from another is **context** — the type tells you how to interpret the bits.
+The fundamental point: all information in a computer system is represented as a sequence of bits. What distinguishes one from another is **context**, the type tells you how to interpret the bits.
 
 ```
 01001000 01100101 01101100 01101100 01101111
@@ -33,7 +33,7 @@ A C program goes through four transformation stages before it runs:
 | Assembly | `as` | `hello.s` | `hello.o` | Translates assembly to machine code |
 | Linking | `ld` | `hello.o`, libs | `hello` | Merges object files, resolves library references |
 
-Link errors (undefined reference) happen at the last stage — the compiler succeeded but the linker couldn't find a function. Go's `go build` runs all four stages; the output is a statically linked binary by default.
+Link errors (undefined reference) happen at the last stage, meaning the compiler succeeded but the linker couldn't find a function. Go's `go build` runs all four stages; the output is a statically linked binary by default.
 
 ---
 
@@ -58,9 +58,9 @@ graph TD
 **Buses** carry fixed-size chunks called words. Word size is 4 bytes on 32-bit systems, 8 bytes on 64-bit.
 
 **CPU internals:**
-- **PC (program counter)** — register holding the address of the *next* instruction to execute
-- **Register file** — a small collection of word-size registers; the fastest storage in the hierarchy
-- **ALU** — computes arithmetic and logical results
+- **PC (program counter)**: register holding the address of the *next* instruction to execute
+- **Register file**: a small collection of word-size registers; the fastest storage in the hierarchy
+- **ALU**: computes arithmetic and logical results
 
 **The fetch/decode/execute loop:**
 ```
@@ -70,7 +70,7 @@ graph TD
 4. Repeat
 ```
 
-The **instruction set architecture (ISA)** is the contract between software and hardware — the defined set of instructions and their effects. x86-64 (Intel/AMD laptops) and ARM64 (Apple Silicon, phones) are the two dominant ISAs today.
+The **instruction set architecture (ISA)** is the contract between software and hardware: the defined set of instructions and their effects. x86-64 (Intel/AMD laptops) and ARM64 (Apple Silicon, phones) are the two dominant ISAs today.
 
 ---
 
@@ -90,8 +90,8 @@ Every data transfer costs time. The processor runs at ~3GHz; DRAM takes ~100ns (
 
 A cache is a smaller, faster storage device that stages data the processor is likely to need again. The hardware exploits two properties of real programs:
 
-- **Temporal locality** — recently accessed data will likely be accessed again soon
-- **Spatial locality** — data near recently accessed data will likely be accessed soon
+- **Temporal locality**: recently accessed data will likely be accessed again soon
+- **Spatial locality**: data near recently accessed data will likely be accessed soon
 
 Sequential array traversal exploits spatial locality and is dramatically faster than random pointer chasing. A single L3 cache miss costs ~300 cycles.
 
@@ -127,7 +127,7 @@ Every level of the hierarchy serves as a **cache for the level below it**. This 
 
 ## Key takeaways
 
-- All information is bits; **type (context) gives them meaning** — the first-principles foundation for static typing
+- All information is bits; **type (context) gives them meaning**, the first-principles foundation for static typing
 - Source code goes through preprocessing → compilation → assembly → linking before running
 - CPU executes a fetch/decode/execute loop; the PC tracks the current instruction
 - Storage hierarchy: registers < L1 < L2 < L3 < DRAM < SSD < disk < network; each level caches the next

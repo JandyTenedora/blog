@@ -9,7 +9,7 @@ weight: 30
 
 ## Everything is bytes
 
-Computers use the **byte** (8 bits) as the smallest addressable unit. A running program views memory as a large array of bytes — the **virtual address space** — where every byte has a unique address.
+Computers use the **byte** (8 bits) as the smallest addressable unit. A running program views memory as a large array of bytes (the **virtual address space**) where every byte has a unique address.
 
 **Hexadecimal** is the shorthand: one hex digit represents 4 bits, so one byte = two hex digits (0x00–0xFF).
 
@@ -20,7 +20,7 @@ Computers use the **byte** (8 bits) as the smallest addressable unit. A running 
 | 32-bit | 4 bytes | 4 GB |
 | 64-bit | 8 bytes | 16 exabytes |
 
-Modern systems are 64-bit. Any pointer — `void *` in C, or any pointer in Go — is 8 bytes.
+Modern systems are 64-bit. Any pointer (`void *` in C, or any pointer in Go) is 8 bytes.
 
 **Data type sizes on 64-bit Linux:**
 

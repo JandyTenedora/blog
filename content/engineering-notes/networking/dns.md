@@ -11,9 +11,9 @@ weight: 20
 
 The **Domain Name System** translates human-readable hostnames (`www.amazon.com`) to IP addresses (`205.251.242.103`). It also handles:
 
-- **Mail server aliasing** — `MX` records map a domain to its mail server's canonical hostname
-- **Load distribution** — one hostname mapped to multiple IP addresses; DNS rotates which it returns
-- **Host aliasing** — canonical hostnames with shorter aliases
+- **Mail server aliasing**: `MX` records map a domain to its mail server's canonical hostname
+- **Load distribution**: one hostname mapped to multiple IP addresses; DNS rotates which it returns
+- **Host aliasing**: canonical hostnames with shorter aliases
 
 DNS is a **distributed, hierarchical database** implemented as an application-layer protocol. A single centralised DNS server would be a single point of failure, a traffic bottleneck, and geographically distant from most users.
 
@@ -37,11 +37,11 @@ graph TD
     T2 --> A2
 ```
 
-- **Root servers** — the top of the hierarchy; know the IP addresses of all TLD servers
-- **TLD servers** — one set per top-level domain (`.com`, `.org`, `.net`, `.uk`, etc.); know the authoritative servers for every domain under them
-- **Authoritative servers** — maintained by organisations; hold the actual A/AAAA records for their own hostnames
+- **Root servers**: the top of the hierarchy; know the IP addresses of all TLD servers
+- **TLD servers**: one set per top-level domain (`.com`, `.org`, `.net`, `.uk`, etc.); know the authoritative servers for every domain under them
+- **Authoritative servers**: maintained by organisations; hold the actual A/AAAA records for their own hostnames
 
-**Local DNS server** — not in the hierarchy, but used first. Every ISP runs one. Acts as a proxy, caches results, and forwards queries into the hierarchy on behalf of clients.
+**Local DNS server**: not in the hierarchy, but used first. Every ISP runs one. Acts as a proxy, caches results, and forwards queries into the hierarchy on behalf of clients.
 
 ---
 
@@ -49,7 +49,7 @@ graph TD
 
 **Recursive query:** each server takes full responsibility for resolving the name and returns the final answer. In practice, only the query from client to local DNS is recursive — root and TLD servers don't want to be burdened with full recursive lookups.
 
-**Iterative query:** the local DNS server does the leg work — root gives a referral, TLD gives a referral, authoritative gives the answer.
+**Iterative query:** the local DNS server does the leg work. Root gives a referral, TLD gives a referral, authoritative gives the answer.
 
 ```mermaid
 sequenceDiagram
@@ -76,7 +76,7 @@ sequenceDiagram
 
 Any DNS server caches responses it receives. The cached mapping expires after its **TTL** (time-to-live), set by the authoritative server. TLD records are commonly cached in local DNS servers, so root servers are rarely queried in practice.
 
-This is why DNS propagation takes up to 48 hours when you change a record — every resolver that cached the old mapping must wait for its TTL to expire before querying again.
+This is why DNS propagation takes up to 48 hours when you change a record, as every resolver that cached the old mapping must wait for its TTL to expire before querying again.
 
 ---
 
@@ -92,7 +92,7 @@ DNS databases store **Resource Records (RRs)** with the structure: `(Name, Value
 | **CNAME** | alias | canonical hostname | Aliasing: `www` → `server1.example.com` |
 | **MX** | domain | canonical hostname of mail server | Mail routing |
 
-If a server is authoritative for a hostname, it has an **A record**. If not authoritative, it has an **NS record** pointing to the authoritative server, plus an **A record** for that server (a "glue record" — avoids a circular lookup).
+If a server is authoritative for a hostname, it has an **A record**. If not authoritative, it has an **NS record** pointing to the authoritative server, plus an **A record** for that server (a "glue record", to avoid a circular lookup).
 
 ---
 
@@ -100,7 +100,7 @@ If a server is authoritative for a hostname, it has an **A record**. If not auth
 
 Both queries and replies use the same message format. A 12-byte fixed header includes flags (query/reply, authoritative answer, recursion desired, recursion available) and counts for four variable-length sections: questions, answers, authority, additional.
 
-DNS uses **UDP** on port 53 for most queries — fast, low overhead, and queries fit in a single packet. Switches to TCP for responses larger than 512 bytes (e.g. zone transfers).
+DNS uses **UDP** on port 53 for most queries, as it's fast, low overhead, and queries fit in a single packet. Switches to TCP for responses larger than 512 bytes (e.g. zone transfers).
 
 ---
 
