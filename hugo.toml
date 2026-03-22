@@ -30,7 +30,7 @@ disablePathToLower = true
   tag = "tags"
 
 [menu]
-  [[menu.after]]
+  [[menu.before]]
     name = "About"
     url = "/about/"
     weight = 1
