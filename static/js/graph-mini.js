@@ -40,11 +40,6 @@
     const colorThreshold = maxDegree * 0.5;
     const hubThreshold   = maxDegree * 0.6;
 
-    const nodeColor = d => {
-      if (d.id === 'German Hub') return COLOR_NODE_HUB;
-      return (d.degree || 0) >= colorThreshold ? COLOR_NODE_HUB : COLOR_NODE;
-    };
-
     const nodeRadius = d => {
       const deg = d.degree || 0;
       return NODE_MIN_R + (Math.pow(deg / maxDegree, 1.8) * (NODE_MAX_R - NODE_MIN_R));
@@ -70,7 +65,7 @@
       .data(data.nodes)
       .join('circle')
       .attr('r', nodeRadius)
-      .attr('fill', nodeColor)
+      .attr('fill', d => (d.degree || 0) >= colorThreshold ? COLOR_NODE_HUB : COLOR_NODE)
       .attr('cursor', 'pointer')
       .call(drag(simulation));
 
@@ -90,7 +85,7 @@
     }).on('mousemove', function (event) {
       label.attr('x', event.offsetX + 10).attr('y', event.offsetY - 6);
     }).on('mouseout', function (event, d) {
-      d3.select(this).attr('fill', nodeColor(d));
+      d3.select(this).attr('fill', (d.degree || 0) >= colorThreshold ? COLOR_NODE_HUB : COLOR_NODE);
       label.style('opacity', 0);
     });
 

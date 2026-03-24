@@ -45,11 +45,6 @@
       return NODE_MIN_R + ((deg / maxDegree) * (NODE_MAX_R - NODE_MIN_R));
     };
 
-    const nodeColor = d => {
-      if (d.id === 'German Hub') return COLOR_NODE_HUB;
-      return (d.degree || 0) >= maxDegree * 0.5 ? COLOR_NODE_HUB : COLOR_NODE;
-    };
-
     const simulation = d3.forceSimulation(data.nodes)
       .force('link', d3.forceLink(data.links).id(d => d.id).distance(60).strength(0.3))
       .force('charge', d3.forceManyBody().strength(-120))
@@ -70,7 +65,7 @@
       .data(data.nodes)
       .join('circle')
       .attr('r', nodeRadius)
-      .attr('fill', nodeColor)
+      .attr('fill', d => (d.degree || 0) >= maxDegree * 0.5 ? COLOR_NODE_HUB : COLOR_NODE)
       .attr('cursor', 'pointer')
       .call(drag(simulation));
 
@@ -95,7 +90,7 @@
         .attr('x', event.offsetX + 10)
         .attr('y', event.offsetY - 6);
     }).on('mouseout', function (event, d) {
-      d3.select(this).attr('fill', nodeColor);
+      d3.select(this).attr('fill', d => (d.degree || 0) >= maxDegree * 0.5 ? COLOR_NODE_HUB : COLOR_NODE);
       label.style('opacity', 0);
     });
 
