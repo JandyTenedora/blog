@@ -50,6 +50,21 @@ Where this matters:
 
 ---
 
+## Bit-level operations
+
+| Op | Symbol | 8-bit example |
+|----|--------|---------------|
+| AND | `&` | `0110 & 1100 = 0100` |
+| OR | `\|` | `0110 \| 1100 = 1110` |
+| XOR | `^` | `0110 ^ 1100 = 1010` |
+| NOT | `~` | `~0110 = 1001` |
+| Left shift | `<<` | `0110 << 1 = 1100` (× 2) |
+| Right shift | `>>` | `1100 >> 1 = 0110` (÷ 2) |
+
+A classic bug: using `&` (bitwise AND) when you meant `&&` (logical AND). They look similar but behave completely differently on non-zero values.
+
+---
+
 ## Integer representations
 
 ### Unsigned integers
@@ -103,6 +118,16 @@ int32 −5:  1111 1111  1111 1111  1111 1111  1111 1011
 
 For unsigned widening: zero-extend (fill with 0s). Different rule, same result.
 
+### The classic unsigned-loop bug
+
+```c
+// Infinite loop: unsigned i can never be < 0.
+// When i hits 0 and decrements, it wraps to 2³² − 1.
+for (unsigned int i = n; i >= 0; i--) { ... }
+```
+
+Go prevents this at compile time: you cannot compare `int` and `uint` without an explicit conversion.
+
 ---
 
 ## Integer arithmetic
@@ -137,6 +162,19 @@ Result = (a + b) mod 2^w
 - Negative overflow (two large negatives): result wraps to positive
 
 In Go, signed integer overflow is defined as two's complement wraparound. In C it is undefined behaviour.
+
+### Negation: flip bits, add 1
+
+To negate a two's complement value: invert all bits, then add 1.
+
+```
+Negate +6 (0110):
+  ~0110 = 1001
+   1001 + 0001 = 1010
+   1010 = −8 + 2 = −6  ✓
+```
+
+This is why the CPU can use the same adder for subtraction: `a − b = a + (~b + 1)`.
 
 ### Shifts as fast multiply/divide
 
