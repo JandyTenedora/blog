@@ -35,18 +35,13 @@ The byte `01000001` could mean the number 65, or the letter `'A'` in ASCII. The 
 This isn't abstract — it's the actual thing. Understanding it is the prerequisite for everything else in this post.
 
 ```goat
-                 the same 4 bytes in RAM
+    .-------+--------+--------+--------+--------.
+    | byte  |  0x41  |  0x00  |  0x00  |  0x00  |
+    '-------+--------+--------+--------+--------'
 
-    +----------+----------+----------+----------+
-    |   0x41   |   0x00   |   0x00   |   0x00   |
-    +----------+----------+----------+----------+
-          |                    |                    |
-          |                    |                    |
-          v                    v                    v
-    +-----------+        +------------+        +----------+
-    |   int32   |        |  float32   |        |   char   |
-    |    65     |        |  9.1e-44   |        |    A     |
-    +-----------+        +------------+        +----------+
+    as int32    =   65
+    as float32  =   9.1e-44
+    as char     =   A
 ```
 
 ---
@@ -100,19 +95,13 @@ When you write `3 + 4` in any language, something has to decide which instructio
 **This is the entire game of typing.** Figuring out which CPU instruction to use, and catching cases where the answer would be nonsensical.
 
 ```goat
-    operand types                      instruction emitted
+    operand types                 emitted instruction
 
-   +------------------------+         +---------------+
-   | int     +   int        | ------> |      ADD      |
-   +------------------------+         +---------------+
-   | float   +   float      | ------> |     FADD      |
-   +------------------------+         +---------------+
-   | int     *   int        | ------> |     IMUL      |   signed
-   +------------------------+         +---------------+
-   | uint    *   uint       | ------> |      MUL      |   unsigned
-   +------------------------+         +---------------+
-   | string  +   int        | ------> |     error     |
-   +------------------------+         +---------------+
+    int    + int           -->         ADD
+    float  + float         -->         FADD
+    int    * int           -->         IMUL      (signed)
+    uint   * uint          -->         MUL       (unsigned)
+    string + int           -->         error
 ```
 
 ---
@@ -134,16 +123,15 @@ This is why static typing is fast: zero runtime overhead from types, and the com
 The cost is upfront strictness — you have to tell the compiler, and it refuses to guess.
 
 ```goat
-    source.go  (typed)                         binary  (no types)
+    source.go  (typed)                  binary  (no types)
 
-    .-----------------------.                 .-----------------------.
-    | var x int = 5         |                 | MOV  eax, 5           |
-    | var y int = 3         | -------------> | ADD  eax, 3            |
-    | return x + y          |                 | RET                   |
-    '-----------------------'                 '-----------------------'
+    .----------------------.            .-------------------.
+    | var x int = 5        |            | MOV  rax, 5       |
+    | var y int = 3        |            | ADD  rax, 3       |
+    | return x             |            | RET               |
+    '----------------------'            '-------------------'
 
-    types present                              types consumed,
-                                               only instructions remain
+    types present                       types consumed
 ```
 
 ---
@@ -368,17 +356,17 @@ This is metaprogramming — code that restructures other code at runtime, before
 ```goat
     @timer applied to process_data
 
-    +--------------------------------------------------------+
-    | wrapper(*args, **kwargs)                               |
-    |                                                        |
-    |   +--------------------------------------------------+ |
-    |   | 1. start = time.time()                           | |
-    |   | 2. result = process_data(*args, **kwargs)        | |
-    |   | 3. print(elapsed)                                | |
-    |   | 4. return result                                 | |
-    |   +--------------------------------------------------+ |
-    |                                                        |
-    +--------------------------------------------------------+
+    +--------------------------------------------------+
+    | wrapper(...)                                     |
+    |                                                  |
+    |   +--------------------------------------------+ |
+    |   | 1. start = time.time()                     | |
+    |   | 2. result = process_data(...)              | |
+    |   | 3. print(elapsed)                          | |
+    |   | 4. return result                           | |
+    |   +--------------------------------------------+ |
+    |                                                  |
+    +--------------------------------------------------+
 
     process_data now points to wrapper
 ```
