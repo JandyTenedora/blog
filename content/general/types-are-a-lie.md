@@ -6,6 +6,24 @@ tags: ["computer-systems", "first-principles"]
 description: "Static, dynamic, strong, weak, and where Java gets weird. A first-principles look at what type systems actually are under the hood."
 ---
 
+## Motivation
+
+For those who know me closely, in about a month's time I am about to start a role as a Backend Engineer on Spotify's Data Platform team. To those who currently work with me, they have a tendency to see me as some technical paragon who knows all the low-level details of computing in a way that makes this transition completely sensible. But as every engineer knows, there's always another level to this game.
+
+A couple of questions came up during the interview that had me rethinking my understanding of typing. Typing has always been something I never thought about too closely, it was something to keep in mind to make sure my code would compile (if it even needed to be compiled at all). So the first question, what's the difference between static and dynamic typing, was easy enough I thought: some languages need the types declared at compile time, others figure it out (or at least try to) during runtime. Easy.
+
+The second question brought an interesting back and forth, and inspired the deep dive I'm writing about today. "What's the difference between strongly and weakly typed languages?" I had to be honest. As a data engineer I've only ever worked with strongly typed languages, so I had completely forgotten the answer to this and didn't try to hide it. I told them I didn't know.
+
+> **Strongly vs weakly typed:** Strongly typed languages enforce type boundaries and raise errors when types are mixed without an explicit conversion. Weakly typed languages silently coerce values to make operations work, often inconsistently depending on the operator.
+
+Straightforward enough. But where does Java's autoboxing fit in? I asked back.
+
+> **Java autoboxing:** Java automatically converts between primitive types like `int` and their object wrappers like `Integer` without you writing the conversion, which looks exactly like the kind of silent type coercion you'd call weak typing. But it is actually a fully type-safe transformation the compiler inserts with complete knowledge of what it's doing, not a runtime guess. It blurs the line between "the compiler did something you didn't ask for" and "the language let something unsafe happen."
+
+Nobody on that call really knew, so I took it on myself in this weird limbo period before starting to actually understand how typing truly works under the hood and get to the bottom of this question.
+
+---
+
 ## The CPU has no idea what a type is
 
 RAM is just a sequence of bytes. Each byte holds a number from 0 to 255. No labels, no metadata, no annotations saying "this is an integer" or "this is a string." Just bytes.
@@ -15,6 +33,14 @@ A **type** is a contract about how to interpret a sequence of bytes. It does not
 The byte `01000001` could mean the number 65, or the letter `'A'` in ASCII. The byte has no preference. It has no awareness. Only the code does.
 
 This isn't abstract — it's the actual thing. Understanding it is the prerequisite for everything else in this post.
+
+```mermaid
+graph LR
+    B["0x41 0x00 0x00 0x00\n(4 bytes in memory)"]
+    B -->|"int32 contract"| I["integer: 65"]
+    B -->|"float32 contract"| F["float: 9.1e-44"]
+    B -->|"ASCII contract"| C["char: 'A'"]
+```
 
 ---
 
@@ -32,6 +58,15 @@ The CPU has *separate instructions* for signed and unsigned arithmetic because t
 
 This is the first concrete example of types mattering at the hardware level before you've touched a programming language.
 
+```mermaid
+flowchart TD
+    BITS["bit pattern: 10000001"]
+    BITS -->|"unsigned contract\nall bits represent magnitude"| U["129"]
+    BITS -->|"signed contract\nMSB is sign bit"| S["-127"]
+    U -->|"multiply"| MUL["MUL instruction"]
+    S -->|"multiply"| IMUL["IMUL instruction"]
+```
+
 ---
 
 ## How the CPU uses types: instruction selection
@@ -46,6 +81,16 @@ The CPU has different instructions for different data kinds:
 When you write `3 + 4` in any language, something has to decide which instruction to emit. It can only make that decision if it knows what the values are.
 
 **This is the entire game of typing.** Figuring out which CPU instruction to use, and catching cases where the answer would be nonsensical.
+
+```mermaid
+flowchart TD
+    E["x OP y"] --> Q{"what are the types?"}
+    Q -->|"int + int"| ADD["emit ADD"]
+    Q -->|"float + float"| FADD["emit FADD"]
+    Q -->|"int * int, signed"| IMUL["emit IMUL"]
+    Q -->|"int * int, unsigned"| MUL["emit MUL"]
+    Q -->|"type mismatch"| ERR["compile error or TypeError"]
+```
 
 ---
 
@@ -64,6 +109,14 @@ By the time the program becomes a binary, **there are no types left**. They've b
 This is why static typing is fast: zero runtime overhead from types, and the compiler can optimise aggressively because it knows exactly what everything is before it generates a single instruction.
 
 The cost is upfront strictness — you have to tell the compiler, and it refuses to guess.
+
+```mermaid
+flowchart LR
+    SRC["source code\nwith type declarations"] --> COMP["compiler"]
+    COMP -->|"type violation"| ERR["compile error\nprogram never runs"]
+    COMP -->|"all types resolved"| BIN["binary\nno type metadata\nonly machine instructions"]
+    BIN --> CPU["CPU executes\nat full speed"]
+```
 
 ---
 
@@ -86,6 +139,19 @@ Python is slower than C not because its algorithms are worse. It's because Pytho
 
 The payoff is flexibility. Functions can accept anything. Variables can change type mid-program. You don't have to declare what you expect.
 
+```mermaid
+flowchart TD
+    subgraph PY["every Python value — e.g. the integer 5"]
+        T["ob_type → int"]
+        R["ob_refcnt → 1"]
+        V["ob_val → 5"]
+    end
+    PY -->|"x + y triggers"| D{"runtime type check"}
+    D -->|"both int"| ADD["int.__add__\nemit ADD"]
+    D -->|"both str"| STR["str.__add__\nconcatenate"]
+    D -->|"str + int"| ERR["TypeError"]
+```
+
 ---
 
 ## Strong vs weak: a completely separate axis
@@ -107,6 +173,22 @@ These are two different questions. The 2×2:
 | **Static** | Rust, Haskell — compiler catches everything | C — compiler checks types but allows silent casts |
 | **Dynamic** | Python, Ruby — flexible, won't silently mangle types | JavaScript, PHP — maximum flexibility, maximum surprises |
 
+```mermaid
+graph TD
+    subgraph STRONG["Strong — errors on mismatch"]
+        RUST["Rust (static)"]
+        HASK["Haskell (static)"]
+        JAVA["Java (static)"]
+        PY["Python (dynamic)"]
+        RUBY["Ruby (dynamic)"]
+    end
+    subgraph WEAK["Weak — silent coercion"]
+        C["C (static)"]
+        JS["JavaScript (dynamic)"]
+        PHP["PHP (dynamic)"]
+    end
+```
+
 ---
 
 ## Is weak typing just blind bit operations?
@@ -122,6 +204,13 @@ More accurate spectrum:
 - **JavaScript** — full investigation, coerces instead of erroring, inconsistently by operator
 - **Python** — full investigation, errors on mismatch, predictable
 - **Rust** — full investigation at compile time, cannot produce a mismatch at runtime
+
+```mermaid
+graph LR
+    C["C\nminimal checking\ngenuine bit reinterpret\npredictable"] -->|"more checking"| JS["JavaScript\nfull runtime check\ncoerces by operator\nunpredictable"]
+    JS -->|"stricter"| PY["Python\nfull runtime check\nerrors on mismatch\npredictable"]
+    PY -->|"stricter"| RUST["Rust\ncompile-time only\nmismatch impossible\nat runtime"]
+```
 
 ---
 
@@ -151,6 +240,12 @@ The rule: **strong typing means conversions are explicit and safe, even when the
 
 Java autoboxing is a compiler feature. It's strongly typed. The secretary inserted the correct form — the clerk at the desk didn't make something up.
 
+```mermaid
+flowchart LR
+    SRC["Integer x = 5\nyou write this"] -->|"compiler rewrites"| OUT["Integer x = Integer.valueOf(5)\nfully type-safe conversion"]
+    OUT --> HEAP["heap-allocated Integer object\nwrapping primitive int 5"]
+```
+
 ---
 
 ## Type erasure: static typing taking it further
@@ -176,6 +271,19 @@ This is why `if (x instanceof List<String>)` is a compile-time error. That infor
 Type erasure is static typing doing its full job at compile time, then discarding *more* type information than usual. The types were always scaffolding — they let the compiler build correct, safe code, and then they were deliberately thrown away.
 
 Contrast with C# **reification**: generic type information is preserved at runtime. `List<string>` and `List<int>` are genuinely different types in the CLR. More powerful — but it required designing the runtime with generics in mind from the start. Java didn't have that luxury.
+
+```mermaid
+flowchart TD
+    subgraph CT["Compile time — full type information"]
+        LS["List of String\ntype-checked, rejects Integer inserts"]
+        LI["List of Integer\ntype-checked, rejects String inserts"]
+    end
+    subgraph RT["Runtime (JVM bytecode)"]
+        L["List\ngeneric parameter gone\nboth look identical"]
+    end
+    LS -->|"type parameter erased"| L
+    LI -->|"type parameter erased"| L
+```
 
 ---
 
@@ -208,6 +316,13 @@ The `wrapper` function doesn't know or care what `process_data` does, what argum
 In static languages this requires more machinery: macros in Rust, annotations and reflection in Java. Python does it in ten lines because functions are first-class values and type investigation happens at call time, not ahead of it.
 
 This is metaprogramming — code that restructures other code at runtime, before execution. It's a genuine capability, not a workaround for missing features.
+
+```mermaid
+flowchart TD
+    DEC["timer(func)"] -->|"receives"| F["process_data function"]
+    DEC -->|"returns"| W["wrapper(*args, **kwargs)\n1. record start time\n2. call original func\n3. print elapsed\n4. return result"]
+    W -->|"re-assigned to"| NAME["process_data\nnow points to wrapper"]
+```
 
 ---
 
@@ -250,4 +365,52 @@ These are two different axes. A language can be any combination of them. Python 
 
 Java is static and strong, autoboxes with the compiler as secretary, erases generics before the runtime ever sees them, and is somehow more interesting than it sounds.
 
+```mermaid
+graph TD
+    Q1{"when are types resolved?"}
+    Q2{"what happens on mismatch?"}
+
+    Q1 -->|"compile time"| STATIC["Static\nC, Java, Go, Rust, Haskell"]
+    Q1 -->|"runtime"| DYNAMIC["Dynamic\nPython, JavaScript, Ruby"]
+    Q2 -->|"error raised"| STRONG["Strong\nPython, Rust, Java, Haskell"]
+    Q2 -->|"silent coercion"| WEAK["Weak\nJavaScript, C, PHP"]
+```
+
 The types were always scaffolding. They help the compiler, the runtime, and you figure out which instruction to emit. Once that decision is made, the bytes are just bytes again.
+
+---
+
+## Books referenced
+
+This post draws on concepts from the following:
+
+- ***Computer Systems: A Programmer's Perspective*** (3rd ed.) — Randal E. Bryant and David R. O'Hallaron (Pearson, 2015). The hardware layer underpinning this entire post: bytes as sequences with no inherent meaning, CPU instruction selection, signed vs unsigned arithmetic. Chapters 1 and 2 are directly relevant.
+
+---
+
+## Engineering Notes
+
+The following notes from my ongoing study sit alongside this post. The computer systems notes are the most direct companion reading; the rest are from the broader learning arc.
+
+**Computer Systems** *(Computer Systems: A Programmer's Perspective — Bryant & O'Hallaron)*
+
+- [Hardware Organisation and the Storage Hierarchy]({{< relref "/engineering-notes/computer-systems/hardware-organization" >}}) — the CPU, the fetch/decode/execute loop, instruction set architecture
+- [Data Representation: Integers, Floats, and Endianness]({{< relref "/engineering-notes/computer-systems/data-representation" >}}) — bytes as interpretation contracts, two's complement, signed vs unsigned, IEEE 754
+- [OS Abstractions: Processes, Threads, and Virtual Memory]({{< relref "/engineering-notes/computer-systems/os-abstractions" >}}) — virtual address space layout, context switching, Amdahl's Law
+
+**Networking** *(Computer Networking: A Top-Down Approach — Kurose & Ross)*
+
+- [HTTP]({{< relref "/engineering-notes/networking/http" >}})
+- [DNS]({{< relref "/engineering-notes/networking/dns" >}})
+- [Email, P2P, and CDNs]({{< relref "/engineering-notes/networking/email-p2p-and-cdns" >}})
+
+**Data Engineering**
+
+- [DBMS Architecture]({{< relref "/engineering-notes/data-engineering/dbms-architecture" >}}) *(Database Internals — Alex Petrov)*
+- [MySQL Architecture]({{< relref "/engineering-notes/data-engineering/mysql-architecture" >}}) *(High Performance MySQL)*
+- [Lakehouse Storage Formats]({{< relref "/engineering-notes/data-engineering/lakehouse-storage-formats" >}}) *(Lakehouse Essentials)*
+- [Dimensional Modelling]({{< relref "/engineering-notes/data-engineering/dimensional-modelling" >}}) *(The Data Warehouse Toolkit — Kimball & Ross)*
+
+**Platform Engineering**
+
+- [Kubernetes Control Plane]({{< relref "/engineering-notes/platform-engineering/kubernetes-control-plane" >}}) *(Kubernetes Deep Dive — Nigel Poulton)*
