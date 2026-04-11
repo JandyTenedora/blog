@@ -34,12 +34,18 @@ The byte `01000001` could mean the number 65, or the letter `'A'` in ASCII. The 
 
 This isn't abstract — it's the actual thing. Understanding it is the prerequisite for everything else in this post.
 
-```mermaid
-graph LR
-    B["0x41 0x00 0x00 0x00\n(4 bytes in memory)"]
-    B -->|"int32 contract"| I["integer: 65"]
-    B -->|"float32 contract"| F["float: 9.1e-44"]
-    B -->|"ASCII contract"| C["char: 'A'"]
+```goat
+         the same 4 bytes in RAM
+
+    +------+------+------+------+
+    | 0x41 | 0x00 | 0x00 | 0x00 |
+    +------+------+------+------+
+        |           |           |
+        v           v           v
+    +-------+   +--------+   +------+
+    | int32 |   | float32|   | char |
+    |  65   |   | 9.1e-44|   |  A   |
+    +-------+   +--------+   +------+
 ```
 
 ---
@@ -58,13 +64,21 @@ The CPU has *separate instructions* for signed and unsigned arithmetic because t
 
 This is the first concrete example of types mattering at the hardware level before you've touched a programming language.
 
-```mermaid
-flowchart TD
-    BITS["bit pattern: 10000001"]
-    BITS -->|"unsigned contract\nall bits represent magnitude"| U["129"]
-    BITS -->|"signed contract\nMSB is sign bit"| S["-127"]
-    U -->|"multiply"| MUL["MUL instruction"]
-    S -->|"multiply"| IMUL["IMUL instruction"]
+```goat
+    unsigned int8  (bit pattern: 1000 0001)
+
+    +---+---+---+---+---+---+---+---+
+    | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 1 |   = 129
+    +---+---+---+---+---+---+---+---+
+     MSB = +128  (magnitude bit)  --> MUL
+
+
+    signed int8  (same bit pattern: 1000 0001)
+
+    +---+---+---+---+---+---+---+---+
+    | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 1 |   = -127
+    +---+---+---+---+---+---+---+---+
+     MSB = -128  (sign bit)        --> IMUL
 ```
 
 ---
@@ -82,14 +96,20 @@ When you write `3 + 4` in any language, something has to decide which instructio
 
 **This is the entire game of typing.** Figuring out which CPU instruction to use, and catching cases where the answer would be nonsensical.
 
-```mermaid
-flowchart TD
-    E["x OP y"] --> Q{"what are the types?"}
-    Q -->|"int + int"| ADD["emit ADD"]
-    Q -->|"float + float"| FADD["emit FADD"]
-    Q -->|"int * int, signed"| IMUL["emit IMUL"]
-    Q -->|"int * int, unsigned"| MUL["emit MUL"]
-    Q -->|"type mismatch"| ERR["compile error or TypeError"]
+```goat
+    operand types            instruction emitted
+
+   +------------------+     +-----------+
+   | int   +  int     | --> |    ADD    |
+   +------------------+     +-----------+
+   | float +  float   | --> |   FADD    |
+   +------------------+     +-----------+
+   | int   *  int     | --> |   IMUL    |  signed
+   +------------------+     +-----------+
+   | uint  *  uint    | --> |    MUL    |  unsigned
+   +------------------+     +-----------+
+   | string + int     | --> |   error   |
+   +------------------+     +-----------+
 ```
 
 ---
@@ -110,12 +130,17 @@ This is why static typing is fast: zero runtime overhead from types, and the com
 
 The cost is upfront strictness — you have to tell the compiler, and it refuses to guess.
 
-```mermaid
-flowchart LR
-    SRC["source code\nwith type declarations"] --> COMP["compiler"]
-    COMP -->|"type violation"| ERR["compile error\nprogram never runs"]
-    COMP -->|"all types resolved"| BIN["binary\nno type metadata\nonly machine instructions"]
-    BIN --> CPU["CPU executes\nat full speed"]
+```goat
+    source.go  (typed)              binary  (no types)
+
+    .-------------------.           .-------------------.
+    | var x int = 5     |           | MOV  eax, 5       |
+    | var y int = 3     | --------> | ADD  eax, 3       |
+    | return x + y      |           | RET               |
+    '-------------------'           '-------------------'
+
+    types present                   types consumed,
+                                    only instructions remain
 ```
 
 ---
@@ -139,17 +164,20 @@ Python is slower than C not because its algorithms are worse. It's because Pytho
 
 The payoff is flexibility. Functions can accept anything. Variables can change type mid-program. You don't have to declare what you expect.
 
-```mermaid
-flowchart TD
-    subgraph PY["every Python value — e.g. the integer 5"]
-        T["ob_type → int"]
-        R["ob_refcnt → 1"]
-        V["ob_val → 5"]
-    end
-    PY -->|"x + y triggers"| D{"runtime type check"}
-    D -->|"both int"| ADD["int.__add__\nemit ADD"]
-    D -->|"both str"| STR["str.__add__\nconcatenate"]
-    D -->|"str + int"| ERR["TypeError"]
+```goat
+    C int x = 5                     Python x = 5
+    (4 bytes)                       (28 bytes)
+
+    +----------+                    +----------------------+
+    |    5     |                    | ob_type  --->  int  |
+    +----------+                    +----------------------+
+                                    | ob_refcnt:  1        |
+    raw value only                  +----------------------+
+                                    | ob_val:     5        |
+                                    +----------------------+
+
+                                    type check overhead
+                                    on every single operation
 ```
 
 ---
@@ -173,20 +201,20 @@ These are two different questions. The 2×2:
 | **Static** | Rust, Haskell — compiler catches everything | C — compiler checks types but allows silent casts |
 | **Dynamic** | Python, Ruby — flexible, won't silently mangle types | JavaScript, PHP — maximum flexibility, maximum surprises |
 
-```mermaid
-graph TD
-    subgraph STRONG["Strong — errors on mismatch"]
-        RUST["Rust (static)"]
-        HASK["Haskell (static)"]
-        JAVA["Java (static)"]
-        PY["Python (dynamic)"]
-        RUBY["Ruby (dynamic)"]
-    end
-    subgraph WEAK["Weak — silent coercion"]
-        C["C (static)"]
-        JS["JavaScript (dynamic)"]
-        PHP["PHP (dynamic)"]
-    end
+```goat
+                    STRONG
+                      ^
+                      |
+    Python   Ruby     |     Rust   Java   Go
+                      |     Haskell
+                      |
+    ------------------+-------------------->
+    DYNAMIC           |              STATIC
+                      |
+    JavaScript  PHP   |     C
+                      |
+                      v
+                     WEAK
 ```
 
 ---
@@ -205,11 +233,16 @@ More accurate spectrum:
 - **Python** — full investigation, errors on mismatch, predictable
 - **Rust** — full investigation at compile time, cannot produce a mismatch at runtime
 
-```mermaid
-graph LR
-    C["C\nminimal checking\ngenuine bit reinterpret\npredictable"] -->|"more checking"| JS["JavaScript\nfull runtime check\ncoerces by operator\nunpredictable"]
-    JS -->|"stricter"| PY["Python\nfull runtime check\nerrors on mismatch\npredictable"]
-    PY -->|"stricter"| RUST["Rust\ncompile-time only\nmismatch impossible\nat runtime"]
+```goat
+    permissive                                          strict
+    <--------------------------------------------------->
+
+    JavaScript       C            Python           Rust
+
+    runtime          compile-     runtime          compile-
+    coercion,        time casts,  errors on        time only,
+    by operator      predictable  mismatch,        no runtime
+    unpredictable                 predictable      mismatch
 ```
 
 ---
@@ -240,10 +273,18 @@ The rule: **strong typing means conversions are explicit and safe, even when the
 
 Java autoboxing is a compiler feature. It's strongly typed. The secretary inserted the correct form — the clerk at the desk didn't make something up.
 
-```mermaid
-flowchart LR
-    SRC["Integer x = 5\nyou write this"] -->|"compiler rewrites"| OUT["Integer x = Integer.valueOf(5)\nfully type-safe conversion"]
-    OUT --> HEAP["heap-allocated Integer object\nwrapping primitive int 5"]
+```goat
+    you write:                 compiler inserts:
+
+    Integer x = 5   ------>   Integer x = Integer.valueOf(5)
+                                                  |
+                                                  v
+                                     +--------------------+
+                                     | Integer   (heap)   |
+                                     | value: 5           |
+                                     +--------------------+
+
+    stack: nothing yet         stack: reference    heap: object
 ```
 
 ---
@@ -272,17 +313,18 @@ Type erasure is static typing doing its full job at compile time, then discardin
 
 Contrast with C# **reification**: generic type information is preserved at runtime. `List<string>` and `List<int>` are genuinely different types in the CLR. More powerful — but it required designing the runtime with generics in mind from the start. Java didn't have that luxury.
 
-```mermaid
-flowchart TD
-    subgraph CT["Compile time — full type information"]
-        LS["List of String\ntype-checked, rejects Integer inserts"]
-        LI["List of Integer\ntype-checked, rejects String inserts"]
-    end
-    subgraph RT["Runtime (JVM bytecode)"]
-        L["List\ngeneric parameter gone\nboth look identical"]
-    end
-    LS -->|"type parameter erased"| L
-    LI -->|"type parameter erased"| L
+```goat
+    compile time                         runtime (JVM)
+
+    .-----------------.
+    | List of String  |---.
+    '-----------------'   |
+                          +----------->  List
+    .-----------------.   |
+    | List of Integer |---'              generic info gone
+    '-----------------'
+
+    distinct, fully checked              indistinguishable
 ```
 
 ---
@@ -317,11 +359,20 @@ In static languages this requires more machinery: macros in Rust, annotations an
 
 This is metaprogramming — code that restructures other code at runtime, before execution. It's a genuine capability, not a workaround for missing features.
 
-```mermaid
-flowchart TD
-    DEC["timer(func)"] -->|"receives"| F["process_data function"]
-    DEC -->|"returns"| W["wrapper(*args, **kwargs)\n1. record start time\n2. call original func\n3. print elapsed\n4. return result"]
-    W -->|"re-assigned to"| NAME["process_data\nnow points to wrapper"]
+```goat
+    @timer applied to process_data
+
+    +------------------------------------------------+
+    | wrapper(*args, **kwargs)                       |
+    |   +------------------------------------------+ |
+    |   | 1. start = time.time()                   | |
+    |   | 2. result = process_data(*args, **kwargs) | |
+    |   | 3. print(elapsed)                         | |
+    |   | 4. return result                          | |
+    |   +------------------------------------------+ |
+    +------------------------------------------------+
+
+    process_data now points to wrapper
 ```
 
 ---
@@ -365,15 +416,20 @@ These are two different axes. A language can be any combination of them. Python 
 
 Java is static and strong, autoboxes with the compiler as secretary, erases generics before the runtime ever sees them, and is somehow more interesting than it sounds.
 
-```mermaid
-graph TD
-    Q1{"when are types resolved?"}
-    Q2{"what happens on mismatch?"}
-
-    Q1 -->|"compile time"| STATIC["Static\nC, Java, Go, Rust, Haskell"]
-    Q1 -->|"runtime"| DYNAMIC["Dynamic\nPython, JavaScript, Ruby"]
-    Q2 -->|"error raised"| STRONG["Strong\nPython, Rust, Java, Haskell"]
-    Q2 -->|"silent coercion"| WEAK["Weak\nJavaScript, C, PHP"]
+```goat
+                    STRONG
+                      ^
+                      |
+    Python   Ruby     |     Rust   Java   Go
+                      |     Haskell
+                      |
+    ------------------+-------------------->
+    DYNAMIC           |              STATIC
+                      |
+    JavaScript  PHP   |     C
+                      |
+                      v
+                     WEAK
 ```
 
 The types were always scaffolding. They help the compiler, the runtime, and you figure out which instruction to emit. Once that decision is made, the bytes are just bytes again.
