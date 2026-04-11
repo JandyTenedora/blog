@@ -12,9 +12,9 @@ For those who know me closely, in about a month's time I am about to start a rol
 
 A couple of questions came up during the interview that had me rethinking my understanding of typing. Typing has always been something I never thought about too closely, it was something to keep in mind to make sure my code would compile (if it even needed to be compiled at all). So the first question, what's the difference between static and dynamic typing, was easy enough I thought: some languages need the types declared at compile time, others figure it out (or at least try to) during runtime. Easy.
 
-The second question brought an interesting back and forth, and inspired the deep dive I'm writing about today. "What's the difference between strongly and weakly typed languages?" I had to be honest. As a data engineer I've only ever worked with strongly typed languages, so I had completely forgotten the answer to this and didn't try to hide it. I told them I didn't know.
-
 > **Strongly vs weakly typed:** Strongly typed languages enforce type boundaries and raise errors when types are mixed without an explicit conversion. Weakly typed languages silently coerce values to make operations work, often inconsistently depending on the operator.
+
+The second question brought an interesting back and forth, and inspired the deep dive I'm writing about today. "What's the difference between strongly and weakly typed languages?" I had to be honest. As a data engineer I've only ever worked with strongly typed languages, so I had completely forgotten the answer to this and didn't try to hide it. I told them I didn't know.
 
 Straightforward enough. But where does Java's autoboxing fit in? I asked back.
 
